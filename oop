@@ -15,6 +15,11 @@ class student
     private int rollNo;
     private string name;
     private double cgpa;
-    
+    public student(int rollNo,string name,double cgpa)
+    {
+        this.rollNo = rollNo;
+        this.name = name;
+        this.cgpa = cgpa;
+    }
 }
 
