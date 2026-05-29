@@ -1,25 +1,49 @@
-
-// +----------------------+
-// |       Student        |
-// +----------------------+
-// | - rollNo : int       |
-// | - name : string      |
-// | - cgpa : double      |
-// +----------------------+
-// | + ShowInfo()         |
-// | + CalculateGrade()   |
-// +----------------------+
 using System;
-class student
+
+class Student
 {
+    // Attributes
     private int rollNo;
     private string name;
     private double cgpa;
-    public student(int rollNo,string name,double cgpa)
+
+    // Constructor
+    public Student(int rollNo, string name, double cgpa)
     {
         this.rollNo = rollNo;
         this.name = name;
         this.cgpa = cgpa;
     }
+
+    // Method to display student information
+    public void ShowInfo()
+    {
+        Console.WriteLine("Roll No: " + rollNo);
+        Console.WriteLine("Name: " + name);
+        Console.WriteLine("CGPA: " + cgpa);
+    }
+
+    // Method to calculate grade
+    public void CalculateGrade()
+    {
+        if (cgpa >= 3.7)
+            Console.WriteLine("Grade: A");
+        else if (cgpa >= 3.0)
+            Console.WriteLine("Grade: B");
+        else if (cgpa >= 2.0)
+            Console.WriteLine("Grade: C");
+        else
+            Console.WriteLine("Grade: F");
+    }
 }
 
+class Program
+{
+    static void Main()
+    {
+        Student s1 = new Student(101, "Ali", 3.8);
+
+        s1.ShowInfo();
+        s1.CalculateGrade();
+    }
+}
