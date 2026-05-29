@@ -10,4 +10,11 @@
 // | + CalculateGrade()   |
 // +----------------------+
 using System;
+class student
+{
+    private int rollNo;
+    private string name;
+    private double cgpa;
+    
+}
 
