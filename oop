@@ -1,19 +1,19 @@
 using System;
 
-class Student
-{
-    // Attributes
-    private int rollNo;
-    private string name;
-    private double cgpa;
+// class Student
+// {
+//     // Attributes
+//     private int rollNo;
+//     private string name;
+//     private double cgpa;
 
-    // Constructor
-    public Student(int rollNo, string name, double cgpa)
-    {
-        this.rollNo = rollNo;
-        this.name = name;
-        this.cgpa = cgpa;
-    }
+//     // Constructor
+//     public Student(int rollNo, string name, double cgpa)
+//     {
+//         this.rollNo = rollNo;
+//         this.name = name;
+//         this.cgpa = cgpa;
+//     }
 
     // Method to display student information
     // public void ShowInfo()
