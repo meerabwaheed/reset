@@ -16,12 +16,12 @@ class Student
     }
 
     // Method to display student information
-    public void ShowInfo()
-    {
-        Console.WriteLine("Roll No: " + rollNo);
-        Console.WriteLine("Name: " + name);
-        Console.WriteLine("CGPA: " + cgpa);
-    }
+    // public void ShowInfo()
+    // {
+    //     Console.WriteLine("Roll No: " + rollNo);
+    //     Console.WriteLine("Name: " + name);
+    //     Console.WriteLine("CGPA: " + cgpa);
+    // }
 
 //     // Method to calculate grade
 //     public void CalculateGrade()
