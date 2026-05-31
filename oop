@@ -32,17 +32,17 @@ class Vehicle
     }
 }
 
-class Car : Vehicle
-{
-    private int doors;
+// class Car : Vehicle
+// {
+//     private int doors;
    
-    public Car(int doors)
-    {
-        this.Car = Car;
-    }
-    public void Drive()
-    {
-        Console.WriteLine("car is driving");
-        Console.WriteLine("doors:"+ doors);
-    }
-}
+//     public Car(int doors)
+//     {
+//         this.Car = Car;
+//     }
+//     public void Drive()
+//     {
+//         Console.WriteLine("car is driving");
+//         Console.WriteLine("doors:"+ doors);
+//     }
+// }
