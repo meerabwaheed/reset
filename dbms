@@ -102,12 +102,12 @@ INSERT INTO Courses VALUES
 (102, 'Object Oriented Programming', 3),
 (103, 'Data Structures', 4);
 
--- -- Insert Enrollments
--- INSERT INTO Enrollments VALUES
--- (1, 1, 101, 85),
--- (2, 1, 102, 78),
--- (3, 2, 101, 90),
--- (4, 3, 103, 88);
+-- Insert Enrollments
+INSERT INTO Enrollments VALUES
+(1, 1, 101, 85),
+(2, 1, 102, 78),
+(3, 2, 101, 90),
+(4, 3, 103, 88);
 
 -- -- Display Students
 -- SELECT * FROM Students;
