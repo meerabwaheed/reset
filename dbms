@@ -144,5 +144,5 @@ SET Marks = 95
 WHERE EnrollmentID = 2;
 
 -- -- Delete a Student
--- DELETE FROM Students
--- WHERE StudentID = 3;
+DELETE FROM Students
+WHERE StudentID = 3;
