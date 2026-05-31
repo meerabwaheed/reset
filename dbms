@@ -16,7 +16,7 @@ CREATE TABLE Books (
 CREATE TABLE Members (
     MemberID INT PRIMARY KEY,
     Name VARCHAR(50),
-    Email VARCHAR(100)
+    Email VARCHAR(50)
 );
 
 -- -- Create BorrowRecords Table
