@@ -8,7 +8,6 @@ USE Library_DB;
 CREATE TABLE Books (
     Book_ID INT PRIMARY KEY,
     Title VARCHAR(50),
-    Author VARCHAR(50),
     Price DECIMAL(322)
 );
 
@@ -39,7 +38,6 @@ INSERT INTO Books VALUES
 INSERT INTO Members VALUES
 (10, 'hussain', 'hussain@gmail.com');
 (114, 'balach', 'balach@gmail.com');
-
 
 -- Insert Data into BorrowRecords
 INSERT INTO BorrowRecords VALUES
