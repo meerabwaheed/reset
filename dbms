@@ -9,7 +9,7 @@ CREATE TABLE Books (
     Book_ID INT PRIMARY KEY,
     Title VARCHAR(50),
     Author VARCHAR(50),
-    Price DECIMAL(12,2)
+    Price DECIMAL(322)
 );
 
 -- -- Create Members Table
