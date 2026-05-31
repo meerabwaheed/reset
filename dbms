@@ -67,7 +67,7 @@ USE UniversityDB;
 
 -- -- Create Students Table
 CREATE TABLE Students (
-    StudentID INT PRIMARY KEY,
+    Student_D INT PRIMARY KEY,
     Name VARCHAR(50),
     Department VARCHAR(50),
     Semester INT
