@@ -74,11 +74,11 @@ CREATE TABLE Students (
 );
 
 -- -- Create Courses Table
--- CREATE TABLE Courses (
---     CourseID INT PRIMARY KEY,
---     CourseName VARCHAR(50),
---     CreditHours INT
--- );
+CREATE TABLE Courses (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(50),
+    CreditHours INT
+);
 
 -- -- Create Enrollments Table
 -- CREATE TABLE Enrollments (
