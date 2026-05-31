@@ -1,5 +1,5 @@
 -- Create Database
-CREATE DATABASE LibraryDB;
+CREATE DATABASE Library_DB;
 
 -- Use Database
 USE LibraryDB;
@@ -29,24 +29,24 @@ CREATE TABLE BorrowRecords (
     FOREIGN KEY (BookID) REFERENCES Books(BookID)
 );
 
--- -- -- Insert Data into Books
--- INSERT INTO Books VALUES
--- (4, 'Database Systems', 'Navathe', 1500),
--- (1, 'C# Programming', 'John Sharp', 2500),
--- (2, 'JavaScript Guide', 'David Flanagan', 1200);
+-- -- Insert Data into Books
+INSERT INTO Books VALUES
+(4, 'Database Systems', 'Navathe', 1500),
+(1, 'C# Programming', 'John Sharp', 2500),
+(2, 'JavaScript Guide', 'David Flanagan', 1200);
 
--- -- Insert Data into Members
--- INSERT INTO Members VALUES
--- (10, 'hussain', 'hussain@gmail.com'),
--- (114, 'balach', 'balach@gmail.com');
--- (112,'hassann','hassann@gmail.com');
+-- Insert Data into Members
+INSERT INTO Members VALUES
+(10, 'hussain', 'hussain@gmail.com'),
+(114, 'balach', 'balach@gmail.com');
+(112,'hassann','hassann@gmail.com');
 
--- -- Insert Data into BorrowRecords
--- INSERT INTO BorrowRecords VALUES
--- (12, 101, 12, '2026-05-01', '2026-05-15'),
--- (22, 102, 22, '2026-05-05', NULL);
+-- Insert Data into BorrowRecords
+INSERT INTO BorrowRecords VALUES
+(12, 101, 12, '2026-05-01', '2026-05-15'),
+(22, 102, 22, '2026-05-05', NULL);
 
--- -- Display All Books
+-- Display All Books
 SELECT * FROM Books;
 
 -- -- Display All Members
@@ -60,6 +60,6 @@ JOIN Books B ON BR.BookID = B.BookID;
 
 
 
--- -- -- Delete a Book
--- DELETE FROM Books
--- WHERE BookID = 13;
+-- -- Delete a Book
+DELETE FROM Books
+WHERE BookID = 13;
