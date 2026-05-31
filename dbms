@@ -5,12 +5,12 @@ CREATE DATABASE LibraryDB;
 USE LibraryDB;
 
 -- -- Create Books Table
--- CREATE TABLE Books (
---     BookID INT PRIMARY KEY,
---     Title VARCHAR(100),
---     Author VARCHAR(100),
---     Price DECIMAL(10,2)
--- );
+CREATE TABLE Books (
+    BookID INT PRIMARY KEY,
+    Title VARCHAR(100),
+    Author VARCHAR(100),
+    Price DECIMAL(10,2)
+);
 
 -- -- Create Members Table
 -- CREATE TABLE Members (
