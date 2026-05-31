@@ -93,7 +93,7 @@ CREATE TABLE Enrollments (
 -- -- Insert Students
 INSERT INTO Students VALUES
 (4, 'Ali', 'Computer Science', 3),
-(2, 'Sara', 'Software Engineering', 2),
+(1, 'Sara', 'Software Engineering', 2),
 (3, 'Ahmed', 'Computer Science', 4);
 
 -- -- Insert Courses
