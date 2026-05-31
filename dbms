@@ -23,7 +23,7 @@ CREATE TABLE Members (
 CREATE TABLE BorrowRecords (
     Record_ID INT PRIMARY KEY,
     Member_ID INT,
-    BookID INT,
+    Book_ID INT,
     BorrowDate DATE,
     ReturnDate DATE,
     FOREIGN KEY (MemberID) REFERENCES Members(MemberID),
