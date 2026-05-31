@@ -96,11 +96,11 @@ INSERT INTO Students VALUES
 (1, 'darling', 'Software_Engineering',14),
 (5, 'sara', 'Computer_Science', 23);
 
--- -- Insert Courses
--- INSERT INTO Courses VALUES
--- (101, 'Database Systems', 3),
--- (102, 'Object Oriented Programming', 3),
--- (103, 'Data Structures', 4);
+-- Insert Courses
+INSERT INTO Courses VALUES
+(101, 'Database Systems', 3),
+(102, 'Object Oriented Programming', 3),
+(103, 'Data Structures', 4);
 
 -- -- Insert Enrollments
 -- INSERT INTO Enrollments VALUES
