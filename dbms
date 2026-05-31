@@ -65,4 +65,4 @@ WHERE BookID = 22;
 
 -- -- Delete a Book
 DELETE FROM Books
-WHERE BookID = 3;
+WHERE BookID = 13;
