@@ -63,7 +63,7 @@
 CREATE DATABASE UniversityDB;
 
 -- Use Database
--- USE UniversityDB;
+USE UniversityDB;
 
 -- -- Create Students Table
 -- CREATE TABLE Students (
