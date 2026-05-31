@@ -59,9 +59,9 @@ JOIN Members M ON BR.MemberID = M.MemberID
 JOIN Books B ON BR.BookID = B.BookID;
 
 -- -- Update Book Price
--- UPDATE Books
--- SET Price = 2000
--- WHERE BookID = 2;
+UPDATE Books
+SET Price = 21200
+WHERE BookID = 2;
 
 -- -- Delete a Book
 -- DELETE FROM Books
