@@ -37,13 +37,13 @@ class Student
     }
 }
 
-class Program
-{
-    static void Main()
-    {
-        Student s1 = new Student(101, "Ali", 3.8);
+// class Program
+// {
+//     static void Main()
+//     {
+//         Student s1 = new Student(101, "Ali", 3.8);
 
-        s1.ShowInfo();
-        s1.CalculateGrade();
-    }
-}
+//         s1.ShowInfo();
+//         s1.CalculateGrade();
+//     }
+// }
