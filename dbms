@@ -82,7 +82,7 @@ CREATE TABLE Courses (
 
 -- -- Create Enrollments Table
 CREATE TABLE Enrollments (
-    EnrollmentID INTPRIMARY KEY,
+    Enrollment_ID INT RIMARY KEY,
     StudentID INT,
     CourseID INT,
     Marks INT,
