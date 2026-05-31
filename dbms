@@ -8,7 +8,7 @@ USE LibraryDB;
 CREATE TABLE Books (
     BookID INT PRIMARY KEY,
     Title VARCHAR(100),
-    Author VARCHAR(100),
+    Author VARCHAR(50),
     Price DECIMAL(12,2)
 );
 
