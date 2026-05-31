@@ -15,7 +15,7 @@ CREATE TABLE Books (
 -- -- Create Members Table
 CREATE TABLE Members (
     Member_ID INT PRIMARY KEY,
-    Name VARCHAR(50),
+    Name VARCHAR(30),
     Email VARCHAR(30)
 );
 
