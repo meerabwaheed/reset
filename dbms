@@ -39,7 +39,7 @@ INSERT INTO Books VALUES
 INSERT INTO Members VALUES
 (10, 'hussain', 'hussain@gmail.com');
 (114, 'balach', 'balach@gmail.com');
-(112,'hassann','hassann@gmail.com');
+
 
 -- Insert Data into BorrowRecords
 INSERT INTO BorrowRecords VALUES
@@ -56,9 +56,6 @@ SELECT * FROM Members;
 SELECT M.Meerab, B.Title, BR.BorrowDate
 FROM BorrowRecords BR
 JOIN Members M ON BR.MemberID = M.MemberID
-
-
-
 
 -- -- Delete a Book
 DELETE FROM Books
