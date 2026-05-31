@@ -66,12 +66,12 @@ CREATE DATABASE UniversityDB;
 USE UniversityDB;
 
 -- -- Create Students Table
--- CREATE TABLE Students (
---     StudentID INT PRIMARY KEY,
---     Name VARCHAR(50),
---     Department VARCHAR(50),
---     Semester INT
--- );
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Department VARCHAR(50),
+    Semester INT
+);
 
 -- -- Create Courses Table
 -- CREATE TABLE Courses (
