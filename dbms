@@ -36,10 +36,10 @@ INSERT INTO Books VALUES
 (2, 'JavaScript Guide', 'David Flanagan', 1200);
 
 -- -- Insert Data into Members
-INSERT INTO Members VALUES
-(10, 'hussain', 'hussain@gmail.com'),
-(114, 'balach', 'balach@gmail.com');
-(112,'hassann','hassann@gmail.com');
+-- INSERT INTO Members VALUES
+-- (10, 'hussain', 'hussain@gmail.com'),
+-- (114, 'balach', 'balach@gmail.com');
+-- (112,'hassann','hassann@gmail.com');
 
 -- -- Insert Data into BorrowRecords
 -- INSERT INTO BorrowRecords VALUES
