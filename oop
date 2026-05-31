@@ -15,22 +15,22 @@
 // +----------------------+
 // | + Drive()            |
 // +----------------------+
-// using System;
-// class Vehicle
-// {
-//     private string brand;
-//     private int speed;
-//     public Vehicle(string brand,int speed)
-//     {
-//         this.brand = brand;
-//         this.speed = speed;
-//     }
-//     public void showInfo()
-//     {
-//         Console.WriteLine("brand" + brand);
-//         Console.WriteLine("speed:"+ speed);
-//     }
-// }
+using System;
+class Vehicle
+{
+    private string brand;
+    private int speed;
+    public Vehicle(string brand,int speed)
+    {
+        this.brand = brand;
+        this.speed = speed;
+    }
+    public void showInfo()
+    {
+        Console.WriteLine("brand" + brand);
+        Console.WriteLine("speed:"+ speed);
+    }
+}
 
 class Car : Vehicle
 {
