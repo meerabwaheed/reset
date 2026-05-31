@@ -61,7 +61,7 @@ JOIN Books B ON BR.BookID = B.BookID;
 -- -- Update Book Price
 UPDATE Books
 SET Price = 21200
-WHERE BookID = 2;
+WHERE BookID = 22;
 
 -- -- Delete a Book
 -- DELETE FROM Books
