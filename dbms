@@ -94,7 +94,7 @@ CREATE TABLE Enrollments (
 INSERT INTO Students VALUES
 (4, 'haseena', 'Computer Science', 3),
 (1, 'darling', 'Software Engineering', 2),
-(5, 'Ahmed', 'Computer Science', 4);
+(5, 'sara', 'Computer Science', 4);
 
 -- -- Insert Courses
 -- INSERT INTO Courses VALUES
