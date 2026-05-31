@@ -110,7 +110,7 @@ INSERT INTO Enrollments VALUES
 (4, 3, 103, 88);
 
 -- -- Display Students
--- SELECT * FROM Students;
+SELECT * FROM Students;
 
 -- -- Display Courses
 -- SELECT * FROM Courses;
