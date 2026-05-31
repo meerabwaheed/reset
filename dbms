@@ -1,0 +1,68 @@
+-- Create Database
+CREATE DATABASE LibraryDB;
+
+-- Use Database
+-- USE LibraryDB;
+
+-- -- Create Books Table
+-- CREATE TABLE Books (
+--     BookID INT PRIMARY KEY,
+--     Title VARCHAR(100),
+--     Author VARCHAR(100),
+--     Price DECIMAL(10,2)
+-- );
+
+-- -- Create Members Table
+-- CREATE TABLE Members (
+--     MemberID INT PRIMARY KEY,
+--     Name VARCHAR(100),
+--     Email VARCHAR(100)
+-- );
+
+-- -- Create BorrowRecords Table
+-- CREATE TABLE BorrowRecords (
+--     RecordID INT PRIMARY KEY,
+--     MemberID INT,
+--     BookID INT,
+--     BorrowDate DATE,
+--     ReturnDate DATE,
+--     FOREIGN KEY (MemberID) REFERENCES Members(MemberID),
+--     FOREIGN KEY (BookID) REFERENCES Books(BookID)
+-- );
+
+-- -- Insert Data into Books
+-- INSERT INTO Books VALUES
+-- (1, 'Database Systems', 'Navathe', 2500),
+-- (2, 'C# Programming', 'John Sharp', 1800),
+-- (3, 'JavaScript Guide', 'David Flanagan', 2200);
+
+-- -- Insert Data into Members
+-- INSERT INTO Members VALUES
+-- (101, 'Ali', 'ali@gmail.com'),
+-- (102, 'Sara', 'sara@gmail.com');
+
+-- -- Insert Data into BorrowRecords
+-- INSERT INTO BorrowRecords VALUES
+-- (1, 101, 2, '2026-05-01', '2026-05-15'),
+-- (2, 102, 1, '2026-05-05', NULL);
+
+-- -- Display All Books
+-- SELECT * FROM Books;
+
+-- -- Display All Members
+-- SELECT * FROM Members;
+
+-- -- Join Query
+-- SELECT M.Name, B.Title, BR.BorrowDate
+-- FROM BorrowRecords BR
+-- JOIN Members M ON BR.MemberID = M.MemberID
+-- JOIN Books B ON BR.BookID = B.BookID;
+
+-- -- Update Book Price
+-- UPDATE Books
+-- SET Price = 2000
+-- WHERE BookID = 2;
+
+-- -- Delete a Book
+-- DELETE FROM Books
+-- WHERE BookID = 3;
