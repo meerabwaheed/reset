@@ -116,15 +116,15 @@ SELECT * FROM Students;
 SELECT * FROM Courses;
 
 -- -- Display Enrollment Details
--- SELECT
---     Students.Name,
---     Courses.CourseName,
---     Enrollments.Marks
--- FROM Enrollments
--- JOIN Students
--- ON Enrollments.StudentID = Students.StudentID
--- JOIN Courses
--- ON Enrollments.CourseID = Courses.CourseID;
+SELECT
+    Students.Name,
+    Courses.CourseName,
+    Enrollments.Marks
+FROM Enrollments
+JOIN Students
+ON Enrollments.StudentID = Students.StudentID
+JOIN Courses
+ON Enrollments.CourseID = Courses.CourseID;
 
 -- -- Students with Marks Greater Than 80
 -- SELECT
