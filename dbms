@@ -53,10 +53,10 @@ SELECT * FROM Books;
 SELECT * FROM Members;
 
 -- -- Join Query
--- SELECT M.Name, B.Title, BR.BorrowDate
--- FROM BorrowRecords BR
--- JOIN Members M ON BR.MemberID = M.MemberID
--- JOIN Books B ON BR.BookID = B.BookID;
+SELECT M.Meerab, B.Title, BR.BorrowDate
+FROM BorrowRecords BR
+JOIN Members M ON BR.MemberID = M.MemberID
+JOIN Books B ON BR.BookID = B.BookID;
 
 -- -- Update Book Price
 -- UPDATE Books
