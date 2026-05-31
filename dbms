@@ -84,7 +84,7 @@ CREATE TABLE Courses (
 CREATE TABLE Enrollments (
     Enrollment_ID INT RIMARY KEY,
     Student_ID INT,
-    CourseID INT,
+    Course_ID INT,
     Marks INT,
     FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
     FOREIGN KEY (CourseID) REFERENCES Courses(CourseID)
