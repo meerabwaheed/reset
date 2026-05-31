@@ -20,15 +20,15 @@ CREATE TABLE Members (
 );
 
 -- -- Create BorrowRecords Table
--- CREATE TABLE BorrowRecords (
---     RecordID INT PRIMARY KEY,
---     MemberID INT,
---     BookID INT,
---     BorrowDate DATE,
---     ReturnDate DATE,
---     FOREIGN KEY (MemberID) REFERENCES Members(MemberID),
---     FOREIGN KEY (BookID) REFERENCES Books(BookID)
--- );
+CREATE TABLE BorrowRecords (
+    Record_ID INT PRIMARY KEY,
+    MemberID INT,
+    BookID INT,
+    BorrowDate DATE,
+    ReturnDate DATE,
+    FOREIGN KEY (MemberID) REFERENCES Members(MemberID),
+    FOREIGN KEY (BookID) REFERENCES Books(BookID)
+);
 
 -- -- Insert Data into Books
 -- INSERT INTO Books VALUES
