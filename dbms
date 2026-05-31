@@ -50,7 +50,7 @@ INSERT INTO BorrowRecords VALUES
 SELECT * FROM Books;
 
 -- -- Display All Members
--- SELECT * FROM Members;
+SELECT * FROM Members;
 
 -- -- Join Query
 -- SELECT M.Name, B.Title, BR.BorrowDate
