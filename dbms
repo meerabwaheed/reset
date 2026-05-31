@@ -56,7 +56,7 @@ SELECT * FROM Members;
 SELECT M.Meerab, B.Title, BR.BorrowDate
 FROM BorrowRecords BR
 JOIN Members M ON BR.MemberID = M.MemberID
-JOIN Books B ON BR.BookID = B.BookID;
+
 
 
 
