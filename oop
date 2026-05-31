@@ -1,49 +1,48 @@
-using System;
+// +----------------------+
+// |      Vehicle         |
+// +----------------------+
+// | - brand : string     |
+// | - speed : int        |
+// +----------------------+
+// | + ShowInfo()         |
+// +----------------------+
+//            ▲
+//            |
+// +----------------------+
+// |        Car           |
+// +----------------------+
+// | - doors : int        |
+// +----------------------+
+// | + Drive()            |
+// +----------------------+
+// using System;
+// class Vehicle
+// {
+//     private string brand;
+//     private int speed;
+//     public Vehicle(string brand,int speed)
+//     {
+//         this.brand = brand;
+//         this.speed = speed;
+//     }
+//     public void showInfo()
+//     {
+//         Console.WriteLine("brand" + brand);
+//         Console.WriteLine("speed:"+ speed);
+//     }
+// }
 
-class Student
+class Car : Vehicle
 {
-    // Attributes
-    private int rollNo;
-    private string name;
-    private double cgpa;
-
-    // Constructor
-    public Student(int rollNo, string name, double cgpa)
+    private int doors;
+   
+    public Car(int doors)
     {
-        this.rollNo = rollNo;
-        this.name = name;
-        this.cgpa = cgpa;
+        this.Car = Car;
     }
-
-    Method to display student information
-    public void ShowInfo()
+    public void Drive()
     {
-        Console.WriteLine("Roll No: " + rollNo);
-        Console.WriteLine("Name: " + name);
-        Console.WriteLine("CGPA: " + cgpa);
-    }
-
-    // Method to calculate grade
-    public void CalculateGrade()
-    {
-        if (cgpa >= 3.7)
-            Console.WriteLine("Grade: A");
-        else if (cgpa >= 3.0)
-            Console.WriteLine("Grade: B");
-        else if (cgpa >= 2.0)
-            Console.WriteLine("Grade: C");
-        else
-            Console.WriteLine("Grade: F");
-    }
-}
-
-class Program
-{
-    static void Main()
-    {
-        Student s1 = new Student(101, "Ali", 3.8);
-
-        s1.ShowInfo();
-        s1.CalculateGrade();
+        Console.WriteLine("car is driving");
+        Console.WriteLine("doors:"+ doors);
     }
 }
