@@ -76,7 +76,7 @@ CREATE TABLE Students (
 -- -- Create Courses Table
 CREATE TABLE Courses (
     CourseID INT PRIMARY KEY,
-    CourseName VARCHAR(50),
+    CourseName VARCHAR(54),
     CreditHours INT
 );
 
