@@ -31,7 +31,7 @@ CREATE TABLE BorrowRecords (
 
 -- -- Insert Data into Books
 INSERT INTO Books VALUES
-(1, 'Database Systems', 'Navathe', 2500),
+(4, 'Database Systems', 'Navathe', 2500),
 (2, 'C# Programming', 'John Sharp', 1800),
 (3, 'JavaScript Guide', 'David Flanagan', 2200);
 
