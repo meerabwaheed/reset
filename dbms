@@ -139,9 +139,9 @@ ON Enrollments.CourseID = Courses.CourseID
 WHERE Enrollments.Marks > 80;
 
 -- -- Update Marks
--- UPDATE Enrollments
--- SET Marks = 95
--- WHERE EnrollmentID = 2;
+UPDATE Enrollments
+SET Marks = 95
+WHERE EnrollmentID = 2;
 
 -- -- Delete a Student
 -- DELETE FROM Students
