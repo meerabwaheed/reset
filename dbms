@@ -167,7 +167,7 @@ CREATE TABLE Students (
 -- -- Insert Records
 INSERT INTO Students (StudentID, Name, Age, Department, CGPA)
 VALUES
-(1, 'Ali', 20, 'Computer Science', 3.50),
+(7, 'Ali', 20, 'Computer Science', 3.50),
 (2, 'Sara', 21, 'Software Engineering', 3.80),
 (3, 'Ahmed', 22, 'Information Technology', 3.40),
 (4, 'Ayesha', 20, 'Computer Science', 3.90),
