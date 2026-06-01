@@ -278,7 +278,7 @@ WHERE BookID = 102;
 
 -- -- Delete a Member
 DELETE FROM Members
-WHERE MemberID = 3;
+WHERE Member_ID = 3;
 
 -- -- Sort Books by Price
 SELECT * FROM Books
