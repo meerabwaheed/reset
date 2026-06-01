@@ -285,8 +285,8 @@ SELECT * FROM Books
 ORDER BY Price DESC;
 
 -- -- Count Total Books
--- SELECT COUNT(*) AS TotalBooks
--- FROM Books;
+SELECT COUNT(*) AS TotalBooks
+FROM Books;
 
 -- -- Find Highest Book Price
 -- SELECT MAX(Price) AS HighestPrice
