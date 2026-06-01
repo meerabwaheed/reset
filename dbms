@@ -199,8 +199,8 @@ SELECT COUNT(*) AS TotalStudents
 FROM Students;
 
 -- -- Find Maximum CGPA
--- SELECT MAX(CGPA) AS HighestCGPA
--- FROM Students;
+SELECT MAX(CGPA) AS HighestCGPA
+FROM Students;
 
 -- -- Find Average CGPA
 -- SELECT AVG(CGPA) AS AverageCGPA
