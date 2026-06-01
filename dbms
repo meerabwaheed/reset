@@ -203,8 +203,8 @@ SELECT MAX(CGPA) AS HighestCGPA
 FROM Students;
 
 -- -- Find Average CGPA
--- SELECT AVG(CGPA) AS AverageCGPA
--- FROM Students;
+SELECT AVG(CGPA) AS AverageCGPA
+FROM Students;
 
 -- -- Sort Students by CGPA (Highest to Lowest)
 -- SELECT *
