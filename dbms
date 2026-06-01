@@ -234,7 +234,7 @@ USE LibraryDB;
 CREATE TABLE Books (
     BookID INT PRIMARY KEY,
     Title VARCHAR(50),
-    Author VARCHAR(100),
+    Author VARCHAR(50),
     Price DECIMAL(8,2),
     Quantity INT
 );
