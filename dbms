@@ -177,8 +177,8 @@ VALUES
 SELECT * FROM Students;
 
 -- -- Display Specific Columns
--- SELECT Name, CGPA
--- FROM Students;
+SELECT Name, CGPA
+FROM Students;
 
 -- -- Search Students with CGPA Greater Than 3.5
 -- SELECT *
