@@ -268,8 +268,8 @@ SELECT * FROM Books;
 SELECT * FROM Members;
 
 -- -- Find Books Costing More Than 1200
--- SELECT * FROM Books
--- WHERE Price > 1200;
+SELECT * FROM Books
+WHERE Price > 1200;
 
 -- -- Update Book Quantity
 -- UPDATE Books
