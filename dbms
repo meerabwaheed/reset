@@ -169,7 +169,7 @@ INSERT INTO Students (StudentID, Name, Age, Department, CGPA)
 VALUES
 (7, 'meer_raj', 20, 'Computer Science', 3.50),
 (6, 'Samina', 21, 'Software Engineering', 3.80),
-(9, 'Ahmed', 22, 'Information Technology', 3.40),
+(9, 'sultan', 22, 'Information Technology', 3.40),
 (5, 'Ayesha', 20, 'Computer Science', 3.90),
 (4, 'Bilal', 23, 'Software Engineering', 3.20);
 
