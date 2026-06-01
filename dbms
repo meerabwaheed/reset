@@ -293,8 +293,8 @@ SELECT MAX(Price) AS HighestPrice
 FROM Books;
 
 -- -- Find Average Book Price
--- SELECT AVG(Price) AS AveragePrice
--- FROM Books;
+SELECT AVG(Price) AS AveragePrice
+FROM Books;
 
 -- -- Show Books with Quantity Less Than 10
 -- SELECT * FROM Books
