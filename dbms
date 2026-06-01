@@ -191,8 +191,8 @@ SET CGPA = 3.95
 WHERE StudentID = 2;
 
 -- -- Delete a Student Record
--- DELETE FROM Students
--- WHERE StudentID = 5;
+DELETE FROM Students
+WHERE StudentID = 5;
 
 -- -- Count Total Students
 -- SELECT COUNT(*) AS TotalStudents
