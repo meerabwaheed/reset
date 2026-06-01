@@ -231,13 +231,13 @@ CREATE DATABASE LibraryDB;
 -- Use Database
 USE LibraryDB;
 -- -- Create Books Table
--- CREATE TABLE Books (
---     BookID INT PRIMARY KEY,
---     Title VARCHAR(100),
---     Author VARCHAR(100),
---     Price DECIMAL(8,2),
---     Quantity INT
--- );
+CREATE TABLE Books (
+    BookID INT PRIMARY KEY,
+    Title VARCHAR(100),
+    Author VARCHAR(100),
+    Price DECIMAL(8,2),
+    Quantity INT
+);
 
 -- -- Create Members Table
 -- CREATE TABLE Members (
