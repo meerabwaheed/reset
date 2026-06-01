@@ -1,63 +1,63 @@
--- -- Create Database
--- CREATE DATABASE Library_DB;
+-- Create Database
+CREATE DATABASE Library_DB;
 
--- -- Use Database
--- USE Library_DB;
+-- Use Database
+USE Library_DB;
 
--- -- -- Create Books Table
--- CREATE TABLE Books (
---     Book_ID INT PRIMARY KEY,
---     Title VARCHAR(50),
---     Price DECIMAL(322)
--- );
+-- -- Create Books Table
+CREATE TABLE Books (
+    Book_ID INT PRIMARY KEY,
+    Title VARCHAR(50),
+    Price DECIMAL(322)
+);
 
--- -- -- Create Members Table
--- CREATE TABLE Members (
---     Member_ID INT PRIMARY KEY,
---     Name VARCHAR(30),
---     Email VARCHAR(30)
--- );
+-- -- Create Members Table
+CREATE TABLE Members (
+    Member_ID INT PRIMARY KEY,
+    Name VARCHAR(30),
+    Email VARCHAR(30)
+);
 
--- -- -- Create BorrowRecords Table
--- CREATE TABLE BorrowRecords (
---     Record_ID INT PRIMARY KEY,
---     Member_ID INT,
---     Book_ID INT,
---     Borrow_Date DATE,
---     FOREIGN KEY (MemberID) REFERENCES Members(MemberID),
---     FOREIGN KEY (BookID) REFERENCES Books(BookID)
--- );
+-- -- Create BorrowRecords Table
+CREATE TABLE BorrowRecords (
+    Record_ID INT PRIMARY KEY,
+    Member_ID INT,
+    Book_ID INT,
+    Borrow_Date DATE,
+    FOREIGN KEY (MemberID) REFERENCES Members(MemberID),
+    FOREIGN KEY (BookID) REFERENCES Books(BookID)
+);
 
--- -- -- Insert Data into Books
--- INSERT INTO Books VALUES
--- (4, 'Database Systems', 'Navathe', 1500),
--- (1, 'C# Programming', 'John Sharp', 2500),
--- (2, 'JavaScript Guide', 'David Flanagan', 1200);
+-- -- Insert Data into Books
+INSERT INTO Books VALUES
+(4, 'Database Systems', 'Navathe', 1500),
+(1, 'C# Programming', 'John Sharp', 2500),
+(2, 'JavaScript Guide', 'David Flanagan', 1200);
 
--- -- Insert Data into Members
--- INSERT INTO Members VALUES
--- (10, 'hussain', 'hussain@gmail.com');
--- (114, 'balach', 'balach@gmail.com');
+-- Insert Data into Members
+INSERT INTO Members VALUES
+(10, 'hussain', 'hussain@gmail.com');
+(114, 'balach', 'balach@gmail.com');
 
--- -- Insert Data into BorrowRecords
--- INSERT INTO BorrowRecords VALUES
--- (12, 101, 12, '2026-05-01', '2026-05-15'),
--- (22, 102, 22, '2026-05-05', NULL);
+-- Insert Data into BorrowRecords
+INSERT INTO BorrowRecords VALUES
+(12, 101, 12, '2026-05-01', '2026-05-15'),
+(22, 102, 22, '2026-05-05', NULL);
 
--- -- Display All Books
--- SELECT * FROM Books;
+-- Display All Books
+SELECT * FROM Books;
 
--- -- -- Display All Members
--- SELECT * FROM Members;
+-- -- Display All Members
+SELECT * FROM Members;
 
--- -- -- Join Query
--- SELECT M.Meerab, B.Title, BR.BorrowDate
--- FROM BorrowRecords BR
--- JOIN Members M ON BR.MemberID = M.MemberID
+-- -- Join Query
+SELECT M.Meerab, B.Title, BR.BorrowDate
+FROM BorrowRecords BR
+JOIN Members M ON BR.MemberID = M.MemberID
 
--- -- -- Delete a Book
--- DELETE FROM Books
--- WHERE BookID = 13;
+-- -- Delete a Book
+DELETE FROM Books
+WHERE BookID = 13;
 
 -- Create Database
 CREATE DATABASE UniversityDB;
