@@ -229,7 +229,7 @@
 CREATE DATABASE LibraryDB;
 
 -- Use Database
--- USE LibraryDB;
+USE LibraryDB;
 -- -- Create Books Table
 -- CREATE TABLE Books (
 --     BookID INT PRIMARY KEY,
