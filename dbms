@@ -305,4 +305,4 @@ DROP TABLE Books;
 DROP TABLE Members;
 
 -- -- Drop Database (Optional)
-DROP DATABASE LibraryDB;
+DROP DATABASE Library_DB;
