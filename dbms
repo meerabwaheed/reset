@@ -265,7 +265,7 @@ VALUES
 SELECT * FROM Books;
 
 -- -- Display All Members
--- SELECT * FROM Members;
+SELECT * FROM Members;
 
 -- -- Find Books Costing More Than 1200
 -- SELECT * FROM Books
