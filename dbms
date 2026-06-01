@@ -272,9 +272,9 @@ SELECT * FROM Books
 WHERE Price > 1200;
 
 -- -- Update Book Quantity
--- UPDATE Books
--- SET Quantity = 15
--- WHERE BookID = 102;
+UPDATE Books
+SET Quantity = 15
+WHERE BookID = 102;
 
 -- -- Delete a Member
 -- DELETE FROM Members
