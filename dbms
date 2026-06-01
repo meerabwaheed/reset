@@ -156,13 +156,13 @@ CREATE DATABASE StudentDB;
 USE StudentDB;
 
 -- -- Create Table
--- CREATE TABLE Students (
---     StudentID INT PRIMARY KEY,
---     Name VARCHAR(50),
---     Age INT,
---     Department VARCHAR(50),
---     CGPA DECIMAL(3,2)
--- );
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(60),
+    Age INT,
+    Department VARCHAR(50),
+    CGPA DECIMAL(3,2)
+);
 
 -- -- Insert Records
 -- INSERT INTO Students (StudentID, Name, Age, Department, CGPA)
