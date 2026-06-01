@@ -226,7 +226,7 @@
 
 
 -- Create Database
-CREATE DATABASE LibraryDB;
+CREATE DATABASE Library_DB;
 
 -- Use Database
 USE LibraryDB;
