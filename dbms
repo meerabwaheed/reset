@@ -301,8 +301,8 @@ SELECT * FROM Books
 WHERE Quantity < 10;
 
 -- -- Drop Tables (Optional)
--- -- DROP TABLE Books;
--- -- DROP TABLE Members;
+DROP TABLE Books;
+DROP TABLE Members;
 
 -- -- Drop Database (Optional)
 -- -- DROP DATABASE LibraryDB;
