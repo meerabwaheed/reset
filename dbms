@@ -207,9 +207,9 @@ SELECT AVG(CGPA) AS AverageCGPA
 FROM Students;
 
 -- -- Sort Students by CGPA (Highest to Lowest)
--- SELECT *
--- FROM Students
--- ORDER BY CGPA DESC;
+SELECT *
+FROM Students
+ORDER BY CGPA DESC;
 
 -- -- Show Students from Computer Science Department
 -- SELECT *
