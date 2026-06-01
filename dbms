@@ -281,8 +281,8 @@ DELETE FROM Members
 WHERE MemberID = 3;
 
 -- -- Sort Books by Price
--- SELECT * FROM Books
--- ORDER BY Price DESC;
+SELECT * FROM Books
+ORDER BY Price DESC;
 
 -- -- Count Total Books
 -- SELECT COUNT(*) AS TotalBooks
