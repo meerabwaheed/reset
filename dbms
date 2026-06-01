@@ -262,7 +262,7 @@ VALUES
 (3, 'Ahmed', 'ahmed@gmail.com');
 
 -- -- Display All Books
--- SELECT * FROM Books;
+SELECT * FROM Books;
 
 -- -- Display All Members
 -- SELECT * FROM Members;
