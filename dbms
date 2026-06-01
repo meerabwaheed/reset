@@ -170,8 +170,8 @@ VALUES
 (7, 'Ali', 20, 'Computer Science', 3.50),
 (6, 'Sara', 21, 'Software Engineering', 3.80),
 (9, 'Ahmed', 22, 'Information Technology', 3.40),
-(4, 'Ayesha', 20, 'Computer Science', 3.90),
-(5, 'Bilal', 23, 'Software Engineering', 3.20);
+(5, 'Ayesha', 20, 'Computer Science', 3.90),
+(4, 'Bilal', 23, 'Software Engineering', 3.20);
 
 -- -- Display All Records
 -- SELECT * FROM Students;
