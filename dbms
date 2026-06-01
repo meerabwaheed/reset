@@ -160,7 +160,7 @@ CREATE TABLE Students (
     StudentID INT PRIMARY KEY,
     Name VARCHAR(70),
     Age INT,
-    Department VARCHAR(50),
+    Department VARCHAR(70),
     CGPA DECIMAL(3,2)
 );
 
