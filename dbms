@@ -255,11 +255,11 @@ VALUES
 (104, 'Python Basics', 'Mark Lutz', 1800.00, 5);
 
 -- -- Insert Data into Members
--- INSERT INTO Members
--- VALUES
--- (1, 'Ali', 'ali@gmail.com'),
--- (2, 'Sara', 'sara@gmail.com'),
--- (3, 'Ahmed', 'ahmed@gmail.com');
+INSERT INTO Members
+VALUES
+(1, 'Ali', 'ali@gmail.com'),
+(2, 'Sara', 'sara@gmail.com'),
+(3, 'Ahmed', 'ahmed@gmail.com');
 
 -- -- Display All Books
 -- SELECT * FROM Books;
