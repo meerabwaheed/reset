@@ -217,7 +217,7 @@ FROM Students
 WHERE Department = 'Computer Science';
 
 -- -- Drop Table (Run only if needed)
--- -- DROP TABLE Students;
+DROP TABLE Students;
 
 -- -- Drop Database (Run only if needed)
--- -- DROP DATABASE StudentDB;
+DROP DATABASE StudentDB;
