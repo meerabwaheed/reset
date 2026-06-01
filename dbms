@@ -181,9 +181,9 @@ SELECT Name, CGPA
 FROM Students;
 
 -- -- Search Students with CGPA Greater Than 3.5
--- SELECT *
--- FROM Students
--- WHERE CGPA > 3.5;
+SELECT *
+FROM Students
+WHERE CGPA > 3.5;
 
 -- -- Update Student Record
 -- UPDATE Students
