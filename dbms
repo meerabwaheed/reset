@@ -277,8 +277,8 @@ SET Quantity = 15
 WHERE BookID = 102;
 
 -- -- Delete a Member
--- DELETE FROM Members
--- WHERE MemberID = 3;
+DELETE FROM Members
+WHERE MemberID = 3;
 
 -- -- Sort Books by Price
 -- SELECT * FROM Books
