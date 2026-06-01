@@ -289,8 +289,8 @@ SELECT COUNT(*) AS TotalBooks
 FROM Books;
 
 -- -- Find Highest Book Price
--- SELECT MAX(Price) AS HighestPrice
--- FROM Books;
+SELECT MAX(Price) AS HighestPrice
+FROM Books;
 
 -- -- Find Average Book Price
 -- SELECT AVG(Price) AS AveragePrice
