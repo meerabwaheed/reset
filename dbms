@@ -174,7 +174,7 @@ VALUES
 (5, 'talal', 278, 'Software Engineering', 3.20);
 
 -- -- Display All Records
--- SELECT * FROM Students;
+SELECT * FROM Students;
 
 -- -- Display Specific Columns
 -- SELECT Name, CGPA
