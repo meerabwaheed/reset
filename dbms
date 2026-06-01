@@ -212,9 +212,9 @@ FROM Students
 ORDER BY CGPA DESC;
 
 -- -- Show Students from Computer Science Department
--- SELECT *
--- FROM Students
--- WHERE Department = 'Computer Science';
+SELECT *
+FROM Students
+WHERE Department = 'Computer Science';
 
 -- -- Drop Table (Run only if needed)
 -- -- DROP TABLE Students;
