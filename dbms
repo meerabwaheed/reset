@@ -250,7 +250,7 @@ CREATE TABLE Members (
 INSERT INTO Books
 VALUES
 (1, 'Database Systems', 'Korth', 1200.00, 10),
-(102, 'C# Programming', 'Deitel', 1500.00, 8),
+(2, 'C# Programming', 'Deitel', 1500.00, 8),
 (103, 'JavaScript Guide', 'John Duckett', 1000.00, 12),
 (104, 'Python Basics', 'Mark Lutz', 1800.00, 5);
 
