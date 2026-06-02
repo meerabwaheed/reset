@@ -2,7 +2,7 @@
 CREATE DATABASE Library_DB;
 
 -- Use Database
-USE Library_DB;
+USE LibraryDB;
 
 -- -- Create Books Table
 CREATE TABLE Books (
