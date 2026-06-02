@@ -1,226 +1,226 @@
--- -- Create Database
--- CREATE DATABASE Library_DB;
+-- Create Database
+CREATE DATABASE Library_DB;
 
--- -- Use Database
--- USE Library_DB;
+-- Use Database
+USE Library_DB;
 
--- -- -- Create Books Table
--- CREATE TABLE Books (
---     Book_ID INT PRIMARY KEY,
---     Title VARCHAR(50),
---     Price DECIMAL(322)
--- );
+-- -- Create Books Table
+CREATE TABLE Books (
+    Book_ID INT PRIMARY KEY,
+    Title VARCHAR(50),
+    Price DECIMAL(322)
+);
 
--- -- -- Create Members Table
--- CREATE TABLE Members (
---     Member_ID INT PRIMARY KEY,
---     Name VARCHAR(30),
---     Email VARCHAR(30)
--- );
+-- -- Create Members Table
+CREATE TABLE Members (
+    Member_ID INT PRIMARY KEY,
+    Name VARCHAR(30),
+    Email VARCHAR(30)
+);
 
--- -- -- Create BorrowRecords Table
--- CREATE TABLE BorrowRecords (
---     Record_ID INT PRIMARY KEY,
---     Member_ID INT,
---     Book_ID INT,
---     Borrow_Date DATE,
---     FOREIGN KEY (MemberID) REFERENCES Members(MemberID),
---     FOREIGN KEY (BookID) REFERENCES Books(BookID)
--- );
+-- -- Create BorrowRecords Table
+CREATE TABLE BorrowRecords (
+    Record_ID INT PRIMARY KEY,
+    Member_ID INT,
+    Book_ID INT,
+    Borrow_Date DATE,
+    FOREIGN KEY (MemberID) REFERENCES Members(MemberID),
+    FOREIGN KEY (BookID) REFERENCES Books(BookID)
+);
 
--- -- -- Insert Data into Books
--- INSERT INTO Books VALUES
--- (4, 'Database Systems', 'Navathe', 1500),
--- (1, 'C# Programming', 'John Sharp', 2500),
--- (2, 'JavaScript Guide', 'David Flanagan', 1200);
+-- -- Insert Data into Books
+INSERT INTO Books VALUES
+(4, 'Database Systems', 'Navathe', 1500),
+(1, 'C# Programming', 'John Sharp', 2500),
+(2, 'JavaScript Guide', 'David Flanagan', 1200);
 
--- -- Insert Data into Members
--- INSERT INTO Members VALUES
--- (10, 'hussain', 'hussain@gmail.com');
--- (114, 'balach', 'balach@gmail.com');
+-- Insert Data into Members
+INSERT INTO Members VALUES
+(10, 'hussain', 'hussain@gmail.com');
+(114, 'balach', 'balach@gmail.com');
 
--- -- Insert Data into BorrowRecords
--- INSERT INTO BorrowRecords VALUES
--- (12, 101, 12, '2026-05-01', '2026-05-15'),
--- (22, 102, 22, '2026-05-05', NULL);
+-- Insert Data into BorrowRecords
+INSERT INTO BorrowRecords VALUES
+(12, 101, 12, '2026-05-01', '2026-05-15'),
+(22, 102, 22, '2026-05-05', NULL);
 
--- -- Display All Books
--- SELECT * FROM Books;
+-- Display All Books
+SELECT * FROM Books;
 
--- -- -- Display All Members
--- SELECT * FROM Members;
+-- -- Display All Members
+SELECT * FROM Members;
 
--- -- -- Join Query
--- SELECT M.Meerab, B.Title, BR.BorrowDate
--- FROM BorrowRecords BR
--- JOIN Members M ON BR.MemberID = M.MemberID
+-- -- Join Query
+SELECT M.Meerab, B.Title, BR.BorrowDate
+FROM BorrowRecords BR
+JOIN Members M ON BR.MemberID = M.MemberID
 
--- -- -- Delete a Book
--- DELETE FROM Books
--- WHERE BookID = 13;
+-- -- Delete a Book
+DELETE FROM Books
+WHERE BookID = 13;
 
--- -- Create Database
--- CREATE DATABASE UniversityDB;
+-- Create Database
+CREATE DATABASE UniversityDB;
 
--- -- Use Database
--- USE UniversityDB;
+-- Use Database
+USE UniversityDB;
 
--- -- -- Create Students Table
--- CREATE TABLE Students (
---     Student_ID INTPRIMARY KEY,
---     Name VARCHAR(20),
---     Department VARCHAR(40),
---     Semester INT
--- );
+-- -- Create Students Table
+CREATE TABLE Students (
+    Student_ID INTPRIMARY KEY,
+    Name VARCHAR(20),
+    Department VARCHAR(40),
+    Semester INT
+);
 
--- -- -- Create Courses Table
--- CREATE TABLE Courses (
---     Course_IDINT PRIMARY KEY,
---     CourseName VARCHAR(54),
---     CreditHours INT
--- );
+-- -- Create Courses Table
+CREATE TABLE Courses (
+    Course_IDINT PRIMARY KEY,
+    CourseName VARCHAR(54),
+    CreditHours INT
+);
 
--- -- -- Create Enrollments Table
--- CREATE TABLE Enrollments (
---     Enrollment_ID INT RIMARY KEY,
---     Student_ID INT,
---     Course_ID INT,
---     Marks INT,
---     FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
---     FOREIGN KEY (CourseID) REFERENCES Courses(CourseID)
--- );
+-- -- Create Enrollments Table
+CREATE TABLE Enrollments (
+    Enrollment_ID INT RIMARY KEY,
+    Student_ID INT,
+    Course_ID INT,
+    Marks INT,
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
+    FOREIGN KEY (CourseID) REFERENCES Courses(CourseID)
+);
 
--- -- -- Insert Students
--- INSERT INTO Students VALUES
--- (4, 'haseena', 'Computer_Science', 15),
--- (1, 'darling', 'Software_Engineering',14),
--- (5, 'sara', 'Computer_Science', 23);
+-- -- Insert Students
+INSERT INTO Students VALUES
+(4, 'haseena', 'Computer_Science', 15),
+(1, 'darling', 'Software_Engineering',14),
+(5, 'sara', 'Computer_Science', 23);
 
--- -- Insert Courses
--- INSERT INTO Courses VALUES
--- (101, 'Database Systems', 3),
--- (102, 'Object Oriented Programming', 3),
--- (103, 'Data Structures', 4);
+-- Insert Courses
+INSERT INTO Courses VALUES
+(101, 'Database Systems', 3),
+(102, 'Object Oriented Programming', 3),
+(103, 'Data Structures', 4);
 
--- -- Insert Enrollments
--- INSERT INTO Enrollments VALUES
--- (1, 1, 101, 85),
--- (2, 1, 102, 78),
--- (3, 2, 101, 90),
--- (4, 3, 103, 88);
+-- Insert Enrollments
+INSERT INTO Enrollments VALUES
+(1, 1, 101, 85),
+(2, 1, 102, 78),
+(3, 2, 101, 90),
+(4, 3, 103, 88);
 
--- -- -- Display Students
--- SELECT * FROM Students;
+-- -- Display Students
+SELECT * FROM Students;
 
--- -- -- Display Courses
--- SELECT * FROM Courses;
+-- -- Display Courses
+SELECT * FROM Courses;
 
--- -- -- Display Enrollment Details
--- SELECT
---     Students.Name,
---     Courses.CourseName,
---     Enrollments.Marks
--- FROM Enrollments
--- JOIN Students
--- ON Enrollments.StudentID = Students.StudentID
--- JOIN Courses
--- ON Enrollments.CourseID = Courses.CourseID;
+-- -- Display Enrollment Details
+SELECT
+    Students.Name,
+    Courses.CourseName,
+    Enrollments.Marks
+FROM Enrollments
+JOIN Students
+ON Enrollments.StudentID = Students.StudentID
+JOIN Courses
+ON Enrollments.CourseID = Courses.CourseID;
 
--- -- -- Students with Marks Greater Than 80
--- SELECT
---     Students.Name,
---     Courses.CourseName,
---     Enrollments.Marks
--- FROM Enrollments
--- JOIN Students
--- ON Enrollments.StudentID = Students.StudentID
--- JOIN Courses
--- ON Enrollments.CourseID = Courses.CourseID
--- WHERE Enrollments.Marks > 80;
+-- -- Students with Marks Greater Than 80
+SELECT
+    Students.Name,
+    Courses.CourseName,
+    Enrollments.Marks
+FROM Enrollments
+JOIN Students
+ON Enrollments.StudentID = Students.StudentID
+JOIN Courses
+ON Enrollments.CourseID = Courses.CourseID
+WHERE Enrollments.Marks > 80;
 
--- -- -- Update Marks
--- UPDATE Enrollments
--- SET Marks = 95
--- WHERE EnrollmentID = 2;
+-- -- Update Marks
+UPDATE Enrollments
+SET Marks = 95
+WHERE EnrollmentID = 2;
 
--- -- -- Delete a Student
--- DELETE FROM Students
--- WHERE StudentID = 3;
+-- -- Delete a Student
+DELETE FROM Students
+WHERE StudentID = 3;
 
 
 
--- -- Create Database
--- CREATE DATABASE StudentDB;
+-- Create Database
+CREATE DATABASE StudentDB;
 
--- -- Use Database
--- USE StudentDB;
+-- Use Database
+USE StudentDB;
 
--- -- -- Create Table
--- CREATE TABLE Students (
---     StudentID INT PRIMARY KEY,
---     Name VARCHAR(70),
---     Age INT,
---     Department VARCHAR(70),
---     CGPA DECIMAL(4,3)
--- );
+-- -- Create Table
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(70),
+    Age INT,
+    Department VARCHAR(70),
+    CGPA DECIMAL(4,3)
+);
 
--- -- -- Insert Records
--- INSERT INTO Students (StudentID, Name, Age, Department, CGPA)
--- VALUES
--- (1, 'meer_raj', 120, 'Computer Science', 3.50),
--- (2, 'Samina', 231, 'Software Engineering', 3.80),
--- (3, 'sultan', 221, 'Information Technology', 3.40),
--- (4, 'bisma', 234, 'Computer Science', 3.90),
--- (5, 'talal', 278, 'Software Engineering', 3.20);
+-- -- Insert Records
+INSERT INTO Students (StudentID, Name, Age, Department, CGPA)
+VALUES
+(1, 'meer_raj', 120, 'Computer Science', 3.50),
+(2, 'Samina', 231, 'Software Engineering', 3.80),
+(3, 'sultan', 221, 'Information Technology', 3.40),
+(4, 'bisma', 234, 'Computer Science', 3.90),
+(5, 'talal', 278, 'Software Engineering', 3.20);
 
--- -- -- Display All Records
--- SELECT * FROM Students;
+-- -- Display All Records
+SELECT * FROM Students;
 
--- -- -- Display Specific Columns
--- SELECT Name, CGPA
--- FROM Students;
+-- -- Display Specific Columns
+SELECT Name, CGPA
+FROM Students;
 
--- -- -- Search Students with CGPA Greater Than 3.5
--- SELECT *
--- FROM Students
--- WHERE CGPA > 3.5;
+-- -- Search Students with CGPA Greater Than 3.5
+SELECT *
+FROM Students
+WHERE CGPA > 3.5;
 
--- -- -- Update Student Record
--- UPDATE Students
--- SET CGPA = 3.95
--- WHERE StudentID = 2;
+-- -- Update Student Record
+UPDATE Students
+SET CGPA = 3.95
+WHERE StudentID = 2;
 
--- -- -- Delete a Student Record
--- DELETE FROM Students
--- WHERE StudentID = 5;
+-- -- Delete a Student Record
+DELETE FROM Students
+WHERE StudentID = 5;
 
--- -- -- Count Total Students
--- SELECT COUNT(*) AS TotalStudents
--- FROM Students;
+-- -- Count Total Students
+SELECT COUNT(*) AS TotalStudents
+FROM Students;
 
--- -- -- Find Maximum CGPA
--- SELECT MAX(CGPA) AS HighestCGPA
--- FROM Students;
+-- -- Find Maximum CGPA
+SELECT MAX(CGPA) AS HighestCGPA
+FROM Students;
 
--- -- -- Find Average CGPA
--- SELECT AVG(CGPA) AS AverageCGPA
--- FROM Students;
+-- -- Find Average CGPA
+SELECT AVG(CGPA) AS AverageCGPA
+FROM Students;
 
--- -- -- Sort Students by CGPA (Highest to Lowest)
--- SELECT *
--- FROM Students
--- ORDER BY CGPA DESC;
+-- -- Sort Students by CGPA (Highest to Lowest)
+SELECT *
+FROM Students
+ORDER BY CGPA DESC;
 
--- -- -- Show Students from Computer Science Department
--- SELECT *
--- FROM Students
--- WHERE Department = 'Computer Science';
+-- -- Show Students from Computer Science Department
+SELECT *
+FROM Students
+WHERE Department = 'Computer Science';
 
--- -- -- Drop Table (Run only if needed)
--- DROP TABLE Students;
+-- -- Drop Table (Run only if needed)
+DROP TABLE Students;
 
--- -- -- Drop Database (Run only if needed)
--- DROP DATABASE StudentDB;
+-- -- Drop Database (Run only if needed)
+DROP DATABASE StudentDB;
 
 
 
