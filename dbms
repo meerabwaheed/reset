@@ -8,7 +8,7 @@ USE Library_DB;
 CREATE TABLE Books (
     Book_ID INT PRIMARY KEY,
     Title VARCHAR(20),
-    Price DECIMAL(322)
+    Price DECIMAL(32)
 );
 
 -- -- Create Members Table
