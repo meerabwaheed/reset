@@ -359,4 +359,4 @@ ORDER BY CGPA DESC;
 
 -- -- Count Students
 SELECT COUNT(*) AS TotalStudents
-FROM Students;
+FROM Student;
