@@ -420,8 +420,8 @@ SELECT * FROM Book;
 SELECT * FROM Member;
 
 -- -- Show Borrow Details
--- SELECT *
--- FROM BorrowRecords;
+SELECT *
+FROM BorrowRecords;
 
 -- -- Join Query
 -- SELECT
