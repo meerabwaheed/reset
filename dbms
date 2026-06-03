@@ -374,7 +374,7 @@ CREATE TABLE Books (
     BookID INT PRIMARY KEY,
     Title VARCHAR(50),
     Author VARCHAR(40),
-    Price DECIMAL(4,2)
+    Price DECIMAL(4,3)
 );
 
 -- -- Create Members Table
