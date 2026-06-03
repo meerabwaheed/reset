@@ -425,7 +425,7 @@ FROM Borrow_Record;
 
 -- -- Join Query
 SELECT
-    Members.MemberName,
+    Members.Member_Name,
     Books.Title,
     BorrowRecords.BorrowDate,
     BorrowRecords.ReturnDate
