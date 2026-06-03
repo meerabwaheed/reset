@@ -417,7 +417,7 @@ INSERT INTO Borrow_Records VALUES
 SELECT * FROM Book;
 
 -- -- Show All Members
--- SELECT * FROM Members;
+SELECT * FROM Members;
 
 -- -- Show Borrow Details
 -- SELECT *
