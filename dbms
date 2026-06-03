@@ -399,7 +399,7 @@ CREATE TABLE BorrowRecords (
 INSERT INTO Books VALUES
 (1, 'Database_Systems', 'Kevin', 1200),
 (2, 'C#_Programming', 'John smith', 1500),
-(3, 'Web_Development', 'David', 1800);
+(3, 'Web_Development', 'David stocker', 1800);
 
 -- -- Insert Data into Members
 -- INSERT INTO Members VALUES
