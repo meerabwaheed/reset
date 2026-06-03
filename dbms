@@ -387,7 +387,7 @@ CREATE TABLE Members (
 -- -- Create BorrowRecords Table
 CREATE TABLE BorrowRecords (
     Borrow_ID INT PRIMARY KEY,
-    MemberID INT,
+    Member_ID INT,
     BookID INT,
     BorrowDate DATE,
     ReturnDate DATE,
