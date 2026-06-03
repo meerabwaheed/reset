@@ -370,12 +370,12 @@ CREATE DATABASE Library_DB;
 USE Library_DB;
 
 -- -- Create Books Table
--- CREATE TABLE Books (
---     BookID INT PRIMARY KEY,
---     Title VARCHAR(100),
---     Author VARCHAR(50),
---     Price DECIMAL(8,2)
--- );
+CREATE TABLE Books (
+    BookID INT PRIMARY KEY,
+    Title VARCHAR(100),
+    Author VARCHAR(50),
+    Price DECIMAL(8,2)
+);
 
 -- -- Create Members Table
 -- CREATE TABLE Members (
