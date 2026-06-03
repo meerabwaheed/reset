@@ -336,7 +336,7 @@ SELECT * FROM Student;
 
 -- -- Display Specific Columns
 SELECT Name, Department
-FROM Students;
+FROM Student;
 
 -- -- Update Record
 -- UPDATE Students
