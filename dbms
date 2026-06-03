@@ -339,7 +339,7 @@ SELECT Name, Department
 FROM Student;
 
 -- -- Update Record
-UPDATE Students
+UPDATE Student
 SET CGPA = 3.90
 WHERE StudentID = 2;
 
