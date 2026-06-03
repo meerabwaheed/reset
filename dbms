@@ -188,7 +188,7 @@ WHERE CGPA > 3.5;
 -- -- Update Student Record
 UPDATE Students
 SET CGPA = 3.95
-WHERE StudentID = 2;
+WHERE Student_ID = 2;
 
 -- -- Delete a Student Record
 DELETE FROM Students
