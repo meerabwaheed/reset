@@ -313,7 +313,7 @@
 CREATE DATABASE Student_DB;
 
 -- Use Database
--- USE StudentDB;
+USE StudentDB;
 
 -- -- Create Student Table
 -- CREATE TABLE Students (
