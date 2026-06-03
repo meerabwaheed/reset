@@ -353,9 +353,9 @@ FROM Student
 WHERE CGPA > 3.6;
 
 -- -- Sort Students by CGPA
--- SELECT *
--- FROM Students
--- ORDER BY CGPA DESC;
+SELECT *
+FROM Students
+ORDER BY CGPA DESC;
 
 -- -- Count Students
 -- SELECT COUNT(*) AS TotalStudents
