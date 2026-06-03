@@ -402,10 +402,10 @@ INSERT INTO Books VALUES
 (3, 'Web_Development', 'David stocker', 7200);
 
 -- -- Insert Data into Members
--- INSERT INTO Members VALUES
--- (1, 'Ali', '03001234567'),
--- (2, 'Sara', '03111234567'),
--- (3, 'Ahmed', '03221234567');
+INSERT INTO Members VALUES
+(1, 'Ali', '03001234567'),
+(2, 'Sara', '03111234567'),
+(3, 'Ahmed', '03221234567');
 
 -- -- Insert Data into BorrowRecords
 -- INSERT INTO BorrowRecords VALUES
