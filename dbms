@@ -325,11 +325,11 @@ CREATE TABLE Student (
 );
 
 -- -- Insert Records
--- INSERT INTO Students
--- VALUES
--- (1, 'Ali', 20, 'Computer Science', 3.50),
--- (2, 'Ahmed', 21, 'Software Engineering', 3.80),
--- (3, 'Sara', 19, 'Information Technology', 3.70);
+INSERT INTO Students
+VALUES
+(1, 'Ali', 20, 'Computer Science', 3.50),
+(2, 'Ahmed', 21, 'Software Engineering', 3.80),
+(3, 'Sara', 19, 'Information Technology', 3.70);
 
 -- -- Display All Students
 -- SELECT * FROM Students;
