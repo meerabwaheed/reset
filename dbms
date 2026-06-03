@@ -391,7 +391,7 @@ CREATE TABLE BorrowRecords (
     Book_ID INT,
     Borrow_Date DATE,
     Return_Date DATE,
-    FOREIGN KEY (MemberID) REFERENCES Members(MemberID),
+    FOREIGN KEY (Member_ID) REFERENCES Members(MemberID),
     FOREIGN KEY (BookID) REFERENCES Books(BookID)
 );
 
