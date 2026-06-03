@@ -404,7 +404,7 @@ INSERT INTO Books VALUES
 -- -- Insert Data into Members
 INSERT INTO Members VALUES
 (5, 'sadia', '03001234567'),
-(4, 'Sara', '03111234567'),
+(4, 'waheed', '03111234567'),
 (2, 'Ahmed', '03221234567');
 
 -- -- Insert Data into BorrowRecords
