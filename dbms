@@ -428,7 +428,7 @@ SELECT
     Members.Member_Name,
     Books.Title,
     BorrowRecords.Borrow_Date,
-    BorrowRecords.ReturnDate
+    BorrowRecords.Return_Date
 FROM BorrowRecords
 INNER JOIN Members
 ON BorrowRecords.MemberID = Members.MemberID
