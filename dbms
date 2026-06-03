@@ -421,7 +421,7 @@ SELECT * FROM Member;
 
 -- -- Show Borrow Details
 SELECT *
-FROM Borrow_Records;
+FROM Borrow_Record;
 
 -- -- Join Query
 -- SELECT
