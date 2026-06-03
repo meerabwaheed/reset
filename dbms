@@ -449,9 +449,9 @@ SELECT COUNT(*) AS Total_Books
 FROM Book;
 
 -- -- Find Expensive Books
--- SELECT *
--- FROM Books
--- WHERE Price > 1300;
+SELECT *
+FROM Books
+WHERE Price > 1300;
 
 -- -- Sort Books by Price
 -- SELECT *
