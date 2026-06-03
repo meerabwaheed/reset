@@ -410,7 +410,7 @@ INSERT INTO Members VALUES
 -- -- Insert Data into BorrowRecords
 INSERT INTO Borrow_Records VALUES
 (5, 5, 101, '2026-06-01', '2026-06-15'),
-(2, 2, 102, '2026-06-02', '2026-06-16'),
+(4, 2, 102, '2026-06-02', '2026-06-16'),
 (3, 3, 103, '2026-06-03', '2026-06-17');
 
 -- -- Show All Books
