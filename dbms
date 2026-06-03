@@ -316,7 +316,7 @@ CREATE DATABASE Student_DB;
 USE Student_DB;
 
 -- -- Create Student Table
-CREATE TABLE Students (
+CREATE TABLE Student (
     StudentID INT PRIMARY KEY,
     Name VARCHAR(50),
     Age INT,
