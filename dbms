@@ -316,13 +316,13 @@ CREATE DATABASE Student_DB;
 USE Student_DB;
 
 -- -- Create Student Table
--- CREATE TABLE Students (
---     StudentID INT PRIMARY KEY,
---     Name VARCHAR(50),
---     Age INT,
---     Department VARCHAR(50),
---     CGPA DECIMAL(3,2)
--- );
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Age INT,
+    Department VARCHAR(50),
+    CGPA DECIMAL(3,2)
+);
 
 -- -- Insert Records
 -- INSERT INTO Students
