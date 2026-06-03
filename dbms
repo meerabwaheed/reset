@@ -332,7 +332,7 @@ VALUES
 (2, 'Sara', 21, 'Information_Technology', 3.70);
 
 -- -- Display All Students
--- SELECT * FROM Students;
+SELECT * FROM Students;
 
 -- -- Display Specific Columns
 -- SELECT Name, Department
