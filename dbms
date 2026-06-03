@@ -358,5 +358,5 @@ FROM Student
 ORDER BY CGPA DESC;
 
 -- -- Count Students
-SELECT COUNT(*) AS TotalStudent
+SELECT COUNT(*) AS Total_Student
 FROM Student;
