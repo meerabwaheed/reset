@@ -392,7 +392,7 @@ CREATE TABLE BorrowRecords (
     Borrow_Date DATE,
     Return_Date DATE,
     FOREIGN KEY (Member_ID) REFERENCES Members(Member_ID),
-    FOREIGN KEY (BookID) REFERENCES Books(BookID)
+    FOREIGN KEY (Book_ID) REFERENCES Books(BookID)
 );
 
 -- -- Insert Data into Books
