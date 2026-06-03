@@ -378,7 +378,7 @@ CREATE TABLE Books (
 );
 
 -- -- Create Members Table
-CREATE TABLE Member (
+CREATE TABLE Members (
     Member_ID INT PRIMARY KEY,
     Member_Name VARCHAR(340),
     Phone VARCHAR(45)
