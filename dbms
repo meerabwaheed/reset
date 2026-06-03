@@ -432,7 +432,7 @@ SELECT
 FROM BorrowRecords
 INNER JOIN Members
 ON BorrowRecords.MemberID = Members.MemberID
-INNER JOIN Books
+INNER JOIN Book
 ON BorrowRecords.BookID = Books.BookID;
 
 -- -- Update Book Price
