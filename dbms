@@ -380,7 +380,7 @@ CREATE TABLE Books (
 -- -- Create Members Table
 CREATE TABLE Member (
     Member_ID INT PRIMARY KEY,
-    MemberName VARCHAR(50),
+    Member_Name VARCHAR(50),
     Phone VARCHAR(15)
 );
 
