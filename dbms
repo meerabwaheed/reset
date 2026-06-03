@@ -445,8 +445,8 @@ DELETE FROM Member
 WHERE Member_ID = 3;
 
 -- -- Count Total Books
--- SELECT COUNT(*) AS TotalBooks
--- FROM Books;
+SELECT COUNT(*) AS TotalBooks
+FROM Books;
 
 -- -- Find Expensive Books
 -- SELECT *
