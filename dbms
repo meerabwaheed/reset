@@ -436,9 +436,9 @@ INNER JOIN Book
 ON BorrowRecords.Book_ID = Books.BookID;
 
 -- -- Update Book Price
--- UPDATE Books
--- SET Price = 2000
--- WHERE BookID = 102;
+UPDATE Books
+SET Price = 2000
+WHERE BookID = 102;
 
 -- -- Delete a Member
 -- DELETE FROM Members
