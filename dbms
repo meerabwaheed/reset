@@ -450,7 +450,7 @@ FROM Book;
 
 -- -- Find Expensive Books
 SELECT *
-FROM Books
+FROM Book
 WHERE Price > 1300;
 
 -- -- Sort Books by Price
