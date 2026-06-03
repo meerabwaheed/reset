@@ -455,5 +455,5 @@ WHERE Price > 1300;
 
 -- -- Sort Books by Price
 SELECT *
-FROM Books
+FROM Book
 ORDER BY Price DESC;
