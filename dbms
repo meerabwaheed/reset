@@ -378,11 +378,11 @@ CREATE TABLE Books (
 );
 
 -- -- Create Members Table
--- CREATE TABLE Members (
---     MemberID INT PRIMARY KEY,
---     MemberName VARCHAR(50),
---     Phone VARCHAR(15)
--- );
+CREATE TABLE Members (
+    MemberID INT PRIMARY KEY,
+    MemberName VARCHAR(50),
+    Phone VARCHAR(15)
+);
 
 -- -- Create BorrowRecords Table
 -- CREATE TABLE BorrowRecords (
