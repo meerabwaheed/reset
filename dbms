@@ -310,7 +310,7 @@
 
 
 -- Create Database
-CREATE DATABASE StudentDB;
+CREATE DATABASE Student_DB;
 
 -- Use Database
 -- USE StudentDB;
