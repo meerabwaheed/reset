@@ -321,7 +321,7 @@ CREATE TABLE Student (
     Name VARCHAR(20),
     Age INT,
     Department VARCHAR(40),
-    CGPA DECIMAL(3,2)
+    CGPA DECIMAL(4,3.97)
 );
 
 -- -- Insert Records
