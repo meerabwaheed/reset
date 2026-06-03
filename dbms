@@ -437,8 +437,8 @@ ON BorrowRecords.Book_ID = Books.BookID;
 
 -- -- Update Book Price
 UPDATE Books
-SET Price = 2000
-WHERE Book_ID = 102;
+SET Price = 4000
+WHERE BookID = 102;
 
 -- -- Delete a Member
 -- DELETE FROM Members
