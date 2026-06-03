@@ -446,7 +446,7 @@ WHERE Member_ID = 3;
 
 -- -- Count Total Books
 SELECT COUNT(*) AS Total_Books
-FROM Books;
+FROM Book;
 
 -- -- Find Expensive Books
 -- SELECT *
