@@ -381,7 +381,7 @@ CREATE TABLE Books (
 CREATE TABLE Member (
     Member_ID INT PRIMARY KEY,
     Member_Name VARCHAR(340),
-    Phone VARCHAR(15)
+    Phone VARCHAR(45)
 );
 
 -- -- Create BorrowRecords Table
