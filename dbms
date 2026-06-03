@@ -441,7 +441,7 @@ SET Price = 4000
 WHERE BookID = 102;
 
 -- -- Delete a Member
-DELETE FROM Members
+DELETE FROM Member
 WHERE Member_ID = 3;
 
 -- -- Count Total Books
