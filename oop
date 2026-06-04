@@ -109,17 +109,17 @@ class Player : GameObject
     }
 
 //     // Return current score
-    public int Get_Score()
+    public int GetScore()
     {
         return score;
     }
 
 //     // Override Draw method
-//     public override char Draw()
-//     {
-//         return '@';
-//     }
-// }
+    public override char Draw()
+    {
+        return '@';
+    }
+}
 // // TREASURE CLASS
 // // INHERITANCE: Treasure inherits GameObject
 // // POLYMORPHISM: Draw() is overridden
