@@ -64,18 +64,18 @@ abstract class GameObject
     protected int y;        // Variables that belong to a class are called attributes (or fields in C#).
 
     // Constructor to initialize object position
-    public Game_Object(int x, int y) // these are parameters
+    public GameObject(int x, int y) // these are parameters
     {
         this.x = x;       //these are constructors
         this.y = y;      //these are constructors
     }
 
 //     // Properties for getting and setting X position
-//     public int X
-//     {
-//         get { return x; }
-//         set { x = value; }
-//     }
+    public int X
+    {
+        get { return x; }
+        set { x = value; }
+    }
 
 //     // Properties for getting and setting Y position
 //     public int Y
