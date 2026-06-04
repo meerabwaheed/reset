@@ -482,7 +482,7 @@ SELECT * FROM students ORDER BY AGE ASC;
 SELECT *FROM students ORDER BY AGE DESC;
 UPDATE students SET AGE = 12 WHERE ID = 1;
 DELETE FROM students WHERE ID = 1;
--- SELECT COUNT(*) AS TotalStudent FROM students;
+SELECT COUNT(*) AS TotalStudent FROM students;
 
 
 
