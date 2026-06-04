@@ -170,7 +170,7 @@ class TreasureHuntGame
 //     // Starts the game loop
     public void Start()
     {
-        bool isRunning = true;
+        bool is_Running = true;
 
         while (isRunning)
         {
