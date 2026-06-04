@@ -237,7 +237,7 @@ class TreasureHuntGame
         Console.Clear();
         Console.WriteLine("===============================");
         Console.WriteLine("          GAME OVER");
-        Console.WriteLine("===============================");
+        Console.WriteLine("================================");
         Console.WriteLine("Final Score: " + player.GetScore());
     }
     // Draws the board, player and treasure
@@ -283,7 +283,7 @@ class Program
         Console.Title = "Treasure Hunt Game";
 
         // Create game object
-        Treasure_Hunt_Game game = new TreasureHuntGame();
+        TreasureHuntGame game = new TreasureHuntGame();
 
         // Start game
         game.Start();
