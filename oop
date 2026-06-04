@@ -123,7 +123,7 @@ class Player : GameObject
 // // TREASURE CLASS
 // // INHERITANCE: Treasure inherits GameObject
 // // POLYMORPHISM: Draw() is overridden
-class Treasure : Game_Object
+class Treasure : GameObject
 {
     // Constructor
     public Treasure(int x, int y) : base(x, y)
@@ -131,11 +131,11 @@ class Treasure : Game_Object
     }
 
 //     // Draw treasure symbol on board
-//     public override char Draw()
-//     {
-//         return '*';
-//     }
-// }
+    public override char Draw()
+    {
+        return '*';
+    }
+}
 // // MAIN GAME CLASS
 // // Responsible for running the game logic
 // class TreasureHuntGame
