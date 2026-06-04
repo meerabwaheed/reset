@@ -283,7 +283,7 @@ class Program
         Console.Title = "Treasure Hunt Game";
 
         // Create game object
-        TreasureHuntGame game = new TreasureHuntGame();
+        Treasure_Hunt_Game game = new TreasureHuntGame();
 
         // Start game
         game.Start();
