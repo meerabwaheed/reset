@@ -216,7 +216,7 @@ class TreasureHuntGame
                     break;
 
                 case ConsoleKey.Q:
-                    isRunning = False;
+                    isRunning = false;
                     break;
             }
 
@@ -225,7 +225,7 @@ class TreasureHuntGame
                 player.Y == treasure.Y)
             {
                 // Increase score
-                player.AddScore();
+                player.Add_Score();
 
                 // Generate new treasure position
                 treasure.X = random.Next(1, Width - 1);
