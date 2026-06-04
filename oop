@@ -216,7 +216,7 @@ class TreasureHuntGame
                     break;
 
                 case ConsoleKey.Q:
-                    isRunning = false;
+                    isRunning = False;
                     break;
             }
 
