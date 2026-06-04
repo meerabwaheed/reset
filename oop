@@ -274,21 +274,21 @@ class TreasureHuntGame
         }
     }
 }
-// // PROGRAM CLASS
-// // Entry point of application
-// class Program
-// {
-//     static void Main()
-//     {
-//         Console.Title = "Treasure Hunt Game";
+// PROGRAM CLASS
+// Entry point of application
+class Program
+{
+    static void Main()
+    {
+        Console.title = "Treasure Hunt Game";
 
-//         // Create game object
-//         TreasureHuntGame game = new TreasureHuntGame();
+        // Create game object
+        TreasureHuntGame game = new TreasureHuntGame();
 
-//         // Start game
-//         game.Start();
-//     }
-// }
+        // Start game
+        game.Start();
+    }
+}
 
 
 
