@@ -280,7 +280,7 @@ class Program
 {
     static void Main()
     {
-        Console.title = "Treasure Hunt Game";
+        Console.Title = "Treasure Hunt Game";
 
         // Create game object
         TreasureHuntGame game = new TreasureHuntGame();
