@@ -138,20 +138,20 @@ class Treasure : GameObject
 }
 // // MAIN GAME CLASS
 // // Responsible for running the game logic
-// class TreasureHuntGame
-// {
-//     // Player object
-//     private Player player;
+class TreasureHuntGame
+{
+    // Player object
+    private Player player;
 
-//     // Treasure object
-//     private Treasure treasure;
+    // Treasure object
+    private Treasure treasure;
 
-//     // Random object for generating treasure locations
-//     private Random random;
+    // Random object for generating treasure locations
+    private Random random;
 
-//     // Board dimensions
-//     private const int Width = 20;
-//     private const int Height = 10;
+    // Board dimensions
+    private const int Width = 20;
+    private const int Height = 10;
 
 //     // Constructor
 //     public TreasureHuntGame()
