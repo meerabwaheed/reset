@@ -1,58 +1,289 @@
-// +----------------------+
-// |      Vehicle         |
-// +----------------------+
-// | - brand : string     |
-// | - speed : int        |
-// +----------------------+
-// | + ShowInfo()         |
-// +----------------------+
-//            ▲
-//            |
-// +----------------------+
-// |        Car           |
-// +----------------------+
-// | - doors : int        |
-// +----------------------+
-// | + Drive()            |
-// +----------------------+
-using System;
-class Vehicle
-{
-    private string brand;
-    private int speed;
-    public Vehicle(string brand,int speed)
-    {
-        this.brand = brand;
-        this.speed = speed;
-    }
-    public void showInfo()
-    {
-        Console.WriteLine("brand" + brand);
-        Console.WriteLine("speed:"+ speed);
-    }
-}
 
-class Car : Vehicle
-{
-    private int doors;
-   
-    public Car(int doors)
-    {
-        this.Car = Car;
-    }
-    public void Drive()
-    {
-        Console.WriteLine("car is driving");
-        Console.WriteLine("doors:"+ doors);
-    }
-}
-class program
-{
-    static void Main()
-    {
-        Car c1 = new Car("bmw",345,4);
-         c.ShowInfo();
-         c.Drive();
-         Console.WriteLine("this code is written by meerab waheed");
-    }
-}
+//                        +----------------------+
+//                        |      GameObject      |
+//                        +----------------------+
+//                        |     # x : int        |
+//                        |     # y : int        |
+//                        +----------------------+
+//                        |      +X : int        |
+//                        |     + Y : int        |
+//                        |    + Draw() : char   |
+//                        +----------------------+
+//                                      ▲
+//                                      │
+//                    ┌─────────────────┴─────────────────┐
+//                    │                                   │
+//                    │                                   │
+//          +---------------------+          +---------------------+
+//          |       Player        |          |      Treasure       |
+//          +---------------------+          +---------------------+
+//          | - score : int       |          |                     |
+//          +---------------------+          +---------------------+
+//          | + AddScore() : void |          | + Draw() : char     |
+//          | + GetScore() : int  |          +---------------------+
+//          | + Draw() : char     |
+//          +---------------------+
+
+//                                      ▲
+//                                      │
+//                                      │
+//                        +----------------------------+
+//                        |      TreasureHuntGame      |
+//                        +----------------------------+
+//                        |     - player : Player      |
+//                        |     -treasure : Treasure   |
+//                        |     -random : Random       |
+//                        |     -Width : int           |
+//                        |     - Height : int         |
+//                        +----------------------------+
+//                        | + Start() : void           |
+//                        | - DrawBoard() : void       |
+//                        +----------------------------+
+
+//                                      ▲
+//                                      │
+//                                      │
+//                            +------------------+
+//                            |     Program      |
+//                            +------------------+
+//                            | + Main() : void  |
+//                            +------------------+
+
+
+using System;
+
+
+// ABSTRACT CLASS (ABSTRACTION)
+// This class provides common properties (x, y)
+// and forces derived classes to implement Draw().
+
+// abstract class GameObject
+// {
+//     // Protected variables accessible in child classes
+//     protected int x;
+//     protected int y;
+
+//     // Constructor to initialize object position
+//     public GameObject(int x, int y)
+//     {
+//         this.x = x;
+//         this.y = y;
+//     }
+
+//     // Properties for getting and setting X position
+//     public int X
+//     {
+//         get { return x; }
+//         set { x = value; }
+//     }
+
+//     // Properties for getting and setting Y position
+//     public int Y
+//     {
+//         get { return y; }
+//         set { y = value; }
+//     }
+
+//     // Abstract method (must be overridden)
+//     public abstract char Draw();
+// }
+// // PLAYER CLASS
+// // INHERITANCE: Player inherits GameObject
+// // ENCAPSULATION: score is private
+// // POLYMORPHISM: Draw() is overridden
+// class Player : GameObject
+// {
+//     // Private data member (Encapsulation)
+//     private int score;
+
+//     // Constructor
+//     public Player(int x, int y) : base(x, y)
+//     {
+//         score = 0;
+//     }
+
+//     // Increase player score
+//     public void AddScore()
+//     {
+//         score += 10;
+//     }
+
+//     // Return current score
+//     public int GetScore()
+//     {
+//         return score;
+//     }
+
+//     // Override Draw method
+//     public override char Draw()
+//     {
+//         return '@';
+//     }
+// }
+// // TREASURE CLASS
+// // INHERITANCE: Treasure inherits GameObject
+// // POLYMORPHISM: Draw() is overridden
+// class Treasure : GameObject
+// {
+//     // Constructor
+//     public Treasure(int x, int y) : base(x, y)
+//     {
+//     }
+
+//     // Draw treasure symbol on board
+//     public override char Draw()
+//     {
+//         return '*';
+//     }
+// }
+// // MAIN GAME CLASS
+// // Responsible for running the game logic
+// class TreasureHuntGame
+// {
+//     // Player object
+//     private Player player;
+
+//     // Treasure object
+//     private Treasure treasure;
+
+//     // Random object for generating treasure locations
+//     private Random random;
+
+//     // Board dimensions
+//     private const int Width = 20;
+//     private const int Height = 10;
+
+//     // Constructor
+//     public TreasureHuntGame()
+//     {
+//         random = new Random();
+
+//         // Initial player position
+//         player = new Player(5, 5);
+
+//         // Random treasure position
+//         treasure = new Treasure(
+//             random.Next(1, Width - 1),
+//             random.Next(1, Height - 1)
+//         );
+//     }
+//     // Starts the game loop
+//     public void Start()
+//     {
+//         bool isRunning = true;
+
+//         while (isRunning)
+//         {
+//             Console.Clear();
+
+//             // Draw game board
+//             DrawBoard();
+
+//             Console.WriteLine("\nScore: " + player.GetScore());
+//             Console.WriteLine("Controls:");
+//             Console.WriteLine("W = Up");
+//             Console.WriteLine("S = Down");
+//             Console.WriteLine("A = Left");
+//             Console.WriteLine("D = Right");
+//             Console.WriteLine("Q = Quit");
+
+//             // Read keyboard input
+//             ConsoleKey key = Console.ReadKey(true).Key;
+
+//             // Move player according to key pressed
+//             switch (key)
+//             {
+//                 case ConsoleKey.W:
+//                     if (player.Y > 1)
+//                         player.Y--;
+//                     break;
+
+//                 case ConsoleKey.S:
+//                     if (player.Y < Height - 2)
+//                         player.Y++;
+//                     break;
+
+//                 case ConsoleKey.A:
+//                     if (player.X > 1)
+//                         player.X--;
+//                     break;
+
+//                 case ConsoleKey.D:
+//                     if (player.X < Width - 2)
+//                         player.X++;
+//                     break;
+
+//                 case ConsoleKey.Q:
+//                     isRunning = false;
+//                     break;
+//             }
+
+//             // Check if treasure is collected
+//             if (player.X == treasure.X &&
+//                 player.Y == treasure.Y)
+//             {
+//                 // Increase score
+//                 player.AddScore();
+
+//                 // Generate new treasure position
+//                 treasure.X = random.Next(1, Width - 1);
+//                 treasure.Y = random.Next(1, Height - 1);
+//             }
+//         }
+
+//         // Display final result
+//         Console.Clear();
+//         Console.WriteLine("=================================");
+//         Console.WriteLine("          GAME OVER");
+//         Console.WriteLine("=================================");
+//         Console.WriteLine("Final Score: " + player.GetScore());
+//     }
+//     // Draws the board, player and treasure
+//     private void DrawBoard()
+//     {
+//         for (int i = 0; i < Height; i++)
+//         {
+//             for (int j = 0; j < Width; j++)
+//             {
+//                 // Draw boundaries
+//                 if (i == 0 || i == Height - 1 ||
+//                     j == 0 || j == Width - 1)
+//                 {
+//                     Console.Write('#');
+//                 }
+//                 // Draw player
+//                 else if (i == player.Y && j == player.X)
+//                 {
+//                     Console.Write(player.Draw());
+//                 }
+//                 // Draw treasure
+//                 else if (i == treasure.Y && j == treasure.X)
+//                 {
+//                     Console.Write(treasure.Draw());
+//                 }
+//                 // Empty space
+//                 else
+//                 {
+//                     Console.Write(' ');
+//                 }
+//             }
+
+//             Console.WriteLine();
+//         }
+//     }
+// }
+// // PROGRAM CLASS
+// // Entry point of application
+// class Program
+// {
+//     static void Main()
+//     {
+//         Console.Title = "Treasure Hunt Game";
+
+//         // Create game object
+//         TreasureHuntGame game = new TreasureHuntGame();
+
+//         // Start game
+//         game.Start();
+//     }
+// }

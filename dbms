@@ -364,96 +364,96 @@
 
 
 -- Create Database
-CREATE DATABASE Library_DB;
+-- CREATE DATABASE Library_DB;
 
--- -- Use Database
-USE Library_DB;
+-- -- -- Use Database
+-- USE Library_DB;
 
--- -- Create Books Table
-CREATE TABLE Books (
-    BookID INT PRIMARY KEY,
-    Title VARCHAR(120),
-    Author VARCHAR(40),
-    Price DECIMAL(4,3)
-);
+-- -- -- Create Books Table
+-- CREATE TABLE Books (
+--     BookID INT PRIMARY KEY,
+--     Title VARCHAR(120),
+--     Author VARCHAR(40),
+--     Price DECIMAL(4,3)
+-- );
 
--- -- Create Members Table
-CREATE TABLE Members (
-    Member_ID INT PRIMARY KEY,
-    Member_Name VARCHAR(340),
-    Phone VARCHAR(45)
-);
+-- -- -- Create Members Table
+-- CREATE TABLE Members (
+--     Member_ID INT PRIMARY KEY,
+--     Member_Name VARCHAR(340),
+--     Phone VARCHAR(45)
+-- );
 
--- -- Create BorrowRecords Table
-CREATE TABLE BorrowRecords (
-    Borrow_ID INT PRIMARY KEY,
-    Member_ID INT,
-    Book_ID INT,
-    Borrow_Date DATE,
-    Return_Date DATE,
-    FOREIGN KEY (Member_ID) REFERENCES Members(Member_ID),
-    FOREIGN KEY (Book_ID) REFERENCES Books(Book_ID)
-);
+-- -- -- Create BorrowRecords Table
+-- CREATE TABLE BorrowRecords (
+--     Borrow_ID INT PRIMARY KEY,
+--     Member_ID INT,
+--     Book_ID INT,
+--     Borrow_Date DATE,
+--     Return_Date DATE,
+--     FOREIGN KEY (Member_ID) REFERENCES Members(Member_ID),
+--     FOREIGN KEY (Book_ID) REFERENCES Books(Book_ID)
+-- );
 
--- -- Insert Data into Books
-INSERT INTO Books VALUES
-(1, 'Database_Systems', 'Kevin', 1450),
-(2, 'C#_Programming', 'John smith', 4500),
-(3, 'Web_Development', 'David stocker', 7200);
+-- -- -- Insert Data into Books
+-- INSERT INTO Books VALUES
+-- (1, 'Database_Systems', 'Kevin', 1450),
+-- (2, 'C#_Programming', 'John smith', 4500),
+-- (3, 'Web_Development', 'David stocker', 7200);
 
--- -- Insert Data into Members
-INSERT INTO Members VALUES
-(5, 'sadia', '03501234567'),
-(4, 'waheed', '03216263400'),
-(2, 'meri mama jaan', '03221275889');
+-- -- -- Insert Data into Members
+-- INSERT INTO Members VALUES
+-- (5, 'sadia', '03501234567'),
+-- (4, 'waheed', '03216263400'),
+-- (2, 'meri mama jaan', '03221275889');
 
--- -- Insert Data into BorrowRecords
-INSERT INTO Borrow_Records VALUES
-(5, 5, 104, '2026-06-12', '2026-06-15'),
-(4, 4, 107, '2026-06-14', '2026-06-16'),
-(2, 2, 109, '2026-06-17', '2026-06-17');
+-- -- -- Insert Data into BorrowRecords
+-- INSERT INTO Borrow_Records VALUES
+-- (5, 5, 104, '2026-06-12', '2026-06-15'),
+-- (4, 4, 107, '2026-06-14', '2026-06-16'),
+-- (2, 2, 109, '2026-06-17', '2026-06-17');
 
--- -- Show All Books
-SELECT * FROM Book;
+-- -- -- Show All Books
+-- SELECT * FROM Book;
 
--- -- Show All Members
-SELECT * FROM Member;
+-- -- -- Show All Members
+-- SELECT * FROM Member;
 
--- -- Show Borrow Details
-SELECT *
-FROM Borrow_Record;
+-- -- -- Show Borrow Details
+-- SELECT *
+-- FROM Borrow_Record;
 
--- -- Join Query
-SELECT
-    Members.Member_Name,
-    Books.Title,
-    BorrowRecords.Borrow_Date,
-    BorrowRecords.Return_Date
-FROM BorrowRecords
-INNER JOIN Members
-ON BorrowRecords.Member_ID = Members.MemberID
-INNER JOIN Book
-ON BorrowRecords.Book_ID = Books.BookID;
+-- -- -- Join Query
+-- SELECT
+--     Members.Member_Name,
+--     Books.Title,
+--     BorrowRecords.Borrow_Date,
+--     BorrowRecords.Return_Date
+-- FROM BorrowRecords
+-- INNER JOIN Members
+-- ON BorrowRecords.Member_ID = Members.MemberID
+-- INNER JOIN Book
+-- ON BorrowRecords.Book_ID = Books.BookID;
 
--- -- Update Book Price
-UPDATE Books
-SET Price = 4000
-WHERE BookID = 102;
+-- -- -- Update Book Price
+-- UPDATE Books
+-- SET Price = 4000
+-- WHERE BookID = 102;
 
--- -- Delete a Member
-DELETE FROM Member
-WHERE Member_ID = 4;
+-- -- -- Delete a Member
+-- DELETE FROM Member
+-- WHERE Member_ID = 4;
 
--- -- Count Total Books
-SELECT COUNT(*) AS Total_Books
-FROM Book;
+-- -- -- Count Total Books
+-- SELECT COUNT(*) AS Total_Books
+-- FROM Book;
 
--- -- Find Expensive Books
-SELECT *
-FROM Book
-WHERE Price > 1300;
+-- -- -- Find Expensive Books
+-- SELECT *
+-- FROM Book
+-- WHERE Price > 1300;
 
--- -- Sort Books by Price
-SELECT *
-FROM Book
-ORDER BY Price DESC;
+-- -- -- Sort Books by Price
+-- SELECT *
+-- FROM Book
+-- ORDER BY Price DESC;
