@@ -235,7 +235,7 @@ class TreasureHuntGame
 
         // Display final result
         Console.Clear();
-        Console.WriteLine("=================================");
+        Console.WriteLine("===============================");
         Console.WriteLine("          GAME OVER");
         Console.WriteLine("=================================");
         Console.WriteLine("Final Score: " + player.GetScore());
