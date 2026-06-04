@@ -163,7 +163,7 @@ class TreasureHuntGame
 
         // Random treasure position
         treasure = new Treasure(
-            random.Next(2, Width - 2),
+            random.Next(1, Width - 2),
             random.Next(2, Height - 2)
         );
     }
