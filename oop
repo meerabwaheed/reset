@@ -172,7 +172,7 @@ class TreasureHuntGame
     {
         bool isRunning = true;
 
-        while (is_Running)
+        while (isRunning)
         {
             Console.Clear();
 
@@ -186,6 +186,8 @@ class TreasureHuntGame
             Console.WriteLine("A = Left");
             Console.WriteLine("D = Right");
             Console.WriteLine("Q = Quit");
+            Console.WriteLine("code is written by meerab +chatgpt");
+            //this code is written by meerab also with the help of chat gpt
 
 //             // Read keyboard input
 //             ConsoleKey key = Console.ReadKey(true).Key;
