@@ -85,22 +85,22 @@ abstract class GameObject
     }
 
 //     // Abstract method (must be overridden)
-    public abstract char Draw;
+    public abstract char Draw();
 }
 // // PLAYER CLASS
 // // INHERITANCE: Player inherits GameObject
 // // ENCAPSULATION: score is private
 // // POLYMORPHISM: Draw() is overridden
-// class Player : GameObject
-// {
-//     // Private data member (Encapsulation)
-//     private int score;
+class Player : GameObject
+{
+    // Private data member (Encapsulation)
+    private int score;
 
-//     // Constructor
-//     public Player(int x, int y) : base(x, y)
-//     {
-//         score = 0;
-//     }
+    // Constructor
+    public Player(int x, int y) : base(x, y)
+    {
+        score = 0;
+    }
 
 //     // Increase player score
 //     public void AddScore()
