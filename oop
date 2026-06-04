@@ -109,7 +109,7 @@ class Player : GameObject
     }
 
 //     // Return current score
-    public int GetScore()
+    public int Get_Score()
     {
         return score;
     }
