@@ -57,18 +57,18 @@ using System;
 // This class provides common properties (x, y)
 // and forces derived classes to implement Draw().
 
-// abstract class GameObject
-// {
-//     // Protected variables accessible in child classes
-//     protected int x;
-//     protected int y;
+abstract class GameObject
+{
+    // Protected variables accessible in child classes
+    protected int x;
+    protected int y;
 
-//     // Constructor to initialize object position
-//     public GameObject(int x, int y)
-//     {
-//         this.x = x;
-//         this.y = y;
-//     }
+    // Constructor to initialize object position
+    public GameObject(int x, int y)
+    {
+        this.x = x;
+        this.y = y;
+    }
 
 //     // Properties for getting and setting X position
 //     public int X
