@@ -457,3 +457,55 @@
 -- SELECT *
 -- FROM Book
 -- ORDER BY Price DESC;
+
+
+
+
+
+CREATE DATABASE home_db;
+-- USE home_db;
+-- CREATE TABLE students(
+--    id INT,
+--    name VARCHAR(20),
+--    age INT,
+--    salary DOUBLE
+-- );
+-- INSERT INTO students VALUES(1,'meerab',19,72000);
+-- INSERT INTO students VALUES(2,'aahil',12,2000);
+-- INSERT INTO students VALUES(3,'mahad',10,2000);
+-- INSERT INTO students VALUES(4,'faran',9,52000);
+-- SELECT * From students;
+-- SELECT * FROM students WHERE age > 8;
+-- UPDATE students SET Age = 10 WHERE ID = 4;
+-- SET SQL_SAFE_UPDATES = 0;
+-- SELECT * FROM students ORDER BY AGE ASC;
+-- SELECT *FROM students ORDER BY AGE DESC;
+-- UPDATE students SET AGE = 12 WHERE ID = 1;
+-- DELETE FROM students WHERE ID = 1;
+-- SELECT COUNT(*) AS TotalStudent FROM students;
+
+
+
+
+
+
+CREATE DATABASE misrishah_db; 
+USE misrishah_db;
+CREATE TABLE homies(
+    rest_id INT PRIMARY KEY,
+    name VARCHAR(20),
+    salary DOUBLE
+);
+INSERT INTO homies VALUES(1,'meerab',230000);
+
+
+
+
+
+
+
+
+
+
+
+
