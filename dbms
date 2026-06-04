@@ -475,7 +475,7 @@ INSERT INTO student VALUES(3,'aahil',12,2000);
 INSERT INTO student VALUES(2,'mahad',10,2000);
 INSERT INTO student VALUES(1,'faran',9,52000);
 SELECT * From student;
-SELECT * FROM students WHERE age > 8;
+SELECT * FROM student WHERE age > 8;
 UPDATE students SET Age = 12 WHERE ID = 4;
 SET SQL_SAFE_UPDATES = 0;
 SELECT * FROM students ORDER BY AGE ASC;
