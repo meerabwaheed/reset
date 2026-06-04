@@ -193,45 +193,45 @@ class TreasureHuntGame
             ConsoleKey key = Console.ReadKey(true).Key;
 
 //             // Move player according to key pressed
-//             switch (key)
-//             {
-//                 case ConsoleKey.W:
-//                     if (player.Y > 1)
-//                         player.Y--;
-//                     break;
+            switch (key)
+            {
+                case ConsoleKey.W:
+                    if (player.Y > 1)
+                        player.Y--;
+                    break;
 
-//                 case ConsoleKey.S:
-//                     if (player.Y < Height - 2)
-//                         player.Y++;
-//                     break;
+                case ConsoleKey.S:
+                    if (player.Y < Height - 2)
+                        player.Y++;
+                    break;
 
-//                 case ConsoleKey.A:
-//                     if (player.X > 1)
-//                         player.X--;
-//                     break;
+                case ConsoleKey.A:
+                    if (player.X > 1)
+                        player.X--;
+                    break;
 
-//                 case ConsoleKey.D:
-//                     if (player.X < Width - 2)
-//                         player.X++;
-//                     break;
+                case ConsoleKey.D:
+                    if (player.X < Width - 2)
+                        player.X++;
+                    break;
 
-//                 case ConsoleKey.Q:
-//                     isRunning = false;
-//                     break;
-//             }
+                case ConsoleKey.Q:
+                    isRunning = false;
+                    break;
+            }
 
-//             // Check if treasure is collected
-//             if (player.X == treasure.X &&
-//                 player.Y == treasure.Y)
-//             {
-//                 // Increase score
-//                 player.AddScore();
+            // Check if treasure is collected
+            if (player.X == treasure.X &&
+                player.Y == treasure.Y)
+            {
+                // Increase score
+                player.AddScore();
 
-//                 // Generate new treasure position
-//                 treasure.X = random.Next(1, Width - 1);
-//                 treasure.Y = random.Next(1, Height - 1);
-//             }
-//         }
+                // Generate new treasure position
+                treasure.X = random.Next(1, Width - 1);
+                treasure.Y = random.Next(1, Height - 1);
+            }
+        }
 
 //         // Display final result
 //         Console.Clear();
