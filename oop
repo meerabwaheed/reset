@@ -237,7 +237,7 @@ class TreasureHuntGame
         Console.Clear();
         Console.WriteLine("===============================");
         Console.WriteLine("          GAME OVER");
-        Console.WriteLine("=================================");
+        Console.WriteLine("===============================");
         Console.WriteLine("Final Score: " + player.GetScore());
     }
 //     // Draws the board, player and treasure
