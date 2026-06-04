@@ -3,12 +3,12 @@
 //                        |      GameObject      |
 //                        +----------------------+
 //                        |     # x : int        |
-//                        |     # y : int        |
+//                        |     # y : int        |          
 //                        +----------------------+
 //                        |      +X : int        |
 //                        |     + Y : int        |
 //                        |    + Draw() : char   |
-//                        +----------------------+
+//                        +----------------------+          
 //                                      ▲
 //                                      │
 //                    ┌─────────────────┴─────────────────┐
@@ -57,17 +57,17 @@ using System;
 // This class provides common properties (x, y)
 // and forces derived classes to implement Draw().
 
-abstract class Game_Object
+abstract class GameObject
 {
     // Protected variables accessible in child classes
-    protected int x;
-    protected int y;
+    protected int x;       //They are variables declared inside a class.
+    protected int y;        // Variables that belong to a class are called attributes (or fields in C#).
 
     // Constructor to initialize object position
-    public GameObject(int x, int y)
+    public Game_Object(int x, int y) // these are parameters
     {
-        this.x = x;
-        this.y = y;
+        this.x = x;       //these are constructors
+        this.y = y;      //these are constructors
     }
 
 //     // Properties for getting and setting X position
@@ -287,3 +287,14 @@ abstract class Game_Object
 //         game.Start();
 //     }
 // }
+
+
+
+
+// Symbol	Access Modifier
+// +	Public
+// -	Private
+// #	Protected
+// ~	Package/Internal    Mam hira sy pouchna haa k how it used
+
+// parameters or constructors pochny hain mam sy 
