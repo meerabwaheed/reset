@@ -57,7 +57,7 @@ using System;
 // This class provides common properties (x, y)
 // and forces derived classes to implement Draw().
 
-abstract class GameObject
+abstract class Game_Object
 {
     // Protected variables accessible in child classes
     protected int x;
