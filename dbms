@@ -318,7 +318,7 @@ USE Student_DB;
 -- -- Create Student Table
 CREATE TABLE Student (
     Student_ID INT PRIMARY KEY,
-    Name VARCHAR(100),
+    Name VARCHAR(50),
     Age INT,
     Department VARCHAR(50),
     CGPA DECIMAL(4,3.97)
