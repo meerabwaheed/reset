@@ -490,7 +490,7 @@ SELECT COUNT(*) AS Total_Student FROM student;
 
 
 CREATE DATABASE misrishahdb; 
-USE misrishah_db;
+USE misrishahdb;
 CREATE TABLE homies(
     rest_id INT PRIMARY KEY,
     name VARCHAR(20),
