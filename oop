@@ -85,8 +85,8 @@ abstract class GameObject
     }
 
 //     // Abstract method (must be overridden)
-//     public abstract char Draw();
-// }
+    public abstract char Draw();
+}
 // // PLAYER CLASS
 // // INHERITANCE: Player inherits GameObject
 // // ENCAPSULATION: score is private
@@ -298,3 +298,5 @@ abstract class GameObject
 // ~	Package/Internal    Mam hira sy pouchna haa k how it used
 
 // parameters or constructors pochny hain mam sy 
+//  public abstract char Draw(); how abstract method is override?
+//POLYMORPHISM: Draw() is overridden why this draw is overriden
