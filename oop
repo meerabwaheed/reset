@@ -103,10 +103,10 @@ class Player : GameObject
     }
 
 //     // Increase player score
-//     public void AddScore()
-//     {
-//         score += 10;
-//     }
+    public void AddScore()
+    {
+        score += 10;
+    }
 
 //     // Return current score
 //     public int GetScore()
