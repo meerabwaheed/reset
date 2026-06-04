@@ -442,7 +442,7 @@ WHERE BookID = 102;
 
 -- -- Delete a Member
 DELETE FROM Member
-WHERE Member_ID = 3;
+WHERE Member_ID = 4;
 
 -- -- Count Total Books
 SELECT COUNT(*) AS Total_Books
