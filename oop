@@ -85,7 +85,7 @@ abstract class GameObject
     }
 
 //     // Abstract method (must be overridden)
-    public abstract char Draw();
+    public abstract char Draw;
 }
 // // PLAYER CLASS
 // // INHERITANCE: Player inherits GameObject
