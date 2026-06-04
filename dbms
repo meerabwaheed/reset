@@ -464,7 +464,7 @@
 
 CREATE DATABASE home_db;
 USE home_db;
-CREATE TABLE students(
+CREATE TABLE student(
    id INT,
    name VARCHAR(20),
    age INT,
