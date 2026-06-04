@@ -123,12 +123,12 @@ class Player : GameObject
 // // TREASURE CLASS
 // // INHERITANCE: Treasure inherits GameObject
 // // POLYMORPHISM: Draw() is overridden
-// class Treasure : GameObject
-// {
-//     // Constructor
-//     public Treasure(int x, int y) : base(x, y)
-//     {
-//     }
+class Treasure : Game_Object
+{
+    // Constructor
+    public Treasure(int x, int y) : base(x, y)
+    {
+    }
 
 //     // Draw treasure symbol on board
 //     public override char Draw()
@@ -300,3 +300,4 @@ class Player : GameObject
 // parameters or constructors pochny hain mam sy 
 //  public abstract char Draw(); how abstract method is override?
 //POLYMORPHISM: Draw() is overridden why this draw is overriden
+//class traesure main inherit ker k : k baad paren class ka name use huwa haa but jab player class inherit hui ha parent sy to usky sath base ka key word use horaa ha
