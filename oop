@@ -168,24 +168,24 @@ class TreasureHuntGame
         );
     }
 //     // Starts the game loop
-//     public void Start()
-//     {
-//         bool isRunning = true;
+    public void Start()
+    {
+        bool isRunning = true;
 
-//         while (isRunning)
-//         {
-//             Console.Clear();
+        while (isRunning)
+        {
+            Console.Clear();
 
-//             // Draw game board
-//             DrawBoard();
+            // Draw game board
+            DrawBoard();
 
-//             Console.WriteLine("\nScore: " + player.GetScore());
-//             Console.WriteLine("Controls:");
-//             Console.WriteLine("W = Up");
-//             Console.WriteLine("S = Down");
-//             Console.WriteLine("A = Left");
-//             Console.WriteLine("D = Right");
-//             Console.WriteLine("Q = Quit");
+            Console.WriteLine("\nScore: " + player.GetScore());
+            Console.WriteLine("Controls:");
+            Console.WriteLine("W = Up");
+            Console.WriteLine("S = Down");
+            Console.WriteLine("A = Left");
+            Console.WriteLine("D = Right");
+            Console.WriteLine("Q = Quit");
 
 //             // Read keyboard input
 //             ConsoleKey key = Console.ReadKey(true).Key;
