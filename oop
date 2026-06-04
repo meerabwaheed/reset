@@ -190,7 +190,7 @@ class TreasureHuntGame
             //this code is written by meerab also with the help of chat gpt
 
 //             // Read keyboard input
-//             ConsoleKey key = Console.ReadKey(true).Key;
+            ConsoleKey key = Console.ReadKey(true).Key;
 
 //             // Move player according to key pressed
 //             switch (key)
