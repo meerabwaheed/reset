@@ -78,11 +78,11 @@ abstract class GameObject
     }
 
 //     // Properties for getting and setting Y position
-//     public int Y
-//     {
-//         get { return y; }
-//         set { y = value; }
-//     }
+    public int Y
+    {
+        get { return y; }
+        set { y = value; }
+    }
 
 //     // Abstract method (must be overridden)
 //     public abstract char Draw();
