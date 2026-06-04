@@ -243,7 +243,7 @@ class TreasureHuntGame
     // Draws the board, player and treasure
     private void DrawBoard()
     {
-        for (int i = 0; i < Height; i++)
+        for (int k = 0; k < Height; k++)
         {
             for (int j = 0; j < Width; j++)
             {
