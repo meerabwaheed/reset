@@ -225,7 +225,7 @@ class TreasureHuntGame
                 player.Y == treasure.Y)
             {
                 // Increase score
-                player.Add_Score();
+                player.AddScore();
 
                 // Generate new treasure position
                 treasure.X = random.Next(1, Width - 1);
@@ -233,13 +233,13 @@ class TreasureHuntGame
             }
         }
 
-//         // Display final result
-//         Console.Clear();
-//         Console.WriteLine("=================================");
-//         Console.WriteLine("          GAME OVER");
-//         Console.WriteLine("=================================");
-//         Console.WriteLine("Final Score: " + player.GetScore());
-//     }
+        // Display final result
+        Console.Clear();
+        Console.WriteLine("=================================");
+        Console.WriteLine("          GAME OVER");
+        Console.WriteLine("=================================");
+        Console.WriteLine("Final Score: " + player.GetScore());
+    }
 //     // Draws the board, player and treasure
 //     private void DrawBoard()
 //     {
