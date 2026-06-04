@@ -465,7 +465,7 @@
 CREATE DATABASE home_db;
 USE home_db;
 CREATE TABLE student(
-   id INT,
+   id INT PRIMARY KEY,
    name VARCHAR(50),
    age INT,
    salary DOUBLE
