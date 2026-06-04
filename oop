@@ -240,40 +240,40 @@ class TreasureHuntGame
         Console.WriteLine("===============================");
         Console.WriteLine("Final Score: " + player.GetScore());
     }
-//     // Draws the board, player and treasure
-//     private void DrawBoard()
-//     {
-//         for (int i = 0; i < Height; i++)
-//         {
-//             for (int j = 0; j < Width; j++)
-//             {
-//                 // Draw boundaries
-//                 if (i == 0 || i == Height - 1 ||
-//                     j == 0 || j == Width - 1)
-//                 {
-//                     Console.Write('#');
-//                 }
-//                 // Draw player
-//                 else if (i == player.Y && j == player.X)
-//                 {
-//                     Console.Write(player.Draw());
-//                 }
-//                 // Draw treasure
-//                 else if (i == treasure.Y && j == treasure.X)
-//                 {
-//                     Console.Write(treasure.Draw());
-//                 }
-//                 // Empty space
-//                 else
-//                 {
-//                     Console.Write(' ');
-//                 }
-//             }
+    // Draws the board, player and treasure
+    private void DrawBoard()
+    {
+        for (int i = 0; i < Height; i++)
+        {
+            for (int j = 0; j < Width; j++)
+            {
+                // Draw boundaries
+                if (i == 0 || i == Height - 1 ||
+                    j == 0 || j == Width - 1)
+                {
+                    Console.Write('#');
+                }
+                // Draw player
+                else if (i == player.Y && j == player.X)
+                {
+                    Console.Write(player.Draw());
+                }
+                // Draw treasure
+                else if (i == treasure.Y && j == treasure.X)
+                {
+                    Console.Write(treasure.Draw());
+                }
+                // Empty space
+                else
+                {
+                    Console.Write(' ');
+                }
+            }
 
-//             Console.WriteLine();
-//         }
-//     }
-// }
+            Console.WriteLine();
+        }
+    }
+}
 // // PROGRAM CLASS
 // // Entry point of application
 // class Program
