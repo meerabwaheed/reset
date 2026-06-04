@@ -170,9 +170,9 @@ class TreasureHuntGame
 //     // Starts the game loop
     public void Start()
     {
-        bool is_Running = true;
+        bool isRunning = true;
 
-        while (isRunning)
+        while (is_Running)
         {
             Console.Clear();
 
