@@ -138,7 +138,7 @@ class Treasure : GameObject
 }
 // // MAIN GAME CLASS
 // // Responsible for running the game logic
-class TreasureHuntGame
+class Treasure_HuntGame
 {
     // Player object
     private Player player;
