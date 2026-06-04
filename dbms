@@ -345,7 +345,7 @@ WHERE Student_ID = 2;
 
 -- -- Delete Record
 DELETE FROM Student
-WHERE Student_ID = 3;
+WHERE Student_ID = 4;
 
 -- -- Find Students with CGPA > 3.6
 SELECT *
