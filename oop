@@ -245,7 +245,7 @@ class TreasureHuntGame
     {
         for (int k = 0; k < Height; k++)
         {
-            for (int j = 0; j < Width; j++)
+            for (int i = 0; i < Width; i++)
             {
                 // Draw boundaries
                 if (i == 0 || i == Height - 1 ||
