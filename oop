@@ -109,10 +109,10 @@ class Player : GameObject
     }
 
 //     // Return current score
-//     public int GetScore()
-//     {
-//         return score;
-//     }
+    public int GetScore()
+    {
+        return score;
+    }
 
 //     // Override Draw method
 //     public override char Draw()
