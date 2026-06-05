@@ -12,7 +12,7 @@ CREATE TABLE Book (
 );
 
 -- -- Create Members Table
-CREATE TABLE Members (
+CREATE TABLE Member (
 
     Member_ID INT PRIMARY KEY,
     Name VARCHAR(30),
