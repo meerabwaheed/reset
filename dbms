@@ -361,8 +361,6 @@ ORDER BY CGPA DESC;
 SELECT COUNT(*) AS Total_Student
 FROM Student;
 
-
-
 Create Database
 CREATE DATABASE Library_DB;
 
