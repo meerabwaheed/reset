@@ -350,7 +350,7 @@ WHERE Student_ID = 4;
 -- -- Find Students with CGPA > 3.6
 SELECT *
 FROM Student
-WHERE CGPA > 3.6;
+WHERE CGPA > 3.46;
 
 -- -- Sort Students by CGPA
 SELECT *
