@@ -20,7 +20,7 @@ CREATE TABLE Member (
 );
 
 -- -- Create BorrowRecords Table
-CREATE TABLE BorrowRecords (
+CREATE TABLE BorrowRecord (
     Record_ID INT PRIMARY KEY,
     Member_ID INT,
     Book_ID INT,
