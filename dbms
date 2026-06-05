@@ -54,7 +54,7 @@ SELECT * FROM Members;
 -- -- Join Query
 SELECT M.Meerab, B.Title, BR.BorrowDate
 FROM BorrowRecords BR
-JOIN Members M ON BR.MemberID = M.MemberID
+JOIN Member M ON BR.MemberID = M.MemberID
 
 -- -- Delete a Book
 DELETE FROM Books
