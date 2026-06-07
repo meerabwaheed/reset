@@ -1,4 +1,3 @@
-
 //                        +----------------------+
 //                        |      GameObject      |
 //                        +----------------------+
@@ -53,11 +52,65 @@
 using System;
 
 
+// =====================================================
+// ISP (Interface Segregation Principle)
+// =====================================================
+// ISP kehta hai: "Ek badi interface banane ki bajaye,
+// choti choti specific interfaces banao."
+// Matlab har class ko sirf woh methods implement karne chahiye
+// jo usse actually zaroorat hain.
+//
+// Yahan hum 3 alag interfaces banate hain:
+// IDrawable  --> sirf Draw() ke liye
+// IMovable   --> sirf movement ke liye (X, Y properties)
+// IScoreable --> sirf score ke liye
+
+// IDrawable: Har woh cheez jo board pe draw ho sakti hai
+interface IDrawable
+{
+    char Draw();
+}
+
+// IMovable: Har woh cheez jis ki position change ho sakti hai
+interface IMovable
+{
+    int X { get; set; }
+    int Y { get; set; }
+}
+
+// IScoreable: Sirf Player ke liye — score track karna
+interface IScoreable
+{
+    void AddScore();
+    int GetScore();
+}
+
+// =====================================================
+// DIP (Dependency Inversion Principle)
+// =====================================================
+// DIP kehta hai: "High-level modules (TreasureHuntGame)
+// ko low-level classes (Player, Treasure) pe directly
+// depend nahi karna chahiye — balke abstractions
+// (interfaces) pe depend karna chahiye."
+//
+// Isliye hum IGameObject banate hain jo IDrawable
+// aur IMovable dono ko combine karta hai.
+// TreasureHuntGame ab Player/Treasure ki jagah
+// IGameObject use karega.
+
+interface IGameObject : IDrawable, IMovable
+{
+    // Combined interface for all game objects
+    // IDrawable se: Draw()
+    // IMovable se: X, Y
+}
+
+
 // ABSTRACT CLASS (ABSTRACTION)
 // This class provides common properties (x, y)
 // and forces derived classes to implement Draw().
 
-abstract class GameObject
+abstract class GameObject : IGameObject
 {
     // Protected variables accessible in child classes
     protected int x;       //They are variables declared inside a class.
@@ -70,28 +123,32 @@ abstract class GameObject
         this.y = y;      //these are constructors
     }
 
-//     // Properties for getting and setting X position
+    // Properties for getting and setting X position
     public int X
     {
         get { return x; }
         set { x = value; }
     }
 
-//     // Properties for getting and setting Y position
+    // Properties for getting and setting Y position
     public int Y
     {
         get { return y; }
         set { y = value; }
     }
 
-//     // Abstract method (must be overridden)
+    // Abstract method (must be overridden)
     public abstract char Draw();
 }
-// // PLAYER CLASS
-// // INHERITANCE: Player inherits GameObject
-// // ENCAPSULATION: score is private
-// // POLYMORPHISM: Draw() is overridden
-class Player : GameObject
+
+
+// PLAYER CLASS
+// INHERITANCE: Player inherits GameObject
+// ENCAPSULATION: score is private
+// POLYMORPHISM: Draw() is overridden
+// ISP: Player implements IScoreable separately
+//      because only Player needs score — Treasure does not
+class Player : GameObject, IScoreable
 {
     // Private data member (Encapsulation)
     private int score;
@@ -102,49 +159,69 @@ class Player : GameObject
         score = 0;
     }
 
-//     // Increase player score
-    public void Add_Score()
+    // Increase player score
+    public void AddScore()
     {
         score += 10;
     }
 
-//     // Return current score
+    // Return current score
     public int GetScore()
     {
         return score;
     }
 
-//     // Override Draw method
+    // Override Draw method
+    // POLYMORPHISM: Draw() is overridden
+    // Parent class (GameObject) ne abstract Draw() declare kiya tha
+    // Player apna khud ka symbol '@' return karta hai
     public override char Draw()
     {
         return '@';
     }
 }
-// // TREASURE CLASS
-// // INHERITANCE: Treasure inherits GameObject
-// // POLYMORPHISM: Draw() is overridden
+
+
+// TREASURE CLASS
+// INHERITANCE: Treasure inherits GameObject
+// POLYMORPHISM: Draw() is overridden
+// Note: Treasure IScoreable implement NAHI karta
+//       ISP ka yahi fayda hai — Treasure ko score ki zaroorat nahi
 class Treasure : GameObject
 {
     // Constructor
+    // INHERITANCE: base(x, y) se parent class ka constructor call hota hai
+    // Matlab Treasure apni position set karne ke liye
+    // GameObject ka constructor use karta hai
     public Treasure(int x, int y) : base(x, y)
     {
     }
 
-//     // Draw treasure symbol on board
+    // Draw treasure symbol on board
+    // POLYMORPHISM: Draw() is overridden
+    // Treasure apna symbol '*' return karta hai
     public override char Draw()
     {
         return '*';
     }
 }
-// // MAIN GAME CLASS
-// // Responsible for running the game logic
+
+
+// MAIN GAME CLASS
+// Responsible for running the game logic
+// DIP: Ab TreasureHuntGame IGameObject aur IScoreable
+//      interfaces use karta hai — directly Player ya
+//      Treasure class pe depend nahi karta
 class TreasureHuntGame
 {
-    // Player object
-    private Player player;
+    // DIP: IGameObject interface use kar rahe hain
+    //      directly Player/Treasure type nahi
+    private IGameObject player;
+    private IGameObject treasure;
 
-    // Treasure object
-    private Treasure treasure;
+    // IScoreable alag rakha — sirf score ke liye
+    // ISP: score ka kaam alag interface se
+    private IScoreable playerScore;
 
     // Random object for generating treasure locations
     private Random random;
@@ -153,21 +230,18 @@ class TreasureHuntGame
     private const int Width = 20;
     private const int Height = 10;
 
-//     // Constructor
-    public TreasureHuntGame()
+    // Constructor
+    // DIP: Player aur Treasure objects bahar se inject ho rahe hain
+    //      (Constructor Injection) — game class khud new nahi karta
+    public TreasureHuntGame(IGameObject player, IGameObject treasure, IScoreable playerScore)
     {
         random = new Random();
-
-        // Initial player position
-        player = new Player(5, 5);
-
-        // Random treasure position
-        treasure = new Treasure(
-            random.Next(1, Width - 1),
-            random.Next(1, Height - 1)
-        );
+        this.player = player;
+        this.treasure = treasure;
+        this.playerScore = playerScore;
     }
-//     // Starts the game loop
+
+    // Starts the game loop
     public void Start()
     {
         bool isRunning = true;
@@ -179,7 +253,7 @@ class TreasureHuntGame
             // Draw game board
             DrawBoard();
 
-            Console.WriteLine("\nScore: " + player.GetScore());
+            Console.WriteLine("\nScore: " + playerScore.GetScore());
             Console.WriteLine("Controls:");
             Console.WriteLine("W = Up");
             Console.WriteLine("S = Down");
@@ -189,10 +263,10 @@ class TreasureHuntGame
             Console.WriteLine("code is written by meerab +chatgpt");
             //this code is written by meerab also with the help of chat gpt
 
-//             // Read keyboard input
+            // Read keyboard input
             ConsoleKey key = Console.ReadKey(true).Key;
 
-//             // Move player according to key pressed
+            // Move player according to key pressed
             switch (key)
             {
                 case ConsoleKey.W:
@@ -225,7 +299,7 @@ class TreasureHuntGame
                 player.Y == treasure.Y)
             {
                 // Increase score
-                player.AddScore();
+                playerScore.AddScore();
 
                 // Generate new treasure position
                 treasure.X = random.Next(1, Width - 1);
@@ -238,28 +312,31 @@ class TreasureHuntGame
         Console.WriteLine("===============================");
         Console.WriteLine("          GAME OVER");
         Console.WriteLine("================================");
-        Console.WriteLine("Final Score: " + player.GetScore());
+        Console.WriteLine("Final Score: " + playerScore.GetScore());
     }
+
     // Draws the board, player and treasure
     private void DrawBoard()
     {
-        for (int k = 0; k < Height; k++)
+        // Bug Fix: outer loop variable 'row', inner loop variable 'col'
+        // Pehle 'k' aur 'i' tha bahar, aur 'i' aur 'j' andar — mismatch tha
+        for (int row = 0; row < Height; row++)
         {
-            for (int i = 0; i < Width; i++)
+            for (int col = 0; col < Width; col++)
             {
                 // Draw boundaries
-                if (i == 0 || i == Height - 1 ||
-                    j == 0 || j == Width - 1)
+                if (row == 0 || row == Height - 1 ||
+                    col == 0 || col == Width - 1)
                 {
                     Console.Write('#');
                 }
                 // Draw player
-                else if (i == player.Y && j == player.X)
+                else if (row == player.Y && col == player.X)
                 {
                     Console.Write(player.Draw());
                 }
                 // Draw treasure
-                else if (i == treasure.Y && j == treasure.X)
+                else if (row == treasure.Y && col == treasure.X)
                 {
                     Console.Write(treasure.Draw());
                 }
@@ -274,6 +351,8 @@ class TreasureHuntGame
         }
     }
 }
+
+
 // PROGRAM CLASS
 // Entry point of application
 class Program
@@ -282,8 +361,17 @@ class Program
     {
         Console.Title = "Treasure Hunt Game";
 
-        // Create game object
-        TreasureHuntGame game = new TreasureHuntGame();
+        // DIP: Player aur Treasure objects yahan banate hain
+        //      aur TreasureHuntGame mein inject karte hain
+        //      Game class ko pata nahi k concrete class kaun si hai
+        Player player = new Player(5, 5);
+        Treasure treasure = new Treasure(
+            new Random().Next(1, 18),
+            new Random().Next(1, 8)
+        );
+
+        // Create game object — interfaces pass kar rahe hain
+        TreasureHuntGame game = new TreasureHuntGame(player, treasure, player);
 
         // Start game
         game.Start();
@@ -291,15 +379,13 @@ class Program
 }
 
 
-
-
-// Symbol	Access Modifier
-// +	Public
-// -	Private
-// #	Protected
-// ~	Package/Internal    Mam hira sy pouchna haa k how it used
+// Symbol   Access Modifier
+// +        Public
+// -        Private
+// #        Protected
+// ~        Package/Internal    Mam hira sy pouchna haa k how it used
 
 // parameters or constructors pochny hain mam sy 
 //  public abstract char Draw(); how abstract method is override?
-//POLYMORPHISM: Draw() is overridden why this draw is overriden
-//class traesure main inherit ker k : k baad paren class ka name use huwa haa but jab player class inherit hui ha parent sy to usky sath base ka key word use horaa ha
+// POLYMORPHISM: Draw() is overridden why this draw is overriden
+// class traesure main inherit ker k : k baad paren class ka name use huwa haa but jab player class inherit hui ha parent sy to usky sath base ka key word use horaa ha
