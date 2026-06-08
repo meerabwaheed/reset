@@ -496,6 +496,25 @@ CREATE TABLE homies(
 );
 INSERT INTO homies VALUES(1,'meerab',230000);
 
+CREATE DATABASE homie_db;
+USE homie_db;
+CREATE TABLE students(
+   id INT PRIMARY KEY,
+   name VARCHAR(20),
+   age INT,
+   salary DOUBLE
+);
+CREATE TABLE homes(
+    id INT PRIMARY KEY,
+    name VARCHAR(20),
+    salary DOUBLE
+);
+SELECT S.student_ID,S.student_NAME,
+H.homes_NAME
+FROM students S
+LEFT JOIN students S
+ON S.home_ID = H.homes_ID
+
 
 
 
