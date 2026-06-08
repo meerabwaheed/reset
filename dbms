@@ -494,7 +494,7 @@ CREATE TABLE homies(
     name VARCHAR(20),
     salary DOUBLE
 );
-INSERT INTO homies VALUES(1,'meerab',230000);
+INSERT INTO homies VALUES(1,'balach',230000);
 
 CREATE DATABASE homie_db;
 USE homie_db;
