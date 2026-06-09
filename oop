@@ -79,7 +79,7 @@ interface IMovable
 }
 
 // IScoreable: Sirf Player ke liye — score track karna
-interface I_Scoreable
+interface IScoreable
 {
     void AddScore();
     int GetScore();
@@ -98,7 +98,7 @@ interface I_Scoreable
 // TreasureHuntGame ab Player/Treasure ki jagah
 // IGameObject use karega.
 
-interface IGameObject : IDrawable, IMovable
+interface I_GameObject : IDrawable, IMovable
 {
     // Combined interface for all game objects
     // IDrawable se: Draw()
