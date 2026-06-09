@@ -332,20 +332,20 @@ VALUES
 (3, 'Sara', 21, 'Information_Technology', 3.70);
 
 -- -- Display All Students
-SELECT * FROM Student;
+-- SELECT * FROM Student;
 
--- -- Display Specific Columns
-SELECT Name, Department
-FROM Student;
+-- -- -- Display Specific Columns
+-- SELECT Name, Department
+-- FROM Student;
 
--- -- Update Record
-UPDATE Student
-SET CGPA = 3.90
-WHERE Student_ID = 19;
+-- -- -- Update Record
+-- UPDATE Student
+-- SET CGPA = 3.90
+-- WHERE Student_ID = 19;
 
--- -- Delete Record
-DELETE FROM Student
-WHERE Student_ID = 4;
+-- -- -- Delete Record
+-- DELETE FROM Student
+-- WHERE Student_ID = 4;
 
 -- -- Find Students with CGPA > 3.6
 SELECT *
