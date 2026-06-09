@@ -327,7 +327,7 @@ CREATE TABLE Student (
 -- -- Insert Records
 INSERT INTO Student
 VALUES
-(1, 'Ali', 19, 'Computer_Science', 3.50),
+(1, 'Ali', 29, 'Computer_Science', 3.50),
 (2, 'Ahmed', 20, 'Software_Engineering', 3.80),
 (3, 'Sara', 21, 'Information_Technology', 3.70);
 
