@@ -422,16 +422,16 @@ SELECT *
 FROM Borrow_Record;
 
 -- -- Join Query
-SELECT
-    Members.Member_Name,
-    Books.Title,
-    BorrowRecords.Borrow_Date,
-    BorrowRecords.Return_Date
-FROM BorrowRecords
-INNER JOIN Members
-ON BorrowRecords.Member_ID = Members.MemberID
-INNER JOIN Book
-ON BorrowRecords.Book_ID = Books.BookID;
+-- SELECT
+--     Members.Member_Name,
+--     Books.Title,
+--     BorrowRecords.Borrow_Date,
+--     BorrowRecords.Return_Date
+-- FROM BorrowRecords
+-- INNER JOIN Members
+-- ON BorrowRecords.Member_ID = Members.MemberID
+-- INNER JOIN Book
+-- ON BorrowRecords.Book_ID = Books.BookID;
 
 -- -- Update Book Price
 UPDATE Books
