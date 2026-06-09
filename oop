@@ -383,9 +383,8 @@ class Program
 // +        Public
 // -        Private
 // #        Protected
-// ~        Package/Internal    Mam hira sy pouchna haa k how it used
+// ~        Package/Internal    Mam hira sy pouchna haa 
 
-// parameters or constructors pochny hain mam sy 
 //  public abstract char Draw(); how abstract method is override?
 // POLYMORPHISM: Draw() is overridden why this draw is overriden
 // class traesure main inherit ker k : k baad paren class ka name use huwa haa but jab player class inherit hui ha parent sy to usky sath base ka key word use horaa ha
