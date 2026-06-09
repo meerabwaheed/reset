@@ -344,8 +344,8 @@ SET CGPA = 3.90
 WHERE Student_ID = 19;
 
 -- -- -- Delete Record
--- DELETE FROM Student
--- WHERE Student_ID = 4;
+DELETE FROM Student
+WHERE Student_ID = 4;
 
 -- -- Find Students with CGPA > 3.6
 SELECT *
