@@ -79,11 +79,11 @@ interface IMovable
 }
 
 // IScoreable: Sirf Player ke liye — score track karna
-interface IScoreable
-{
-    void AddScore();
-    int GetScore();
-}
+// interface IScoreable
+// {
+//     void AddScore();
+//     int GetScore();
+// }
 
 // =====================================================
 // DIP (Dependency Inversion Principle)
