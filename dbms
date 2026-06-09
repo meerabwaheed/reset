@@ -331,8 +331,8 @@ VALUES
 (2, 'Ahmed', 20, 'Software_Engineering', 3.80),
 (3, 'Sara', 21, 'Information_Technology', 3.70);
 
--- -- Display All Students
--- SELECT * FROM Student;
+-- Display All Students
+SELECT * FROM Student;
 
 -- -- -- Display Specific Columns
 -- SELECT Name, Department
