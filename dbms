@@ -395,15 +395,15 @@ CREATE TABLE BorrowRecords (
 
 -- -- Insert Data into Books
 INSERT INTO Books VALUES
-(1, 'Database_Systems', 'Kevin', 1450),
+(5, 'Database_Systems', 'Kevin', 1450),
 (2, 'C#_Programming', 'John smith', 4500),
 (3, 'Web_Development', 'David stocker', 7200);
 
 -- -- Insert Data into Members
-INSERT INTO Members VALUES
-(5, 'sadia', '03501234567'),
-(4, 'waheed', '03216263400'),
-(2, 'meri mama jaan', '03221275889');
+-- INSERT INTO Members VALUES
+-- (5, 'sadia', '03501234567'),
+-- (4, 'waheed', '03216263400'),
+-- (2, 'meri mama jaan', '03221275889');
 
 -- -- Insert Data into BorrowRecords
 INSERT INTO Borrow_Records VALUES
