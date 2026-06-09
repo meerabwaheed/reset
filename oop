@@ -98,7 +98,7 @@ interface IScoreable
 // TreasureHuntGame ab Player/Treasure ki jagah
 // IGameObject use karega.
 
-interface I_GameObject : IDrawable, IMovable
+interface IGameObject : I_Drawable, IMovable
 {
     // Combined interface for all game objects
     // IDrawable se: Draw()
