@@ -96,9 +96,9 @@ interface IScoreable
 // Isliye hum IGameObject banate hain jo IDrawable
 // aur IMovable dono ko combine karta hai.
 // TreasureHuntGame ab Player/Treasure ki jagah
-// IGameObject use karega.
+// IGameObject use karega
 
-interface IGameObject : IDrawable, I_Movable
+interface IGameObject : IDrawable, IMovable
 {
     // Combined interface for all game objects
     // IDrawable se: Draw()
