@@ -72,7 +72,7 @@ interface IDrawable
 }
 
 // IMovable: Har woh cheez jis ki position change ho sakti hai
-interface IMovable
+interface I_Movable
 {
     int X { get; set; }
     int Y { get; set; }
