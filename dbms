@@ -339,9 +339,9 @@ SELECT Name, Department
 FROM Student;
 
 -- -- -- Update Record
--- UPDATE Student
--- SET CGPA = 3.90
--- WHERE Student_ID = 19;
+UPDATE Student
+SET CGPA = 3.90
+WHERE Student_ID = 19;
 
 -- -- -- Delete Record
 -- DELETE FROM Student
