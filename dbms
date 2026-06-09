@@ -328,7 +328,7 @@ CREATE TABLE Student (
 INSERT INTO Student
 VALUES
 (1, 'Ali', 29, 'Computer_Science', 3.55);
-(2, 'Ahmed', 23, 'Software_Engineering', 3.88),
+(2, 'Ahmed', 23, 'Software_Engineering', 3.88);
 (3, 'Sara', 22, 'Information_Technology', 3.77);
 
 -- Display All Students
