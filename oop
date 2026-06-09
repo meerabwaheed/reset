@@ -72,14 +72,14 @@ interface IDrawable
 }
 
 // IMovable: Har woh cheez jis ki position change ho sakti hai
-interface I_Movable
+interface IMovable
 {
     int X { get; set; }
     int Y { get; set; }
 }
 
 // IScoreable: Sirf Player ke liye — score track karna
-interface IScoreable
+interface I_Scoreable
 {
     void AddScore();
     int GetScore();
