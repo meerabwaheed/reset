@@ -479,7 +479,7 @@ CREATE TABLE student(
 -- SELECT * FROM student ORDER BY AGE ASC;
 -- SELECT *FROM student ORDER BY AGE DESC;
 -- UPDATE students SET AGE = 15 WHERE ID = 3;
--- DELETE FROM student WHERE ID = 4;
+DELETE FROM student WHERE ID = 4;
 SELECT COUNT(*) AS Total_Student FROM student;
 
 
