@@ -475,7 +475,7 @@ CREATE TABLE student(
 -- SELECT * From student;
 -- SELECT * FROM student WHERE age > 8;
 -- UPDATE students SET Age = 12 WHERE ID = 4;
--- SET SQL_SAFE_UPDATES = 0;
+SET SQL_SAFE_UPDATES = 0;
 SELECT * FROM student ORDER BY AGE ASC;
 SELECT *FROM student ORDER BY AGE DESC;
 UPDATE students SET AGE = 15 WHERE ID = 3;
