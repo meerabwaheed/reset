@@ -468,9 +468,9 @@ CREATE TABLE student(
    age INT,
    salary DOUBLE
 );
--- INSERT INTO student VALUES(4,'meerab',19,72000);
--- INSERT INTO student VALUES(3,'aahil',12,2000);
--- INSERT INTO student VALUES(2,'mahad',10,2000);
+INSERT INTO student VALUES(4,'meerab',19,72000);
+INSERT INTO student VALUES(3,'aahil',12,2000);
+INSERT INTO student VALUES(2,'mahad',10,2000);
 INSERT INTO student VALUES(1,'faran',9,52000);
 SELECT * From student;
 SELECT * FROM student WHERE age > 8;
