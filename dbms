@@ -519,7 +519,50 @@ ON S.home_ID = H.homes_ID
 
 
 
+-- Create Database
+CREATE DATABASE student_dbs;
 
+-- Use Database
+USE student_db;
+
+-- Create Student Table
+CREATE TABLE Student (
+    Student_ID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Age INT,
+    CGPA DECIMAL(4,2)
+);
+
+-- Create Department Table
+CREATE TABLE Department (
+    Department_ID INT PRIMARY KEY,
+    Department_Name VARCHAR(50)
+);
+
+-- Insert Data into Student Table
+INSERT INTO Student VALUES
+(101, 'Ali', 20, 3.75),
+(102, 'Ahmed', 21, 3.50),
+(103, 'Sara', 19, 3.90);
+
+-- Insert Data into Department Table
+INSERT INTO Department VALUES
+(1, 'Computer Science'),
+(2, 'Software Engineering'),
+(3, 'Information Technology');
+
+-- Display Tables
+SELECT * FROM Student;
+SELECT * FROM Department;
+
+-- CROSS JOIN Query
+SELECT
+    S.Student_ID,
+    S.Name,
+    D.Department_ID,
+    D.Department_Name
+FROM Student S
+CROSS JOIN Department D;
 
 
 
