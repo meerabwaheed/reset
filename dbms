@@ -494,7 +494,7 @@ CREATE TABLE homies(
     name VARCHAR(20),
     salary DOUBLE
 );
-INSERT INTO homies VALUES(1,',230000);
+-- INSERT INTO homies VALUES(1,',230000);
 
 CREATE DATABASE homie_db;
 USE homie_db;
@@ -523,7 +523,7 @@ ON S.home_ID = H.homes_ID
 CREATE DATABASE student_dbs;
 
 -- Use Database
--- USE student_db;
+USE student_db;
 
 -- Create Student Table
 CREATE TABLE Student (
@@ -539,11 +539,11 @@ CREATE TABLE Department (
     Department_Name VARCHAR(50)
 );
 
--- -- Insert Data into Student Table
--- INSERT INTO Student VALUES
--- (1, 'Ali', 20, 3.75),
--- (2, 'Ahmed', 21, 3.50),
--- (3, 'Sara', 19, 3.90);
+-- Insert Data into Student Table
+INSERT INTO Student VALUES
+(1, 'Ali', 20, 3.75),
+(2, 'Ahmed', 21, 3.50),
+(3, 'Sara', 19, 3.90);
 
 -- Insert Data into Department Table
 INSERT INTO Department VALUES
