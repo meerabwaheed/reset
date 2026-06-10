@@ -530,7 +530,7 @@ CREATE TABLE Student (
     Student_ID INT PRIMARY KEY,
     Name VARCHAR(30),
     Age INT,
-    CGPA DECIMAL(4,2)
+    CGPA DECIMAL(3.9)
 );
 
 -- Create Department Table
