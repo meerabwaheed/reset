@@ -523,7 +523,7 @@ ON S.home_ID = H.homes_ID
 CREATE DATABASE student_dbs;
 
 -- Use Database
-USE student_db;
+-- USE student_db;
 
 -- Create Student Table
 CREATE TABLE Student (
