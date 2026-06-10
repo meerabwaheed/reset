@@ -539,17 +539,17 @@ CREATE TABLE Department (
     Department_Name VARCHAR(50)
 );
 
--- Insert Data into Student Table
-INSERT INTO Student VALUES
-(101, 'Ali', 20, 3.75),
-(102, 'Ahmed', 21, 3.50),
-(103, 'Sara', 19, 3.90);
+-- -- Insert Data into Student Table
+-- INSERT INTO Student VALUES
+-- (101, 'Ali', 20, 3.75),
+-- (102, 'Ahmed', 21, 3.50),
+-- (103, 'Sara', 19, 3.90);
 
--- Insert Data into Department Table
-INSERT INTO Department VALUES
-(1, 'Computer Science'),
-(2, 'Software Engineering'),
-(3, 'Information Technology');
+-- -- Insert Data into Department Table
+-- INSERT INTO Department VALUES
+-- (1, 'Computer Science'),
+-- (2, 'Software Engineering'),
+-- (3, 'Information Technology');
 
 -- Display Tables
 SELECT * FROM Student;
