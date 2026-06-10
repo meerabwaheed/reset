@@ -542,7 +542,7 @@ CREATE TABLE Department (
 -- -- Insert Data into Student Table
 -- INSERT INTO Student VALUES
 -- (1, 'Ali', 20, 3.75),
--- (102, 'Ahmed', 21, 3.50),
+-- (2, 'Ahmed', 21, 3.50),
 -- (103, 'Sara', 19, 3.90);
 
 -- Insert Data into Department Table
