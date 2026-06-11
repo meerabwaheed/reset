@@ -507,7 +507,7 @@ class Program {
 
 
 
-interface IShape {
+interface I_Shape {
     void Draw();
 }
 
