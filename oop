@@ -469,12 +469,12 @@ interface IWorker {
     void Work();
 }
 
-// class Person {
-//     public string Name { get; set; }
-//     public Person(string name) {
-//         Name = name;
-//     }
-// }
+class Person {
+    public string Name { get; set; }
+    public Person(string name) {
+        Name = name;
+    }
+}
 
 // class Engineer : Person, IWorker {
 //     public Engineer(string name) : base(name) {}
