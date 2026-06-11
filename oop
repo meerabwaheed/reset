@@ -392,30 +392,30 @@
 
 
 
-class Parent
-{
-    public void Show()
-    {
-        Console.WriteLine("Parent Show");
-    }
-}
+// class Parent
+// {
+//     public void Show()
+//     {
+//         Console.WriteLine("Parent Show");
+//     }
+// }
 
-class Child : Parent
-{
-    public new void Show()
-    {
-        Console.WriteLine("Child Show");
-    }
-}
+// class Child : Parent
+// {
+//     public new void Show()
+//     {
+//         Console.WriteLine("Child Show");
+//     }
+// }
 
-class Program
-{
-    static void Main()
-    {
-        Parent p = new Child();
-        p.Show();
-    }
-}
+// class Program
+// {
+//     static void Main()
+//     {
+//         Parent p = new Child();
+//         p.Show();
+//     }
+// }
 
 
 
@@ -452,14 +452,14 @@ class Car : Vehicle
     }
 }
 
-// class Program
-// {
-//     static void Main()
-//     {
-//         Vehicle v = new Car();
-//         v.Start();
-//     }
-// }
+class Program
+{
+    static void Main()
+    {
+        Vehicle v = new Car();
+        v.Start();
+    }
+}
 
 
 
