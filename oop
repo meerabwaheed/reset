@@ -400,13 +400,13 @@ class Parent
     }
 }
 
-// class Child : Parent
-// {
-//     public new void Show()
-//     {
-//         Console.WriteLine("Child Show");
-//     }
-// }
+class Child : Parent
+{
+    public new void Show()
+    {
+        Console.WriteLine("Child Show");
+    }
+}
 
 // class Program
 // {
