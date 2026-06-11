@@ -438,19 +438,19 @@ class Vehicle
     }
 }
 
-// class Car : Vehicle
-// {
-//     protected int speed;
-//     public Car() : base("Default Car")
-//     {
-//         speed = 100;
-//         Console.WriteLine("Car Created");
-//     }
-//     public override void Start()
-//     {
-//         Console.WriteLine("Car is moving at speed " + speed);
-//     }
-// }
+class Car : Vehicle
+{
+    protected int speed;
+    public Car() : base("Default Car")
+    {
+        speed = 100;
+        Console.WriteLine("Car Created");
+    }
+    public override void Start()
+    {
+        Console.WriteLine("Car is moving at speed " + speed);
+    }
+}
 
 // class Program
 // {
@@ -502,6 +502,7 @@ class Program {
         }
     }
 }
+
 
 
 
