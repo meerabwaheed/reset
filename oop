@@ -483,12 +483,12 @@ class Engineer : Person, IWorker {
     }
 }
 
-// class Doctor : Person, IWorker {
-//     public Doctor(string name) : base(name) {}
-//     public void Work() {
-//         Console.WriteLine(Name + " is treating patients.");
-//     }
-// }
+class Doctor : Person, IWorker {
+    public Doctor(string name) : base(name) {}
+    public void Work() {
+        Console.WriteLine(Name + " is treating patients.");
+    }
+}
 
 // class Program {
 //     static void Main() {
