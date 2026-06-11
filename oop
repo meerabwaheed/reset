@@ -511,22 +511,22 @@ interface IShape {
     void Draw();
 }
 
-class Shape {
-    protected string type = "Shape";
+// class Shape {
+//     protected string type = "Shape";
 
-    public Shape() {
-        Console.WriteLine("Shape Created");
-    }
+//     public Shape() {
+//         Console.WriteLine("Shape Created");
+//     }
 
-    public Shape(string type) {
-        this.type = type;
-        Console.WriteLine("Shape: " + type);
-    }
+//     public Shape(string type) {
+//         this.type = type;
+//         Console.WriteLine("Shape: " + type);
+//     }
 
-    public void Describe() {
-        Console.WriteLine("This is a " + type);
-    }
-}
+//     public void Describe() {
+//         Console.WriteLine("This is a " + type);
+//     }
+// }
 
 // class Circle : Shape, IShape {
 //     public Circle() : base("Circle") {
