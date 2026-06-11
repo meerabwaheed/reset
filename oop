@@ -528,19 +528,19 @@ class Shape {
     }
 }
 
-class Circle : Shape, IShape {
-    public Circle() : base("Circle") {
-        Console.WriteLine("Circle Created");
-    }
+// class Circle : Shape, IShape {
+//     public Circle() : base("Circle") {
+//         Console.WriteLine("Circle Created");
+//     }
 
-    public new void Describe() {
-        Console.WriteLine("This is specifically a circle.");
-    }
+//     public new void Describe() {
+//         Console.WriteLine("This is specifically a circle.");
+//     }
 
-    public void Draw() {
-        Console.WriteLine("Drawing a Circle...");
-    }
-}
+//     public void Draw() {
+//         Console.WriteLine("Drawing a Circle...");
+//     }
+// }
 
 // class Program {
 //     static void Main() {
