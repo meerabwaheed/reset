@@ -490,18 +490,18 @@ class Doctor : Person, IWorker {
     }
 }
 
-// class Program {
-//     static void Main() {
-//         List<IWorker> workers = new List<IWorker>() {
-//             new Engineer("Ali"),
-//             new Doctor("Zara")
-//         };
+class Program {
+    static void Main() {
+        List<IWorker> workers = new List<IWorker>() {
+            new Engineer("Ali"),
+            new Doctor("Zara")
+        };
 
-//         foreach (IWorker worker in workers) {
-//             worker.Work();
-//         }
-//     }
-// }
+        foreach (IWorker worker in workers) {
+            worker.Work();
+        }
+    }
+}
 
 
 
