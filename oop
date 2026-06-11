@@ -542,15 +542,15 @@ class Circle : Shape, IShape {
     }
 }
 
-class Program {
-    static void Main() {
-        Shape s = new Circle();
-        s.Describe();
+// class Program {
+//     static void Main() {
+//         Shape s = new Circle();
+//         s.Describe();
 
-        IShape shapeInterface = new Circle();
-        shapeInterface.Draw();
-    }
-}
+//         IShape shapeInterface = new Circle();
+//         shapeInterface.Draw();
+//     }
+// }
 
 
 
