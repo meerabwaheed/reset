@@ -392,13 +392,13 @@
 
 
 
-class Parent
-{
-    public void Show()
-    {
-        Console.WriteLine("Parent Show");
-    }
-}
+// class Parent
+// {
+//     public void Show()
+//     {
+//         Console.WriteLine("Parent Show");
+//     }
+// }
 
 class Child : Parent
 {
@@ -416,6 +416,7 @@ class Program
         p.Show();
     }
 }
+
 
 
 
