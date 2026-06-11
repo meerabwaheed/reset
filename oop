@@ -476,12 +476,12 @@ class Person {
     }
 }
 
-// class Engineer : Person, IWorker {
-//     public Engineer(string name) : base(name) {}
-//     public void Work() {
-//         Console.WriteLine(Name + " is coding.");
-//     }
-// }
+class Engineer : Person, IWorker {
+    public Engineer(string name) : base(name) {}
+    public void Work() {
+        Console.WriteLine(Name + " is coding.");
+    }
+}
 
 // class Doctor : Person, IWorker {
 //     public Doctor(string name) : base(name) {}
