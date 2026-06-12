@@ -591,5 +591,27 @@ CREATE TABLE Enrollment (
     FOREIGN KEY (CID) REFERENCES Course(CID)
 );
 
+INSERT INTO Student VALUES
+(1,'Adams'),
+(2,'Jones'),
+(3,'Smith'),
+(4,'Baker');
+
+-- INSERT INTO Faculty VALUES
+-- ('Howser','60192'),
+-- ('Langley','45869');
+
+-- INSERT INTO Course VALUES
+-- ('IS318','Database','Howser'),
+-- ('IS301','EC','Langley');
+
+-- INSERT INTO Enrollment VALUES
+-- (1,'IS318','A'),
+-- (1,'IS301','B'),
+-- (2,'IS318','A'),
+-- (3,'IS318','B'),
+-- (4,'IS301','A'),
+-- (4,'IS318','B');
+
 
 
