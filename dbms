@@ -606,7 +606,7 @@ INSERT INTO Course VALUES
 ('IS301','EC','Langley');
 
 INSERT INTO Enrollment VALUES
-(1,'IS318','A'),
+(1,'ISshh18','A'),
 (1,'IS301','B'),
 (2,'IS318','A'),
 (3,'IS318','B'),
