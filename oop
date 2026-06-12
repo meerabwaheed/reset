@@ -78,386 +78,428 @@ interface IMovable
     int Y { get; set; }
 }
 
-// IScoreable: Sirf Player ke liye — score track karna
-// interface IScoreable
+// // IScoreable: Sirf Player ke liye — score track karna
+// // interface IScoreable
+// // {
+// //     void AddScore();
+// //     int GetScore();
+// // }
+
+// // =====================================================
+// // DIP (Dependency Inversion Principle)
+// // =====================================================
+// // DIP kehta hai: "High-level modules (TreasureHuntGame)
+// // ko low-level classes (Player, Treasure) pe directly
+// // depend nahi karna chahiye — balke abstractions
+// // (interfaces) pe depend karna chahiye."
+// //
+// // Isliye hum IGameObject banate hain jo IDrawable
+// // aur IMovable dono ko combine karta hai.
+// // TreasureHuntGame ab Player/Treasure ki jagah
+// // IGameObject use karega.
+
+// interface IGameObject : IDrawable, IMovable
 // {
-//     void AddScore();
-//     int GetScore();
+//     // Combined interface for all game objects
+//     // IDrawable se: Draw()
+//     // IMovable se: X, Y
 // }
 
-// =====================================================
-// DIP (Dependency Inversion Principle)
-// =====================================================
-// DIP kehta hai: "High-level modules (TreasureHuntGame)
-// ko low-level classes (Player, Treasure) pe directly
-// depend nahi karna chahiye — balke abstractions
-// (interfaces) pe depend karna chahiye."
-//
-// Isliye hum IGameObject banate hain jo IDrawable
-// aur IMovable dono ko combine karta hai.
-// TreasureHuntGame ab Player/Treasure ki jagah
-// IGameObject use karega.
 
-interface IGameObject : IDrawable, IMovable
-{
-    // Combined interface for all game objects
-    // IDrawable se: Draw()
-    // IMovable se: X, Y
-}
+// // ABSTRACT CLASS (ABSTRACTION)
+// // This class provides common properties (x, y)
+// // and forces derived classes to implement Draw().
 
+// abstract class GameObject : IGameObject
+// {
+//     // Protected variables accessible in child classes
+//     protected int x;       //They are variables declared inside a class.
+//     protected int y;        // Variables that belong to a class are called attributes (or fields in C#).
 
-// ABSTRACT CLASS (ABSTRACTION)
-// This class provides common properties (x, y)
-// and forces derived classes to implement Draw().
+//     // Constructor to initialize object position
+//     public GameObject(int x, int y) // these are parameters
+//     {
+//         this.x = x;       //these are constructors
+//         this.y = y;      //these are constructors
+//     }
 
-abstract class GameObject : IGameObject
-{
-    // Protected variables accessible in child classes
-    protected int x;       //They are variables declared inside a class.
-    protected int y;        // Variables that belong to a class are called attributes (or fields in C#).
+//     // Properties for getting and setting X position
+//     public int X
+//     {
+//         get { return x; }
+//         set { x = value; }
+//     }
 
-    // Constructor to initialize object position
-    public GameObject(int x, int y) // these are parameters
-    {
-        this.x = x;       //these are constructors
-        this.y = y;      //these are constructors
-    }
+//     // Properties for getting and setting Y position
+//     public int Y
+//     {
+//         get { return y; }
+//         set { y = value; }
+//     }
 
-    // Properties for getting and setting X position
-    public int X
-    {
-        get { return x; }
-        set { x = value; }
-    }
-
-    // Properties for getting and setting Y position
-    public int Y
-    {
-        get { return y; }
-        set { y = value; }
-    }
-
-    // Abstract method (must be overridden)
-    public abstract char Draw();
-}
+//     // Abstract method (must be overridden)
+//     public abstract char Draw();
+// }
 
 
-// PLAYER CLASS
-// INHERITANCE: Player inherits GameObject
-// ENCAPSULATION: score is private
-// POLYMORPHISM: Draw() is overridden
-// ISP: Player implements IScoreable separately
-//      because only Player needs score — Treasure does not
-class Player : GameObject, IScoreable
-{
-    // Private data member (Encapsulation)
-    private int score;
+// // PLAYER CLASS
+// // INHERITANCE: Player inherits GameObject
+// // ENCAPSULATION: score is private
+// // POLYMORPHISM: Draw() is overridden
+// // ISP: Player implements IScoreable separately
+// //      because only Player needs score — Treasure does not
+// class Player : GameObject, IScoreable
+// {
+//     // Private data member (Encapsulation)
+//     private int score;
 
-    // Constructor
-    public Player(int x, int y) : base(x, y)
-    {
-        score = 0;
-    }
+//     // Constructor
+//     public Player(int x, int y) : base(x, y)
+//     {
+//         score = 0;
+//     }
 
-    // Increase player score
-    public void AddScore()
-    {
-        score += 10;
-    }
+//     // Increase player score
+//     public void AddScore()
+//     {
+//         score += 10;
+//     }
 
-    // Return current score
-    public int GetScore()
-    {
-        return score;
-    }
+//     // Return current score
+//     public int GetScore()
+//     {
+//         return score;
+//     }
 
-    // Override Draw method
-    // POLYMORPHISM: Draw() is overridden
-    // Parent class (GameObject) ne abstract Draw() declare kiya tha
-    // Player apna khud ka symbol '@' return karta hai
-    public override char Draw()
-    {
-        return '@';
-    }
-}
-
-
-// TREASURE CLASS
-// INHERITANCE: Treasure inherits GameObject
-// POLYMORPHISM: Draw() is overridden
-// Note: Treasure IScoreable implement NAHI karta
-//       ISP ka yahi fayda hai — Treasure ko score ki zaroorat nahi
-class Treasure : GameObject
-{
-    // Constructor
-    // INHERITANCE: base(x, y) se parent class ka constructor call hota hai
-    // Matlab Treasure apni position set karne ke liye
-    // GameObject ka constructor use karta hai
-    public Treasure(int x, int y) : base(x, y)
-    {
-    }
-
-    // Draw treasure symbol on board
-    // POLYMORPHISM: Draw() is overridden
-    // Treasure apna symbol '*' return karta hai
-    public override char Draw()
-    {
-        return '*';
-    }
-}
+//     // Override Draw method
+//     // POLYMORPHISM: Draw() is overridden
+//     // Parent class (GameObject) ne abstract Draw() declare kiya tha
+//     // Player apna khud ka symbol '@' return karta hai
+//     public override char Draw()
+//     {
+//         return '@';
+//     }
+// }
 
 
-// MAIN GAME CLASS
-// Responsible for running the game logic
-// DIP: Ab TreasureHuntGame IGameObject aur IScoreable
-//      interfaces use karta hai — directly Player ya
-//      Treasure class pe depend nahi karta
-class TreasureHuntGame
-{
-    // DIP: IGameObject interface use kar rahe hain
-    //      directly Player/Treasure type nahi
-    private IGameObject player;
-    private IGameObject treasure;
+// // TREASURE CLASS
+// // INHERITANCE: Treasure inherits GameObject
+// // POLYMORPHISM: Draw() is overridden
+// // Note: Treasure IScoreable implement NAHI karta
+// //       ISP ka yahi fayda hai — Treasure ko score ki zaroorat nahi
+// class Treasure : GameObject
+// {
+//     // Constructor
+//     // INHERITANCE: base(x, y) se parent class ka constructor call hota hai
+//     // Matlab Treasure apni position set karne ke liye
+//     // GameObject ka constructor use karta hai
+//     public Treasure(int x, int y) : base(x, y)
+//     {
+//     }
 
-    // IScoreable alag rakha — sirf score ke liye
-    // ISP: score ka kaam alag interface se
-    private IScoreable playerScore;
-
-    // Random object for generating treasure locations
-    private Random random;
-
-    // Board dimensions
-    private const int Width = 20;
-    private const int Height = 10;
-
-    // Constructor
-    // DIP: Player aur Treasure objects bahar se inject ho rahe hain
-    //      (Constructor Injection) — game class khud new nahi karta
-    public TreasureHuntGame(IGameObject player, IGameObject treasure, IScoreable playerScore)
-    {
-        random = new Random();
-        this.player = player;
-        this.treasure = treasure;
-        this.playerScore = playerScore;
-    }
-
-    // Starts the game loop
-    public void Start()
-    {
-        bool isRunning = true;
-
-        while (isRunning)
-        {
-            Console.Clear();
-
-            // Draw game board
-            DrawBoard();
-
-            Console.WriteLine("\nScore: " + playerScore.GetScore());
-            Console.WriteLine("Controls:");
-            Console.WriteLine("W = Up");
-            Console.WriteLine("S = Down");
-            Console.WriteLine("A = Left");
-            Console.WriteLine("D = Right");
-            Console.WriteLine("Q = Quit");
-            Console.WriteLine("code is written by meerab +chatgpt");
-            //this code is written by meerab also with the help of chat gpt
-
-            // Read keyboard input
-            ConsoleKey key = Console.ReadKey(true).Key;
-
-            // Move player according to key pressed
-            switch (key)
-            {
-                case ConsoleKey.W:
-                    if (player.Y > 1)
-                        player.Y--;
-                    break;
-
-                case ConsoleKey.S:
-                    if (player.Y < Height - 2)
-                        player.Y++;
-                    break;
-
-                case ConsoleKey.A:
-                    if (player.X > 1)
-                        player.X--;
-                    break;
-
-                case ConsoleKey.D:
-                    if (player.X < Width - 2)
-                        player.X++;
-                    break;
-
-                case ConsoleKey.Q:
-                    isRunning = false;
-                    break;
-            }
-
-            // Check if treasure is collected
-            if (player.X == treasure.X &&
-                player.Y == treasure.Y)
-            {
-                // Increase score
-                playerScore.AddScore();
-
-                // Generate new treasure position
-                treasure.X = random.Next(1, Width - 1);
-                treasure.Y = random.Next(1, Height - 1);
-            }
-        }
-
-        // Display final result
-        Console.Clear();
-        Console.WriteLine("===============================");
-        Console.WriteLine("          GAME OVER");
-        Console.WriteLine("================================");
-        Console.WriteLine("Final Score: " + playerScore.GetScore());
-    }
-
-    // Draws the board, player and treasure
-    private void DrawBoard()
-    {
-        // Bug Fix: outer loop variable 'row', inner loop variable 'col'
-        // Pehle 'k' aur 'i' tha bahar, aur 'i' aur 'j' andar — mismatch tha
-        for (int row = 0; row < Height; row++)
-        {
-            for (int col = 0; col < Width; col++)
-            {
-                // Draw boundaries
-                if (row == 0 || row == Height - 1 ||
-                    col == 0 || col == Width - 1)
-                {
-                    Console.Write('#');
-                }
-                // Draw player
-                else if (row == player.Y && col == player.X)
-                {
-                    Console.Write(player.Draw());
-                }
-                // Draw treasure
-                else if (row == treasure.Y && col == treasure.X)
-                {
-                    Console.Write(treasure.Draw());
-                }
-                // Empty space
-                else
-                {
-                    Console.Write(' ');
-                }
-            }
-
-            Console.WriteLine();
-        }
-    }
-}
+//     // Draw treasure symbol on board
+//     // POLYMORPHISM: Draw() is overridden
+//     // Treasure apna symbol '*' return karta hai
+//     public override char Draw()
+//     {
+//         return '*';
+//     }
+// }
 
 
-// PROGRAM CLASS
-// Entry point of application
-class Program
-{
-    static void Main()
-    {
-        Console.Title = "Treasure Hunt Game";
+// // MAIN GAME CLASS
+// // Responsible for running the game logic
+// // DIP: Ab TreasureHuntGame IGameObject aur IScoreable
+// //      interfaces use karta hai — directly Player ya
+// //      Treasure class pe depend nahi karta
+// class TreasureHuntGame
+// {
+//     // DIP: IGameObject interface use kar rahe hain
+//     //      directly Player/Treasure type nahi
+//     private IGameObject player;
+//     private IGameObject treasure;
 
-        // DIP: Player aur Treasure objects yahan banate hain
-        //      aur TreasureHuntGame mein inject karte hain
-        //      Game class ko pata nahi k concrete class kaun si hai
-        Player player = new Player(5, 5);
-        Treasure treasure = new Treasure(
-            new Random().Next(1, 18),
-            new Random().Next(1, 8)
-        );
+//     // IScoreable alag rakha — sirf score ke liye
+//     // ISP: score ka kaam alag interface se
+//     private IScoreable playerScore;
 
-        // Create game object — interfaces pass kar rahe hain
-        TreasureHuntGame game = new TreasureHuntGame(player, treasure, player);
+//     // Random object for generating treasure locations
+//     private Random random;
 
-        // Start game
-        game.Start();
-    }
-}
+//     // Board dimensions
+//     private const int Width = 20;
+//     private const int Height = 10;
+
+//     // Constructor
+//     // DIP: Player aur Treasure objects bahar se inject ho rahe hain
+//     //      (Constructor Injection) — game class khud new nahi karta
+//     public TreasureHuntGame(IGameObject player, IGameObject treasure, IScoreable playerScore)
+//     {
+//         random = new Random();
+//         this.player = player;
+//         this.treasure = treasure;
+//         this.playerScore = playerScore;
+//     }
+
+//     // Starts the game loop
+//     public void Start()
+//     {
+//         bool isRunning = true;
+
+//         while (isRunning)
+//         {
+//             Console.Clear();
+
+//             // Draw game board
+//             DrawBoard();
+
+//             Console.WriteLine("\nScore: " + playerScore.GetScore());
+//             Console.WriteLine("Controls:");
+//             Console.WriteLine("W = Up");
+//             Console.WriteLine("S = Down");
+//             Console.WriteLine("A = Left");
+//             Console.WriteLine("D = Right");
+//             Console.WriteLine("Q = Quit");
+//             Console.WriteLine("code is written by meerab +chatgpt");
+//             //this code is written by meerab also with the help of chat gpt
+
+//             // Read keyboard input
+//             ConsoleKey key = Console.ReadKey(true).Key;
+
+//             // Move player according to key pressed
+//             switch (key)
+//             {
+//                 case ConsoleKey.W:
+//                     if (player.Y > 1)
+//                         player.Y--;
+//                     break;
+
+//                 case ConsoleKey.S:
+//                     if (player.Y < Height - 2)
+//                         player.Y++;
+//                     break;
+
+//                 case ConsoleKey.A:
+//                     if (player.X > 1)
+//                         player.X--;
+//                     break;
+
+//                 case ConsoleKey.D:
+//                     if (player.X < Width - 2)
+//                         player.X++;
+//                     break;
+
+//                 case ConsoleKey.Q:
+//                     isRunning = false;
+//                     break;
+//             }
+
+//             // Check if treasure is collected
+//             if (player.X == treasure.X &&
+//                 player.Y == treasure.Y)
+//             {
+//                 // Increase score
+//                 playerScore.AddScore();
+
+//                 // Generate new treasure position
+//                 treasure.X = random.Next(1, Width - 1);
+//                 treasure.Y = random.Next(1, Height - 1);
+//             }
+//         }
+
+//         // Display final result
+//         Console.Clear();
+//         Console.WriteLine("===============================");
+//         Console.WriteLine("          GAME OVER");
+//         Console.WriteLine("================================");
+//         Console.WriteLine("Final Score: " + playerScore.GetScore());
+//     }
+
+//     // Draws the board, player and treasure
+//     private void DrawBoard()
+//     {
+//         // Bug Fix: outer loop variable 'row', inner loop variable 'col'
+//         // Pehle 'k' aur 'i' tha bahar, aur 'i' aur 'j' andar — mismatch tha
+//         for (int row = 0; row < Height; row++)
+//         {
+//             for (int col = 0; col < Width; col++)
+//             {
+//                 // Draw boundaries
+//                 if (row == 0 || row == Height - 1 ||
+//                     col == 0 || col == Width - 1)
+//                 {
+//                     Console.Write('#');
+//                 }
+//                 // Draw player
+//                 else if (row == player.Y && col == player.X)
+//                 {
+//                     Console.Write(player.Draw());
+//                 }
+//                 // Draw treasure
+//                 else if (row == treasure.Y && col == treasure.X)
+//                 {
+//                     Console.Write(treasure.Draw());
+//                 }
+//                 // Empty space
+//                 else
+//                 {
+//                     Console.Write(' ');
+//                 }
+//             }
+
+//             Console.WriteLine();
+//         }
+//     }
+// }
 
 
-// Symbol   Access Modifier
-// +        Public
-// -        Private
-// #        Protected
-// ~        Package/Internal    Mam hira sy pouchna haa 
+// // PROGRAM CLASS
+// // Entry point of application
+// class Program
+// {
+//     static void Main()
+//     {
+//         Console.Title = "Treasure Hunt Game";
 
-//  public abstract char Draw(); how abstract method is override?
-// POLYMORPHISM: Draw() is overridden why this draw is overriden
-// class traesure main inherit ker k : k baad paren class ka name use huwa haa but jab player class inherit hui ha parent sy to usky sath base ka key word use horaa ha
+//         // DIP: Player aur Treasure objects yahan banate hain
+//         //      aur TreasureHuntGame mein inject karte hain
+//         //      Game class ko pata nahi k concrete class kaun si hai
+//         Player player = new Player(5, 5);
+//         Treasure treasure = new Treasure(
+//             new Random().Next(1, 18),
+//             new Random().Next(1, 8)
+//         );
+
+//         // Create game object — interfaces pass kar rahe hain
+//         TreasureHuntGame game = new TreasureHuntGame(player, treasure, player);
+
+//         // Start game
+//         game.Start();
+//     }
+// }
+
+
+// // Symbol   Access Modifier
+// // +        Public
+// // -        Private
+// // #        Protected
+// // ~        Package/Internal    Mam hira sy pouchna haa 
+
+// //  public abstract char Draw(); how abstract method is override?
+// // POLYMORPHISM: Draw() is overridden why this draw is overriden
+// // class traesure main inherit ker k : k baad paren class ka name use huwa haa but jab player class inherit hui ha parent sy to usky sath base ka key word use horaa ha
 
 
 
 
-class Parent
-{
-    public void Show()
-    {
-        Console.WriteLine("Parent Show");
-    }
-}
+// class Parent
+// {
+//     public void Show()
+//     {
+//         Console.WriteLine("Parent Show");
+//     }
+// }
 
-class Child : Parent
-{
-    public new void Show()
-    {
-        Console.WriteLine("Child Show");
-    }
-}
-
-class Program
-{
-    static void Main()
-    {
-        Parent p = new Child();
-        p.Show();
-    }
-}
-
-
-
-class Vehicle
-{
-    private string name;
-    public Vehicle()
-    {
-        name = "Unknown Vehicle";
-        Console.WriteLine("Vehicle Created");
-    }
-    public Vehicle(string name)
-    {
-        this.name = name;
-        Console.WriteLine("Vehicle: " + name);
-    }
-    public virtual void Start()
-    {
-        Console.WriteLine("Vehicle starting...");
-    }
-}
-
-class Car : Vehicle
-{
-    protected int speed;
-    public Car() : base("Default Car")
-    {
-        speed = 100;
-        Console.WriteLine("Car Created");
-    }
-    public override void Start()
-    {
-        Console.WriteLine("Car is moving at speed " + speed);
-    }
-}
+// class Child : Parent
+// {
+//     public new void Show()
+//     {
+//         Console.WriteLine("Child Show");
+//     }
+// }
 
 // class Program
 // {
 //     static void Main()
 //     {
-//         Vehicle v = new Car();
-//         v.Start();
+//         Parent p = new Child();
+//         p.Show();
+//     }
+// }
+
+
+
+// class Vehicle
+// {
+//     private string name;
+//     public Vehicle()
+//     {
+//         name = "Unknown Vehicle";
+//         Console.WriteLine("Vehicle Created");
+//     }
+//     public Vehicle(string name)
+//     {
+//         this.name = name;
+//         Console.WriteLine("Vehicle: " + name);
+//     }
+//     public virtual void Start()
+//     {
+//         Console.WriteLine("Vehicle starting...");
+//     }
+// }
+
+// class Car : Vehicle
+// {
+//     protected int speed;
+//     public Car() : base("Default Car")
+//     {
+//         speed = 100;
+//         Console.WriteLine("Car Created");
+//     }
+//     public override void Start()
+//     {
+//         Console.WriteLine("Car is moving at speed " + speed);
+//     }
+// }
+
+// // class Program
+// // {
+// //     static void Main()
+// //     {
+// //         Vehicle v = new Car();
+// //         v.Start();
+// //     }
+// // }
+
+
+
+
+
+// // interface IWorker {
+// //     void Work();
+// // }
+
+// // class Person {
+// //     public string Name { get; set; }
+// //     public Person(string name) {
+// //         Name = name;
+// //     }
+// // }
+
+// class Engineer : Person, IWorker {
+//     public Engineer(string name) : base(name) {}
+//     public void Work() {
+//         Console.WriteLine(Name + " is coding.");
+//     }
+// }
+
+// class Doctor : Person, IWorker {
+//     public Doctor(string name) : base(name) {}
+//     public void Work() {
+//         Console.WriteLine(Name + " is treating patients.");
+//     }
+// }
+
+// class Program {
+//     static void Main() {
+//         List<IWorker> workers = new List<IWorker>() {
+//             new Engineer("Ali"),
+//             new Doctor("Zara")
+//         };
+
+//         foreach (IWorker worker in workers) {
+//             worker.Work();
+//         }
 //     }
 // }
 
@@ -465,92 +507,50 @@ class Car : Vehicle
 
 
 
-// interface IWorker {
-//     void Work();
+// interface IShape {
+//     void Draw();
 // }
 
-// class Person {
-//     public string Name { get; set; }
-//     public Person(string name) {
-//         Name = name;
+// class Shape {
+//     protected string type = "Shape";
+
+//     public Shape() {
+//         Console.WriteLine("Shape is Created");
+//     }
+
+//     public Shape(string type) {
+//         this.type = type;
+//         Console.WriteLine("Shape: " + type);
+//     }
+
+//     public void Describe() {
+//         Console.WriteLine("This is a " + type);
 //     }
 // }
 
-class Engineer : Person, IWorker {
-    public Engineer(string name) : base(name) {}
-    public void Work() {
-        Console.WriteLine(Name + " is coding.");
-    }
-}
+// class Circle : Shape, IShape {
+//     public Circle() : base("Circle") {
+//         Console.WriteLine("Circle is Created");
+//     }
 
-class Doctor : Person, IWorker {
-    public Doctor(string name) : base(name) {}
-    public void Work() {
-        Console.WriteLine(Name + " is treating patients.");
-    }
-}
+//     public new void Describe() {
+//         Console.WriteLine("This is specifically a circle.");
+//     }
 
-class Program {
-    static void Main() {
-        List<IWorker> workers = new List<IWorker>() {
-            new Engineer("Ali"),
-            new Doctor("Zara")
-        };
+//     public void Draw() {
+//         Console.WriteLine("Drawing a Circle...");
+//     }
+// }
 
-        foreach (IWorker worker in workers) {
-            worker.Work();
-        }
-    }
-}
+// class Program {
+//     static void Main() {
+//         Shape s = new Circle();
+//         s.Describe();
 
-
-
-
-
-interface IShape {
-    void Draw();
-}
-
-class Shape {
-    protected string type = "Shape";
-
-    public Shape() {
-        Console.WriteLine("Shape is Created");
-    }
-
-    public Shape(string type) {
-        this.type = type;
-        Console.WriteLine("Shape: " + type);
-    }
-
-    public void Describe() {
-        Console.WriteLine("This is a " + type);
-    }
-}
-
-class Circle : Shape, IShape {
-    public Circle() : base("Circle") {
-        Console.WriteLine("Circle is Created");
-    }
-
-    public new void Describe() {
-        Console.WriteLine("This is specifically a circle.");
-    }
-
-    public void Draw() {
-        Console.WriteLine("Drawing a Circle...");
-    }
-}
-
-class Program {
-    static void Main() {
-        Shape s = new Circle();
-        s.Describe();
-
-        IShape shapeInterface = new Circle();
-        shapeInterface.Draw();
-    }
-}
+//         IShape shapeInterface = new Circle();
+//         shapeInterface.Draw();
+//     }
+// }
 
 
 
