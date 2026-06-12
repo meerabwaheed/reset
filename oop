@@ -611,54 +611,54 @@
 
 
 
-// using System;
+using System;
 
-// class Parent
-// {
-//     public virtual void Show()
-//     {
-//         Console.WriteLine("Parent");
-//     }
-// }
+class Parent
+{
+    public virtual void Show()
+    {
+        Console.WriteLine("Parent");
+    }
+}
 
-// class Child : Parent
-// {
-//     public override void Show()
-//     {
-//         Console.WriteLine("Child");
-//     }
-// }
+class Child : Parent
+{
+    public override void Show()
+    {
+        Console.WriteLine("Child");
+    }
+}
 
-// class Program
-// {
-//     static void Main()
-//     {
-//         Parent p = new Child();
-//         p.Show();
-//     }
-// }
+class Program
+{
+    static void Main()
+    {
+        Parent p = new Child();
+        p.Show();
+    }
+}
 
 
 using System;
 
-// class Bank
-// {
-//     private int balance = 5000;
+class Bank
+{
+    private int balance = 5000;
 
-//     public int GetBalance()
-//     {
-//         return balance;
-//     }
-// }
+    public int GetBalance()
+    {
+        return balance;
+    }
+}
 
-// class Program
-// {
-//     static void Main()
-//     {
-//         Bank b = new Bank();
-//         Console.WriteLine(b.GetBalance());
-//     }
-// }
+class Program
+{
+    static void Main()
+    {
+        Bank b = new Bank();
+        Console.WriteLine(b.GetBalance());
+    }
+}
 
 
 
