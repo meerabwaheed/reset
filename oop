@@ -565,11 +565,11 @@ class Student
         name = n;
     }
 
-//     public void Display()
-//     {
-//         Console.WriteLine(name);
-//     }
-// }
+    public void Display()
+    {
+        Console.WriteLine(name);
+    }
+}
 
 // class Program
 // {
