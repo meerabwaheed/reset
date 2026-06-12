@@ -1,82 +1,82 @@
-//                        +----------------------+
-//                        |      GameObject      |
-//                        +----------------------+
-//                        |     # x : int        |
-//                        |     # y : int        |          
-//                        +----------------------+
-//                        |      +X : int        |
-//                        |     + Y : int        |
-//                        |    + Draw() : char   |
-//                        +----------------------+          
-//                                      ▲
-//                                      │
-//                    ┌─────────────────┴─────────────────┐
-//                    │                                   │
-//                    │                                   │
-//          +---------------------+          +---------------------+
-//          |       Player        |          |      Treasure       |
-//          +---------------------+          +---------------------+
-//          | - score : int       |          |                     |
-//          +---------------------+          +---------------------+
-//          | + AddScore() : void |          | + Draw() : char     |
-//          | + GetScore() : int  |          +---------------------+
-//          | + Draw() : char     |
-//          +---------------------+
+// //                        +----------------------+
+// //                        |      GameObject      |
+// //                        +----------------------+
+// //                        |     # x : int        |
+// //                        |     # y : int        |          
+// //                        +----------------------+
+// //                        |      +X : int        |
+// //                        |     + Y : int        |
+// //                        |    + Draw() : char   |
+// //                        +----------------------+          
+// //                                      ▲
+// //                                      │
+// //                    ┌─────────────────┴─────────────────┐
+// //                    │                                   │
+// //                    │                                   │
+// //          +---------------------+          +---------------------+
+// //          |       Player        |          |      Treasure       |
+// //          +---------------------+          +---------------------+
+// //          | - score : int       |          |                     |
+// //          +---------------------+          +---------------------+
+// //          | + AddScore() : void |          | + Draw() : char     |
+// //          | + GetScore() : int  |          +---------------------+
+// //          | + Draw() : char     |
+// //          +---------------------+
 
-//                                      ▲
-//                                      │
-//                                      │
-//                        +----------------------------+
-//                        |      TreasureHuntGame      |
-//                        +----------------------------+
-//                        |     - player : Player      |
-//                        |     -treasure : Treasure   |
-//                        |     -random : Random       |
-//                        |     -Width : int           |
-//                        |     - Height : int         |
-//                        +----------------------------+
-//                        | + Start() : void           |
-//                        | - DrawBoard() : void       |
-//                        +----------------------------+
+// //                                      ▲
+// //                                      │
+// //                                      │
+// //                        +----------------------------+
+// //                        |      TreasureHuntGame      |
+// //                        +----------------------------+
+// //                        |     - player : Player      |
+// //                        |     -treasure : Treasure   |
+// //                        |     -random : Random       |
+// //                        |     -Width : int           |
+// //                        |     - Height : int         |
+// //                        +----------------------------+
+// //                        | + Start() : void           |
+// //                        | - DrawBoard() : void       |
+// //                        +----------------------------+
 
-//                                      ▲
-//                                      │
-//                                      │
-//                            +------------------+
-//                            |     Program      |
-//                            +------------------+
-//                            | + Main() : void  |
-//                            +------------------+
-
-
-using System;
+// //                                      ▲
+// //                                      │
+// //                                      │
+// //                            +------------------+
+// //                            |     Program      |
+// //                            +------------------+
+// //                            | + Main() : void  |
+// //                            +------------------+
 
 
-// =====================================================
-// ISP (Interface Segregation Principle)
-// =====================================================
-// ISP kehta hai: "Ek badi interface banane ki bajaye,
-// choti choti specific interfaces banao."
-// Matlab har class ko sirf woh methods implement karne chahiye
-// jo usse actually zaroorat hain.
-//
-// Yahan hum 3 alag interfaces banate hain:
-// IDrawable  --> sirf Draw() ke liye
-// IMovable   --> sirf movement ke liye (X, Y properties)
-// IScoreable --> sirf score ke liye
+// using System;
 
-// IDrawable: Har woh cheez jo board pe draw ho sakti hai
-interface IDrawable
-{
-    char Draw();
-}
 
-// IMovable: Har woh cheez jis ki position change ho sakti hai
-interface IMovable
-{
-    int X { get; set; }
-    int Y { get; set; }
-}
+// // =====================================================
+// // ISP (Interface Segregation Principle)
+// // =====================================================
+// // ISP kehta hai: "Ek badi interface banane ki bajaye,
+// // choti choti specific interfaces banao."
+// // Matlab har class ko sirf woh methods implement karne chahiye
+// // jo usse actually zaroorat hain.
+// //
+// // Yahan hum 3 alag interfaces banate hain:
+// // IDrawable  --> sirf Draw() ke liye
+// // IMovable   --> sirf movement ke liye (X, Y properties)
+// // IScoreable --> sirf score ke liye
+
+// // IDrawable: Har woh cheez jo board pe draw ho sakti hai
+// interface IDrawable
+// {
+//     char Draw();
+// }
+
+// // IMovable: Har woh cheez jis ki position change ho sakti hai
+// interface IMovable
+// {
+//     int X { get; set; }
+//     int Y { get; set; }
+// }
 
 // // IScoreable: Sirf Player ke liye — score track karna
 // // interface IScoreable
@@ -551,6 +551,68 @@ interface IMovable
 //         shapeInterface.Draw();
 //     }
 // }
+
+
+
+using System;
+
+// class Student
+// {
+//     string name;
+
+//     public Student(string n)
+//     {
+//         name = n;
+//     }
+
+//     public void Display()
+//     {
+//         Console.WriteLine(name);
+//     }
+// }
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         Student s1 = new Student("Ali");
+//         Student s2 = new Student("Ahmed");
+
+//         s1.Display();
+//         s2.Display();
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
