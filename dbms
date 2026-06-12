@@ -582,14 +582,14 @@ CREATE TABLE Course (
     FOREIGN KEY (F_Name) REFERENCES Faculty(F_Name)
 );
 
--- CREATE TABLE Enrollment (
---     SID INT,
---     CID VARCHAR(10),
---     Grade CHAR(1),
---     PRIMARY KEY (SID, CID),
---     FOREIGN KEY (SID) REFERENCES Student(SID),
---     FOREIGN KEY (CID) REFERENCES Course(CID)
--- );
+CREATE TABLE Enrollment (
+    SID INT,
+    CID VARCHAR(10),
+    Grade CHAR(1),
+    PRIMARY KEY (SID, CID),
+    FOREIGN KEY (SID) REFERENCES Student(SID),
+    FOREIGN KEY (CID) REFERENCES Course(CID)
+);
 
 
 
