@@ -621,13 +621,13 @@ class Parent
     }
 }
 
-// class Child : Parent
-// {
-//     public override void Show()
-//     {
-//         Console.WriteLine("Child");
-//     }
-// }
+class Child : Parent
+{
+    public override void Show()
+    {
+        Console.WriteLine("Child");
+    }
+}
 
 // class Program
 // {
