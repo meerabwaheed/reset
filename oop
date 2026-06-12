@@ -560,10 +560,10 @@ class Student
 {
     string name;
 
-//     public Student(string n)
-//     {
-//         name = n;
-//     }
+    public Student(string n)
+    {
+        name = n;
+    }
 
 //     public void Display()
 //     {
