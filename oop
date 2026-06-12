@@ -554,20 +554,131 @@
 
 
 
+// using System;
+
+// class Student
+// {
+//     string name;
+
+//     public Student(string n)
+//     {
+//         name = n;
+//     }
+
+//     public void Display()
+//     {
+//         Console.WriteLine(name);
+//     }
+// }
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         Student s1 = new Student("Ali");
+//         Student s2 = new Student("Ahmed");
+
+//         s1.Display();
+//         s2.Display();
+//     }
+// }
+
+
+
+
+// using System;
+
+// class Animal
+// {
+//     public void Sound()
+//     {
+//         Console.WriteLine("Animal Sound");
+//     }
+// }
+
+// class Dog : Animal
+// {
+// }
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         Dog d = new Dog();
+//         d.Sound();
+//     }
+// }
+
+
+
+// using System;
+
+// class Parent
+// {
+//     public virtual void Show()
+//     {
+//         Console.WriteLine("Parent");
+//     }
+// }
+
+// class Child : Parent
+// {
+//     public override void Show()
+//     {
+//         Console.WriteLine("Child");
+//     }
+// }
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         Parent p = new Child();
+//         p.Show();
+//     }
+// }
+
+
+// using System;
+
+// class Bank
+// {
+//     private int balance = 5000;
+
+//     public int GetBalance()
+//     {
+//         return balance;
+//     }
+// }
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         Bank b = new Bank();
+//         Console.WriteLine(b.GetBalance());
+//     }
+// }
+
+
+
+
+
 using System;
 
-class Student
+class A
 {
-    string name;
-
-    public Student(string n)
+    public A()
     {
-        name = n;
+        Console.WriteLine("A");
     }
+}
 
-    public void Display()
+class B : A
+{
+    public B()
     {
-        Console.WriteLine(name);
+        Console.WriteLine("B");
     }
 }
 
@@ -575,96 +686,9 @@ class Program
 {
     static void Main()
     {
-        Student s1 = new Student("Ali");
-        Student s2 = new Student("Ahmed");
-
-        s1.Display();
-        s2.Display();
+        B obj = new B();
     }
 }
-
-
-
-
-using System;
-
-class Animal
-{
-    public void Sound()
-    {
-        Console.WriteLine("Animal Sound");
-    }
-}
-
-class Dog : Animal
-{
-}
-
-class Program
-{
-    static void Main()
-    {
-        Dog d = new Dog();
-        d.Sound();
-    }
-}
-
-
-
-using System;
-
-class Parent
-{
-    public virtual void Show()
-    {
-        Console.WriteLine("Parent");
-    }
-}
-
-class Child : Parent
-{
-    public override void Show()
-    {
-        Console.WriteLine("Child");
-    }
-}
-
-class Program
-{
-    static void Main()
-    {
-        Parent p = new Child();
-        p.Show();
-    }
-}
-
-
-using System;
-
-class Bank
-{
-    private int balance = 5000;
-
-    public int GetBalance()
-    {
-        return balance;
-    }
-}
-
-class Program
-{
-    static void Main()
-    {
-        Bank b = new Bank();
-        Console.WriteLine(b.GetBalance());
-    }
-}
-
-
-
-
-
-
 
 
 
