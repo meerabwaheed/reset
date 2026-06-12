@@ -593,9 +593,9 @@ class Animal
     }
 }
 
-// class Dog : Animal
-// {
-// }
+class Dog : Animal
+{
+}
 
 // class Program
 // {
