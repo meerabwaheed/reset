@@ -554,57 +554,89 @@
 
 
 
+// using System;
+
+// class Student
+// {
+//     string name;
+
+//     public Student(string n)
+//     {
+//         name = n;
+//     }
+
+//     public void Display()
+//     {
+//         Console.WriteLine(name);
+//     }
+// }
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         Student s1 = new Student("Ali");
+//         Student s2 = new Student("Ahmed");
+
+//         s1.Display();
+//         s2.Display();
+//     }
+// }
+
+
+
+
+// using System;
+
+// class Animal
+// {
+//     public void Sound()
+//     {
+//         Console.WriteLine("Animal Sound");
+//     }
+// }
+
+// class Dog : Animal
+// {
+// }
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         Dog d = new Dog();
+//         d.Sound();
+//     }
+// }
+
+
+
 using System;
 
-class Student
-{
-    string name;
+// class Parent
+// {
+//     public virtual void Show()
+//     {
+//         Console.WriteLine("Parent");
+//     }
+// }
 
-    public Student(string n)
-    {
-        name = n;
-    }
+// class Child : Parent
+// {
+//     public override void Show()
+//     {
+//         Console.WriteLine("Child");
+//     }
+// }
 
-    public void Display()
-    {
-        Console.WriteLine(name);
-    }
-}
-
-class Program
-{
-    static void Main()
-    {
-        Student s1 = new Student("Ali");
-        Student s2 = new Student("Ahmed");
-
-        s1.Display();
-        s2.Display();
-    }
-}
-
-using System;
-
-class Animal
-{
-    public void Sound()
-    {
-        Console.WriteLine("Animal Sound");
-    }
-}
-
-class Dog : Animal
-{
-}
-
-class Program
-{
-    static void Main()
-    {
-        Dog d = new Dog();
-        d.Sound();
-    }
-}
+// class Program
+// {
+//     static void Main()
+//     {
+//         Parent p = new Child();
+//         p.Show();
+//     }
+// }
 
 
 
