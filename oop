@@ -641,15 +641,15 @@
 
 using System;
 
-class Bank
-{
-    private int balance = 5000;
+// class Bank
+// {
+//     private int balance = 5000;
 
-    public int GetBalance()
-    {
-        return balance;
-    }
-}
+//     public int GetBalance()
+//     {
+//         return balance;
+//     }
+// }
 
 // class Program
 // {
