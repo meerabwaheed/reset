@@ -556,9 +556,9 @@
 
 using System;
 
-// class Student
-// {
-//     string name;
+class Student
+{
+    string name;
 
 //     public Student(string n)
 //     {
