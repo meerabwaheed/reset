@@ -570,10 +570,10 @@ CREATE TABLE Student (
     S_Name VARCHAR(50)
 );
 
--- CREATE TABLE Faculty (
---     F_Name VARCHAR(50) PRIMARY KEY,
---     F_Phone VARCHAR(20)
--- );
+CREATE TABLE Faculty (
+    F_Name VARCHAR(50) PRIMARY KEY,
+    F_Phone VARCHAR(20)
+);
 
 -- CREATE TABLE Course (
 --     CID VARCHAR(10) PRIMARY KEY,
