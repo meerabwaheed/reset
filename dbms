@@ -601,9 +601,9 @@ INSERT INTO Faculty VALUES
 ('Howser','60192'),
 ('Langley','45869');
 
--- INSERT INTO Course VALUES
--- ('IS318','Database','Howser'),
--- ('IS301','EC','Langley');
+INSERT INTO Course VALUES
+('IS318','Database','Howser'),
+('IS301','EC','Langley');
 
 -- INSERT INTO Enrollment VALUES
 -- (1,'IS318','A'),
