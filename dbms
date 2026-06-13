@@ -625,3 +625,13 @@ class Book
         set { title = value; }
     }
 }
+
+class Person
+{
+    public string Name;
+}
+
+class Member : Person
+{
+    public int MemberID;
+}
