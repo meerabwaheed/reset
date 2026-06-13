@@ -655,18 +655,34 @@ class Teacher : Person
 
 
 
-class Account
+-- class Account
+-- {
+--     public double Balance;
+-- }
+
+-- class SavingsAccount : Account
+-- {
+-- }
+
+-- class CurrentAccount : Account
+-- {
+-- }
+
+-- SavingsAccount acc1 = new SavingsAccount();
+-- CurrentAccount acc2 = new CurrentAccount();
+
+class Vehicle
 {
-    public double Balance;
+    public virtual void Start()
+    {
+        Console.WriteLine("Vehicle Starting");
+    }
 }
 
-class SavingsAccount : Account
+class Car : Vehicle
 {
+    public override void Start()
+    {
+        Console.WriteLine("Car Starting");
+    }
 }
-
-class CurrentAccount : Account
-{
-}
-
-SavingsAccount acc1 = new SavingsAccount();
-CurrentAccount acc2 = new CurrentAccount();
