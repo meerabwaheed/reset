@@ -631,7 +631,22 @@ class Person
     public string Name;
 }
 
--- class Member : Person
--- {
---     public int MemberID;
--- }
+class Member : Person
+{
+    public int MemberID;
+}
+
+class Person
+{
+    public string Name;
+}
+
+class Student : Person
+{
+    public int Semester;
+}
+
+class Teacher : Person
+{
+    public string Subject;
+}
