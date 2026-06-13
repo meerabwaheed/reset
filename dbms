@@ -655,21 +655,21 @@ class Teacher : Person
 
 
 
--- class Account
--- {
---     public double Balance;
--- }
+class Account
+{
+    public double Balance;
+}
 
--- class SavingsAccount : Account
--- {
--- }
+class SavingsAccount : Account
+{
+}
 
--- class CurrentAccount : Account
--- {
--- }
+class CurrentAccount : Account
+{
+}
 
--- SavingsAccount acc1 = new SavingsAccount();
--- CurrentAccount acc2 = new CurrentAccount();
+SavingsAccount acc1 = new SavingsAccount();
+CurrentAccount acc2 = new CurrentAccount();
 
 class Vehicle
 {
@@ -686,3 +686,10 @@ class Car : Vehicle
         Console.WriteLine("Car Starting");
     }
 }
+
+
+
+CREATE TABLE StudentSubjects (
+    StudentID INT,
+    Subject VARCHAR(50)
+);
