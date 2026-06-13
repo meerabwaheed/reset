@@ -603,7 +603,7 @@ INSERT INTO Faculty VALUES
 
 INSERT INTO Course VALUES
 ('IS318','Database','Howser'),
-('IS301','EC','Langley');
+('IS301','EC','Langley lopez');
 
 INSERT INTO Enrollment VALUES
 (1,'IS318','A'),
@@ -622,6 +622,6 @@ class Book
     public string Title
     {
         get { return title; }
-        -- set { title = value; }
+        set { title = value; }
     }
 }
