@@ -626,12 +626,12 @@ class Book
     }
 }
 
--- class Person
--- {
---     public string Name;
--- }
-
-class Member : Person
+class Person
 {
-    public int MemberID;
+    public string Name;
 }
+
+-- class Member : Person
+-- {
+--     public int MemberID;
+-- }
