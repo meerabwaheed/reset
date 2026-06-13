@@ -599,7 +599,7 @@ INSERT INTO Student VALUES
 
 INSERT INTO Faculty VALUES
 ('Howser','60192'),
-('Langley','45869');
+('Langley','458623');
 
 INSERT INTO Course VALUES
 ('IS318','Database','Howser'),
