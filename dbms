@@ -667,3 +667,6 @@ class SavingsAccount : Account
 class CurrentAccount : Account
 {
 }
+
+SavingsAccount acc1 = new SavingsAccount();
+CurrentAccount acc2 = new CurrentAccount();
