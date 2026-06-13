@@ -636,6 +636,8 @@ class Member : Person
     public int MemberID;
 }
 
+
+
 class Person
 {
     public string Name;
@@ -649,4 +651,19 @@ class Student : Person
 class Teacher : Person
 {
     public string Subject;
+}
+
+
+
+class Account
+{
+    public double Balance;
+}
+
+class SavingsAccount : Account
+{
+}
+
+class CurrentAccount : Account
+{
 }
