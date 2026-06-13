@@ -622,6 +622,6 @@ class Book
     public string Title
     {
         get { return title; }
-        set { title = value; }
+        -- set { title = value; }
     }
 }
