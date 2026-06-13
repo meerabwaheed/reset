@@ -626,10 +626,10 @@ class Book
     }
 }
 
-class Person
-{
-    public string Name;
-}
+-- class Person
+-- {
+--     public string Name;
+-- }
 
 class Member : Person
 {
