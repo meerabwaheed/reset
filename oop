@@ -629,14 +629,14 @@
 //     }
 // }
 
-// class Program
-// {
-//     static void Main()
-//     {
-//         Parent p = new Child();
-//         p.Show();
-//     }
-// }
+class Program
+{
+    static void Main()
+    {
+        Parent p = new Child();
+        p.Show();
+    }
+}
 
 
 // using System;
@@ -690,6 +690,11 @@ class Program
     }
 
 }
+
+
+
+
+
 
 
 
