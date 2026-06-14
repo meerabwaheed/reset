@@ -611,15 +611,15 @@
 
 
 
-// using System;
+using System;
 
-// class Parent
-// {
-//     public virtual void Show()
-//     {
-//         Console.WriteLine("Parent");
-//     }
-// }
+class Parent
+{
+    public virtual void Show()
+    {
+        Console.WriteLine("Parent");
+    }
+}
 
 class Child : Parent
 {
