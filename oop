@@ -651,14 +651,14 @@ class Bank
     }
 }
 
-// class Program
-// {
-//     static void Main()
-//     {
-//         Bank b = new Bank();
-//         Console.WriteLine(b.GetBalance());
-//     }
-// }
+class Program
+{
+    static void Main()
+    {
+        Bank b = new Bank();
+        Console.WriteLine(b.GetBalance());
+    }
+}
 
 
 
