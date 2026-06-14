@@ -571,17 +571,17 @@
 //     }
 // }
 
-class Program
-{
-    static void Main()
-    {
-        // Student s1 = new Student("Ali");
-        Student s2 = new Student("Ahmed");
+// class Program
+// {
+//     static void Main()
+//     {
+//         Student s1 = new Student("Ali");
+//         Student s2 = new Student("Ahmed");
 
-        s1.Display();
-        s2.Display();
-    }
-}
+//         s1.Display();
+//         s2.Display();
+//     }
+// }
 
 
 
@@ -611,85 +611,85 @@ class Program
 
 
 
-using System;
+// using System;
 
-class Parent
-{
-    public virtual void Show()
-    {
-        Console.WriteLine("Parent");
-    }
-}
+// class Parent
+// {
+//     public virtual void Show()
+//     {
+//         Console.WriteLine("Parent");
+//     }
+// }
 
-class Child : Parent
-{
-    public override void Show()
-    {
-        Console.WriteLine("Child");
-    }
-}
+// class Child : Parent
+// {
+//     public override void Show()
+//     {
+//         Console.WriteLine("Child");
+//     }
+// }
 
-class Program
-{
-    static void Main()
-    {
-        Parent p = new Child();
-        p.Show();
-    }
-}
-
-
-using System;
-
-class Bank
-{
-    private int balance = 5000;
-
-    public int GetBalance()
-    {
-        return balance;
-    }
-}
-
-class Program
-{
-    static void Main()
-    {
-        Bank b = new Bank();
-        Console.WriteLine(b.GetBalance());
-    }
-}
+// class Program
+// {
+//     static void Main()
+//     {
+//         Parent p = new Child();
+//         p.Show();
+//     }
+// }
 
 
+// using System;
+
+// class Bank
+// {
+//     private int balance = 5000;
+
+//     public int GetBalance()
+//     {
+//         return balance;
+//     }
+// }
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         Bank b = new Bank();
+//         Console.WriteLine(b.GetBalance());
+//     }
+// }
 
 
 
-using System;
 
-class A
-{
-    public A()
-    {
-        Console.WriteLine("A");
-    }
-}
 
-class B : A
-{
-    public B()
-    {
-        Console.WriteLine("B");
-    }
-}
+// using System;
 
-class Program
-{
-    static void Main()
-    {
-        B obj = new B();
-    }
+// class A
+// {
+//     public A()
+//     {
+//         Console.WriteLine("A");
+//     }
+// }
 
-}
+// class B : A
+// {
+//     public B()
+//     {
+//         Console.WriteLine("B");
+//     }
+// }
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         B obj = new B();
+//     }
+
+// }
 
 
 

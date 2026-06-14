@@ -669,7 +669,7 @@ class CurrentAccount : Account
 }
 
 SavingsAccount acc1 = new SavingsAccount();
-CurrentAccount acc2 = new CurrentAccount();
+-- CurrentAccount acc2 = new CurrentAccount();
 
 class Vehicle
 {
