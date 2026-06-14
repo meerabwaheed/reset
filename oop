@@ -575,7 +575,7 @@ class Program
 {
     static void Main()
     {
-        Student s1 = new Student("Ali");
+        // Student s1 = new Student("Ali");
         Student s2 = new Student("Ahmed");
 
         s1.Display();
