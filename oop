@@ -586,15 +586,15 @@
 
 
 
-// using System;
+using System;
 
-// class Animal
-// {
-//     public void Sound()
-//     {
-//         Console.WriteLine("Animal Sound");
-//     }
-// }
+class Animal
+{
+    public void Sound()
+    {
+        Console.WriteLine("Animal Sound");
+    }
+}
 
 class Dog : Animal
 {
