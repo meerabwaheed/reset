@@ -600,14 +600,14 @@
 // {
 // }
 
-// class Program
-// {
-//     static void Main()
-//     {
-//         Dog d = new Dog();
-//         d.Sound();
-//     }
-// }
+class Program
+{
+    static void Main()
+    {
+        Dog d = new Dog();
+        d.Sound();
+    }
+}
 
 
 
