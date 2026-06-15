@@ -379,10 +379,10 @@
 // }
 
 
-// // Symbol   Access Modifier
-// // +        Public
-// // -        Private
-// // #        Protected
+// Symbol   Access Modifier
+// +        Public iska matlb ha k her koi isko access ker skta haa
+// -        Private 
+// #        Protected
 // // ~        Package/Internal    Mam hira sy pouchna haa 
 
 // //  public abstract char Draw(); how abstract method is override?
@@ -724,16 +724,20 @@
 
 // }
 
-class Program
-{
+// class Program
+// {
 
-  static void Main()
-    {
+//   static void Main()
+//     {
        
-        Student s1 = new Student();
-        s1.display("meerab", 19);
-    }
-}
+//         Student s1 = new Student();
+//         s1.display("meerab", 19);
+//     }
+// }
+
+
+using System;
+
 
 
 
