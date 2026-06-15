@@ -739,14 +739,14 @@
 using System;
 class Program
 {
-//     static void Main()
-//     {
-//         int age = 12;
-//         float cgpa = 3.6;
-//         double price =2345;
-//         char grade = 'A';
-//         string name = "meerab";
-//         isBool = true;
+    static void Main()
+    {
+        int age = 12;
+        float cgpa = 3.6;
+        double price =2345;
+        char grade = 'A';
+        string name = "meerab";
+        isBool = true;
 
 //         Console.WriteLine(name);
 //         Console.WriteLine(age);
