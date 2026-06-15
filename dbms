@@ -1,568 +1,568 @@
--- -- Create Database
--- CREATE DATABASE Library_DB;
+-- Create Database
+CREATE DATABASE Library_DB;
+
+-- Use Database
+USE Library_DB;
+
+-- -- Create Books Table
+CREATE TABLE Book (
+    Book_ID INT PRIMARY KEY,
+    Title VARCHAR(20),
+    Price DECIMAL(32)
+);
+
+-- -- Create Members Table
+CREATE TABLE Member (
+
+    Member_ID INT PRIMARY KEY,
+    Name VARCHAR(30),
+    Email VARCHAR(30)
+);
+
+-- -- Create BorrowRecords Table
+CREATE TABLE BorrowRecord (
+    Record_ID INT PRIMARY KEY,
+    Member_ID INT,
+    Book_ID INT,
+    Borrow_Date DATE,
+    FOREIGN KEY (MemberID) REFERENCES Members(MemberID),
+    FOREIGN KEY (BookID) REFERENCES Book(BookID)
+);
+
+-- -- Insert Data into Books
+INSERT INTO Books VALUES
+(4, 'Database Systems', 'Navathe', 2300),
+(1, 'C# Programming', 'John Sharp', 2600),
+(2, 'JavaScript Guide', 'David Flanagan', 1500);
+
+-- Insert Data into Members
+INSERT INTO Members VALUES
+(113, 'hussain', 'hussain@gmail.com');
+(114, 'balach', 'balach@gmail.com');
+
+-- Insert Data into BorrowRecords
+INSERT INTO BorrowRecords VALUES
+(112, 101, 12, '2026-05-01', '2026-05-15'),
+(113, 102, 22, '2026-05-05', NULL);
+
+-- Display All Books
+SELECT * FROM Books;
+
+-- -- Display All Members
+SELECT * FROM Members;
+
+-- -- Join Query
+SELECT M.Meerab, B.Title, BR.BorrowDate
+FROM BorrowRecords BR
+JOIN Member M ON BR.MemberID = M.MemberID
+
+-- -- Delete a Book
+DELETE FROM Books
+WHERE BookID = 13;
+
+-- Create Database
+CREATE DATABASE UniversityDB;
+
+-- Use Database
+USE UniversityDB;
+
+-- -- Create Students Table
+CREATE TABLE Students (
+    Student_ID INTPRIMARY KEY,
+    Name VARCHAR(20),
+    Department VARCHAR(40),
+    Semester INT
+);
+
+-- -- Create Courses Table
+CREATE TABLE Courses (
+    Course_IDINT PRIMARY KEY,
+    CourseName VARCHAR(54),
+    CreditHours INT
+);
+
+-- -- Create Enrollments Table
+CREATE TABLE Enrollments (
+    Enrollment_ID INT RIMARY KEY,
+    Student_ID INT,
+    Course_ID INT,
+    Marks INT,
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
+    FOREIGN KEY (CourseID) REFERENCES Courses(CourseID)
+);
+
+-- -- Insert Students
+INSERT INTO Students VALUES
+(4, 'haseena', 'Computer_Science', 15),
+(1, 'darling', 'Software_Engineering',14),
+(5, 'sara', 'Computer_Science', 23);
+
+-- Insert Courses
+INSERT INTO Courses VALUES
+(101, 'Database Systems', 3),
+(102, 'Object Oriented Programming', 3),
+(103, 'Data Structures', 4);
+
+-- Insert Enrollments
+INSERT INTO Enrollments VALUES
+(1, 1, 101, 85),
+(2, 1, 102, 78),
+(3, 2, 101, 90),
+(4, 3, 103, 88);
+
+-- -- Display Students
+SELECT * FROM Students;
+
+-- -- Display Courses
+SELECT * FROM Courses;
+
+-- -- Display Enrollment Details
+SELECT
+    Students.Name,
+    Courses.CourseName,
+    Enrollments.Marks
+FROM Enrollments
+JOIN Students
+ON Enrollments.StudentID = Students.StudentID
+JOIN Courses
+ON Enrollments.CourseID = Courses.CourseID;
+
+-- -- Students with Marks Greater Than 80
+SELECT
+    Students.Name,
+    Courses.CourseName,
+    Enrollments.Marks
+FROM Enrollments
+JOIN Students
+ON Enrollments.StudentID = Students.StudentID
+JOIN Courses
+ON Enrollments.CourseID = Courses.CourseID
+WHERE Enrollments.Marks > 80;
+
+-- -- Update Marks
+UPDATE Enrollments
+SET Marks = 95
+WHERE EnrollmentID = 2;
+
+-- -- Delete a Student
+DELETE FROM Students
+WHERE StudentID = 3;
+
+
+
+-- Create Database
+CREATE DATABASE StudentDB;
+
+-- Use Database
+USE StudentDB;
+
+-- -- Create Table
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(70),
+    Age INT,
+    Department VARCHAR(70),
+    CGPA DECIMAL(4,3)
+);
+
+-- -- Insert Records
+INSERT INTO Students (StudentID, Name, Age, Department, CGPA)
+VALUES
+(1, 'meer_raj', 120, 'Computer Science', 3.50),
+(2, 'Samina', 231, 'Software Engineering', 3.80),
+(3, 'sultan', 221, 'Information Technology', 3.40),
+(4, 'bisma', 234, 'Computer Science', 3.90),
+(5, 'talal', 278, 'Software Engineering', 3.20);
+
+-- -- Display All Records
+SELECT * FROM Students;
+
+-- -- Display Specific Columns
+SELECT Name, CGPA
+FROM Students;
+
+-- -- Search Students with CGPA Greater Than 3.5
+SELECT *
+FROM Students
+WHERE CGPA > 3.5;
+
+-- -- Update Student Record
+UPDATE Students
+SET CGPA = 3.95
+WHERE Student_ID = 2;
+
+-- -- Delete a Student Record
+DELETE FROM Students
+WHERE StudentID = 5;
+
+-- -- Count Total Students
+SELECT COUNT(*) AS TotalStudents
+FROM Students;
+
+-- -- Find Maximum CGPA
+SELECT MAX(CGPA) AS HighestCGPA
+FROM Students;
+
+-- -- Find Average CGPA
+SELECT AVG(CGPA) AS AverageCGPA
+FROM Students;
+
+-- -- Sort Students by CGPA (Highest to Lowest)
+SELECT *
+FROM Students
+ORDER BY CGPA DESC;
+
+-- -- Show Students from Computer Science Department
+SELECT *
+FROM Students
+WHERE Department = 'Computer Science';
+
+-- -- Drop Table (Run only if needed)
+DROP TABLE Students;
+
+-- -- Drop Database (Run only if needed)
+DROP DATABASE StudentDB;
+
+
+
+
+-- Create Database
+CREATE DATABASE Library_DB;
+
+-- Use Database
+USE LibraryDB;
+-- -- Create Books Table
+CREATE TABLE Books (
+    BookID INT PRIMARY KEY,
+    Title VARCHAR(50),
+    Author VARCHAR(50),
+    Price DECIMAL(8,2),
+    Quantity INT
+);
+
+-- -- Create Members Table
+CREATE TABLE Members (
+    Member_ID INT PRIMARY KEY,
+    MemberName VARCHAR(50),
+    Email VARCHAR(100)
+);
+
+-- -- Insert Data into Books
+INSERT INTO Books
+VALUES
+(1, 'Database Systems', 'Korth', 1200.00, 10),
+(2, 'C# Programming', 'Deitel', 1500.00, 8),
+(103, 'JavaScript Guide', 'John Duckett', 1000.00, 12),
+(104, 'Python Basics', 'Mark Lutz', 1800.00, 5);
+
+-- -- Insert Data into Members
+INSERT INTO Members
+VALUES
+(24, 'Muhammad', 'ali@gmail.com'),
+(34, 'Sara', 'sara@gmail.com'),
+(45, 'ali', 'ahmed@gmail.com');
+
+-- -- Display All Books
+SELECT * FROM Books;
+
+-- -- Display All Members
+SELECT * FROM Members;
+
+-- -- Find Books Costing More Than 1200
+SELECT * FROM Books
+WHERE Price > 1200;
+
+-- -- Update Book Quantity
+UPDATE Books
+SET Quantity = 15
+WHERE BookID = 102;
+
+-- -- Delete a Member
+DELETE FROM Members
+WHERE Member_ID = 3;
+
+-- -- Sort Books by Price
+SELECT * FROM Books
+ORDER BY Price DESC;
+
+-- -- Count Total Books
+SELECT COUNT(*) AS TotalBooks
+FROM Books;
+
+-- -- Find Highest Book Price
+SELECT MAX(Price) AS HighestPrice
+FROM Books;
+
+-- -- Find Average Book Price
+SELECT AVG(Price) AS AveragePrice
+FROM Books;
+
+-- -- Show Books with Quantity Less Than 10
+SELECT * FROM Books
+WHERE Quantity < 10;
+
+-- -- Drop Tables (Optional)
+DROP TABLE Books;
+DROP TABLE Members;
+
+-- -- Drop Database (Optional)
+DROP DATABASE Library_DB;
+
+
+Create Database
+CREATE DATABASE Student_DB;
+
+-- Use Database
+USE Student_DB;
+
+-- -- Create Student Table
+CREATE TABLE Student (
+    Student_ID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Age INT,
+    Department VARCHAR(50),
+    CGPA DECIMAL(4,3.97)
+);
+
+-- -- Insert Records
+INSERT INTO Student
+VALUES
+(1, 'Ali', 29, 'Computer_Science', 3.55),
+(2, 'Ahmed', 23, 'Software_Engineering', 3.88),
+(3, 'Sara', 22, 'Information_Technology', 3.77),
+
+-- Display All Students
+SELECT * FROM Student;
+
+-- -- -- Display Specific Columns
+SELECT Name, Department
+FROM Student;
+
+-- -- -- Update Record
+UPDATE Student
+SET CGPA = 3.90
+WHERE Student_ID = 19;
+
+-- -- -- Delete Record
+DELETE FROM Student
+WHERE Student_ID = 4;
+
+-- -- Find Students with CGPA > 3.6
+SELECT *
+FROM Student
+WHERE CGPA > 3.46;
+
+-- -- Sort Students by CGPA
+SELECT *
+FROM Student
+ORDER BY CGPA DESC;
+
+-- -- Count Students
+SELECT COUNT(*) AS Total_Student
+FROM Student;
+
+Create Database
+CREATE DATABASE Library_DB;
 
 -- -- Use Database
--- USE Library_DB;
+USE Library_DB;
 
--- -- -- Create Books Table
--- CREATE TABLE Book (
---     Book_ID INT PRIMARY KEY,
---     Title VARCHAR(20),
---     Price DECIMAL(32)
--- );
+-- -- Create Books Table
+CREATE TABLE Books (
+    BookID INT PRIMARY KEY,
+    Title VARCHAR(120),
+    Author VARCHAR(40),
+    Price DECIMAL(4,3)
+);
 
--- -- -- Create Members Table
--- CREATE TABLE Member (
+-- -- Create Members Table
+CREATE TABLE Members (
+    Member_ID INT PRIMARY KEY,
+    Member_Name VARCHAR(340),
+    Phone VARCHAR(45)
+);
 
---     Member_ID INT PRIMARY KEY,
---     Name VARCHAR(30),
---     Email VARCHAR(30)
--- );
+-- -- Create BorrowRecords Table
+CREATE TABLE BorrowRecords (
+    Borrow_ID INT PRIMARY KEY,
+    Member_ID INT,
+    Book_ID INT,
+    Borrow_Date DATE,
+    Return_Date DATE,
+    FOREIGN KEY (Member_ID) REFERENCES Members(Member_ID),
+    FOREIGN KEY (Book_ID) REFERENCES Books(Book_ID)
+);
 
--- -- -- Create BorrowRecords Table
--- CREATE TABLE BorrowRecord (
---     Record_ID INT PRIMARY KEY,
---     Member_ID INT,
---     Book_ID INT,
---     Borrow_Date DATE,
---     FOREIGN KEY (MemberID) REFERENCES Members(MemberID),
---     FOREIGN KEY (BookID) REFERENCES Book(BookID)
--- );
-
--- -- -- Insert Data into Books
--- INSERT INTO Books VALUES
--- (4, 'Database Systems', 'Navathe', 2300),
--- (1, 'C# Programming', 'John Sharp', 2600),
--- (2, 'JavaScript Guide', 'David Flanagan', 1500);
+-- -- Insert Data into Books
+INSERT INTO Books VALUES
+(5, 'Database_Systems', 'Kevin', 1450),
+(4, 'C#_Programming', 'John smith', 4530),
+(1, 'Web_Development', 'David stocker', 72100);
 
 -- -- Insert Data into Members
 -- INSERT INTO Members VALUES
--- (113, 'hussain', 'hussain@gmail.com');
--- (114, 'balach', 'balach@gmail.com');
+-- (5, 'sadia', '03501234567'),
+-- (4, 'waheed', '03216263400'),
+-- (2, 'meri mama jaan', '03221275889');
 
 -- -- Insert Data into BorrowRecords
--- INSERT INTO BorrowRecords VALUES
--- (112, 101, 12, '2026-05-01', '2026-05-15'),
--- (113, 102, 22, '2026-05-05', NULL);
+INSERT INTO Borrow_Records VALUES
+(5, 5, 104, '2026-06-12', '2026-06-15'),
+(4, 4, 107, '2026-06-14', '2026-06-16'),
+(2, 2, 109, '2026-06-17', '2026-06-17');
 
--- -- Display All Books
--- SELECT * FROM Books;
+-- -- Show All Books
+SELECT * FROM Book;
 
--- -- -- Display All Members
--- SELECT * FROM Members;
+-- -- Show All Members
+SELECT * FROM Member;
 
--- -- -- Join Query
--- SELECT M.Meerab, B.Title, BR.BorrowDate
--- FROM BorrowRecords BR
--- JOIN Member M ON BR.MemberID = M.MemberID
+-- -- Show Borrow Details
+SELECT *
+FROM Borrow_Record;
 
--- -- -- Delete a Book
--- DELETE FROM Books
--- WHERE BookID = 13;
-
--- -- Create Database
--- CREATE DATABASE UniversityDB;
-
--- -- Use Database
--- USE UniversityDB;
-
--- -- -- Create Students Table
--- CREATE TABLE Students (
---     Student_ID INTPRIMARY KEY,
---     Name VARCHAR(20),
---     Department VARCHAR(40),
---     Semester INT
--- );
-
--- -- -- Create Courses Table
--- CREATE TABLE Courses (
---     Course_IDINT PRIMARY KEY,
---     CourseName VARCHAR(54),
---     CreditHours INT
--- );
-
--- -- -- Create Enrollments Table
--- CREATE TABLE Enrollments (
---     Enrollment_ID INT RIMARY KEY,
---     Student_ID INT,
---     Course_ID INT,
---     Marks INT,
---     FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
---     FOREIGN KEY (CourseID) REFERENCES Courses(CourseID)
--- );
-
--- -- -- Insert Students
--- INSERT INTO Students VALUES
--- (4, 'haseena', 'Computer_Science', 15),
--- (1, 'darling', 'Software_Engineering',14),
--- (5, 'sara', 'Computer_Science', 23);
-
--- -- Insert Courses
--- INSERT INTO Courses VALUES
--- (101, 'Database Systems', 3),
--- (102, 'Object Oriented Programming', 3),
--- (103, 'Data Structures', 4);
-
--- -- Insert Enrollments
--- INSERT INTO Enrollments VALUES
--- (1, 1, 101, 85),
--- (2, 1, 102, 78),
--- (3, 2, 101, 90),
--- (4, 3, 103, 88);
-
--- -- -- Display Students
--- SELECT * FROM Students;
-
--- -- -- Display Courses
--- SELECT * FROM Courses;
-
--- -- -- Display Enrollment Details
+-- -- Join Query
 -- SELECT
---     Students.Name,
---     Courses.CourseName,
---     Enrollments.Marks
--- FROM Enrollments
--- JOIN Students
--- ON Enrollments.StudentID = Students.StudentID
--- JOIN Courses
--- ON Enrollments.CourseID = Courses.CourseID;
+--     Members.Member_Name,
+--     Books.Title,
+--     BorrowRecords.Borrow_Date,
+--     BorrowRecords.Return_Date
+-- FROM BorrowRecords
+-- INNER JOIN Members
+-- ON BorrowRecords.Member_ID = Members.MemberID
+-- INNER JOIN Book
+-- ON BorrowRecords.Book_ID = Books.BookID;
 
--- -- -- Students with Marks Greater Than 80
--- SELECT
---     Students.Name,
---     Courses.CourseName,
---     Enrollments.Marks
--- FROM Enrollments
--- JOIN Students
--- ON Enrollments.StudentID = Students.StudentID
--- JOIN Courses
--- ON Enrollments.CourseID = Courses.CourseID
--- WHERE Enrollments.Marks > 80;
+-- -- Update Book Price
+UPDATE Books
+SET Price = 4000
+WHERE BookID = 102;
 
--- -- -- Update Marks
--- UPDATE Enrollments
--- SET Marks = 95
--- WHERE EnrollmentID = 2;
+-- -- Delete a Member
+DELETE FROM Member
+WHERE Member_ID = 4;
 
--- -- -- Delete a Student
--- DELETE FROM Students
--- WHERE StudentID = 3;
+-- -- Count Total Books
+SELECT COUNT(*) AS Total_Books
+FROM Book;
 
+-- -- Find Expensive Books
+SELECT *
+FROM Book
+WHERE Price > 1300;
 
-
--- -- Create Database
--- CREATE DATABASE StudentDB;
-
--- -- Use Database
--- USE StudentDB;
-
--- -- -- Create Table
--- CREATE TABLE Students (
---     StudentID INT PRIMARY KEY,
---     Name VARCHAR(70),
---     Age INT,
---     Department VARCHAR(70),
---     CGPA DECIMAL(4,3)
--- );
-
--- -- -- Insert Records
--- INSERT INTO Students (StudentID, Name, Age, Department, CGPA)
--- VALUES
--- (1, 'meer_raj', 120, 'Computer Science', 3.50),
--- (2, 'Samina', 231, 'Software Engineering', 3.80),
--- (3, 'sultan', 221, 'Information Technology', 3.40),
--- (4, 'bisma', 234, 'Computer Science', 3.90),
--- (5, 'talal', 278, 'Software Engineering', 3.20);
-
--- -- -- Display All Records
--- SELECT * FROM Students;
-
--- -- -- Display Specific Columns
--- SELECT Name, CGPA
--- FROM Students;
-
--- -- -- Search Students with CGPA Greater Than 3.5
--- SELECT *
--- FROM Students
--- WHERE CGPA > 3.5;
-
--- -- -- Update Student Record
--- UPDATE Students
--- SET CGPA = 3.95
--- WHERE Student_ID = 2;
-
--- -- -- Delete a Student Record
--- DELETE FROM Students
--- WHERE StudentID = 5;
-
--- -- -- Count Total Students
--- SELECT COUNT(*) AS TotalStudents
--- FROM Students;
-
--- -- -- Find Maximum CGPA
--- SELECT MAX(CGPA) AS HighestCGPA
--- FROM Students;
-
--- -- -- Find Average CGPA
--- SELECT AVG(CGPA) AS AverageCGPA
--- FROM Students;
-
--- -- -- Sort Students by CGPA (Highest to Lowest)
--- SELECT *
--- FROM Students
--- ORDER BY CGPA DESC;
-
--- -- -- Show Students from Computer Science Department
--- SELECT *
--- FROM Students
--- WHERE Department = 'Computer Science';
-
--- -- -- Drop Table (Run only if needed)
--- DROP TABLE Students;
-
--- -- -- Drop Database (Run only if needed)
--- DROP DATABASE StudentDB;
+-- -- Sort Books by Price
+SELECT *
+FROM Book
+ORDER BY Price DESC;
 
 
 
 
--- -- Create Database
--- CREATE DATABASE Library_DB;
 
--- -- Use Database
--- USE LibraryDB;
--- -- -- Create Books Table
--- CREATE TABLE Books (
---     BookID INT PRIMARY KEY,
---     Title VARCHAR(50),
---     Author VARCHAR(50),
---     Price DECIMAL(8,2),
---     Quantity INT
--- );
+CREATE DATABASE home_db;
+USE home_db;
+CREATE TABLE student(
+   id INT PRIMARY KEY,
+   name VARCHAR(50),
+   age INT,
+   salary DOUBLE
+);
+INSERT INTO student VALUES(4,'meerab',19,72000);
+INSERT INTO student VALUES(3,'aahil',12,2000);
+INSERT INTO student VALUES(2,'mahad',10,2000);
+INSERT INTO student VALUES(1,'faran',9,52000);
+SELECT * From student;
+SELECT * FROM student WHERE age > 8;
+UPDATE students SET Age = 12 WHERE ID = 4;
+SET SQL_SAFE_UPDATES = 0;
+SELECT * FROM student ORDER BY AGE ASC;
+SELECT *FROM student ORDER BY AGE DESC;
+UPDATE students SET AGE = 15 WHERE ID = 3;
+DELETE FROM student WHERE ID = 4;
+SELECT COUNT(*) AS Total_Student FROM student;
 
--- -- -- Create Members Table
--- CREATE TABLE Members (
---     Member_ID INT PRIMARY KEY,
---     MemberName VARCHAR(50),
---     Email VARCHAR(100)
--- );
 
--- -- -- Insert Data into Books
--- INSERT INTO Books
--- VALUES
--- (1, 'Database Systems', 'Korth', 1200.00, 10),
--- (2, 'C# Programming', 'Deitel', 1500.00, 8),
--- (103, 'JavaScript Guide', 'John Duckett', 1000.00, 12),
--- (104, 'Python Basics', 'Mark Lutz', 1800.00, 5);
 
--- -- -- Insert Data into Members
--- INSERT INTO Members
--- VALUES
--- (24, 'Muhammad', 'ali@gmail.com'),
--- (34, 'Sara', 'sara@gmail.com'),
--- (45, 'ali', 'ahmed@gmail.com');
 
--- -- -- Display All Books
--- SELECT * FROM Books;
 
--- -- -- Display All Members
--- SELECT * FROM Members;
 
--- -- -- Find Books Costing More Than 1200
--- SELECT * FROM Books
--- WHERE Price > 1200;
+CREATE DATABASE misrishahdb; 
+USE misrishahdb;
+CREATE TABLE homies(
+    rest_id INT PRIMARY KEY,
+    name VARCHAR(20),
+    salary DOUBLE
+);
+-- INSERT INTO homies VALUES(1,',230000);
 
--- -- -- Update Book Quantity
--- UPDATE Books
--- SET Quantity = 15
--- WHERE BookID = 102;
+CREATE DATABASE homie_db;
+USE homie_db;
+CREATE TABLE students(
+   id INT PRIMARY KEY,
+   name VARCHAR(20),
+   age INT,
+   salary DOUBLE
+);
+CREATE TABLE homes(
+    id INT PRIMARY KEY,
+    name VARCHAR(20),
+    salary DOUBLE
+);
+SELECT S.student_ID,S.student_NAME,
+H.homes_NAME
+FROM students S
+LEFT JOIN students S
+ON S.home_ID = H.homes_ID
 
--- -- -- Delete a Member
--- DELETE FROM Members
--- WHERE Member_ID = 3;
 
--- -- -- Sort Books by Price
--- SELECT * FROM Books
--- ORDER BY Price DESC;
 
--- -- -- Count Total Books
--- SELECT COUNT(*) AS TotalBooks
--- FROM Books;
-
--- -- -- Find Highest Book Price
--- SELECT MAX(Price) AS HighestPrice
--- FROM Books;
-
--- -- -- Find Average Book Price
--- SELECT AVG(Price) AS AveragePrice
--- FROM Books;
-
--- -- -- Show Books with Quantity Less Than 10
--- SELECT * FROM Books
--- WHERE Quantity < 10;
-
--- -- -- Drop Tables (Optional)
--- DROP TABLE Books;
--- DROP TABLE Members;
-
--- -- -- Drop Database (Optional)
--- DROP DATABASE Library_DB;
 
 
 -- Create Database
--- CREATE DATABASE Student_DB;
+CREATE DATABASE student_dbs;
 
--- -- Use Database
--- USE Student_DB;
+-- Use Database
+USE student_db;
 
--- -- -- Create Student Table
--- CREATE TABLE Student (
---     Student_ID INT PRIMARY KEY,
---     Name VARCHAR(50),
---     Age INT,
---     Department VARCHAR(50),
---     CGPA DECIMAL(4,3.97)
--- );
+-- Create Student Table
+CREATE TABLE Student (
+    Student_ID INT PRIMARY KEY,
+    Name VARCHAR(30),
+    Age INT,
+    CGPA DECIMAL(3.9)
+);
 
--- -- -- Insert Records
--- INSERT INTO Student
--- VALUES
--- (1, 'Ali', 29, 'Computer_Science', 3.55),
--- (2, 'Ahmed', 23, 'Software_Engineering', 3.88),
--- (3, 'Sara', 22, 'Information_Technology', 3.77),
+-- Create Department Table
+CREATE TABLE Department (
+    Department_ID INT PRIMARY KEY,
+    Department_Name VARCHAR(50)
+);
 
--- -- Display All Students
--- SELECT * FROM Student;
+-- Insert Data into Student Table
+INSERT INTO Student VALUES
+(1, 'Ali', 20, 3.75),
+(2, 'Ahmed', 21, 3.50),
+(3, 'Sara', 19, 3.90);
 
--- -- -- -- Display Specific Columns
--- SELECT Name, Department
--- FROM Student;
+-- Insert Data into Department Table
+INSERT INTO Department VALUES
+(1, 'Computer Science'),
+(2, 'Software Engineering'),
+(3, 'Information Technology');
 
--- -- -- -- Update Record
--- UPDATE Student
--- SET CGPA = 3.90
--- WHERE Student_ID = 19;
+-- Display Tables
+SELECT * FROM Student;
+SELECT * FROM Department;
 
--- -- -- -- Delete Record
--- DELETE FROM Student
--- WHERE Student_ID = 4;
-
--- -- -- Find Students with CGPA > 3.6
--- SELECT *
--- FROM Student
--- WHERE CGPA > 3.46;
-
--- -- -- Sort Students by CGPA
--- SELECT *
--- FROM Student
--- ORDER BY CGPA DESC;
-
--- -- -- Count Students
--- SELECT COUNT(*) AS Total_Student
--- FROM Student;
-
--- Create Database
--- CREATE DATABASE Library_DB;
-
--- -- -- Use Database
--- USE Library_DB;
-
--- -- -- Create Books Table
--- CREATE TABLE Books (
---     BookID INT PRIMARY KEY,
---     Title VARCHAR(120),
---     Author VARCHAR(40),
---     Price DECIMAL(4,3)
--- );
-
--- -- -- Create Members Table
--- CREATE TABLE Members (
---     Member_ID INT PRIMARY KEY,
---     Member_Name VARCHAR(340),
---     Phone VARCHAR(45)
--- );
-
--- -- -- Create BorrowRecords Table
--- CREATE TABLE BorrowRecords (
---     Borrow_ID INT PRIMARY KEY,
---     Member_ID INT,
---     Book_ID INT,
---     Borrow_Date DATE,
---     Return_Date DATE,
---     FOREIGN KEY (Member_ID) REFERENCES Members(Member_ID),
---     FOREIGN KEY (Book_ID) REFERENCES Books(Book_ID)
--- );
-
--- -- -- Insert Data into Books
--- INSERT INTO Books VALUES
--- (5, 'Database_Systems', 'Kevin', 1450),
--- (4, 'C#_Programming', 'John smith', 4530),
--- (1, 'Web_Development', 'David stocker', 72100);
-
--- -- -- Insert Data into Members
--- -- INSERT INTO Members VALUES
--- -- (5, 'sadia', '03501234567'),
--- -- (4, 'waheed', '03216263400'),
--- -- (2, 'meri mama jaan', '03221275889');
-
--- -- -- Insert Data into BorrowRecords
--- INSERT INTO Borrow_Records VALUES
--- (5, 5, 104, '2026-06-12', '2026-06-15'),
--- (4, 4, 107, '2026-06-14', '2026-06-16'),
--- (2, 2, 109, '2026-06-17', '2026-06-17');
-
--- -- -- Show All Books
--- SELECT * FROM Book;
-
--- -- -- Show All Members
--- SELECT * FROM Member;
-
--- -- -- Show Borrow Details
--- SELECT *
--- FROM Borrow_Record;
-
--- -- -- Join Query
--- -- SELECT
--- --     Members.Member_Name,
--- --     Books.Title,
--- --     BorrowRecords.Borrow_Date,
--- --     BorrowRecords.Return_Date
--- -- FROM BorrowRecords
--- -- INNER JOIN Members
--- -- ON BorrowRecords.Member_ID = Members.MemberID
--- -- INNER JOIN Book
--- -- ON BorrowRecords.Book_ID = Books.BookID;
-
--- -- -- Update Book Price
--- UPDATE Books
--- SET Price = 4000
--- WHERE BookID = 102;
-
--- -- -- Delete a Member
--- DELETE FROM Member
--- WHERE Member_ID = 4;
-
--- -- -- Count Total Books
--- SELECT COUNT(*) AS Total_Books
--- FROM Book;
-
--- -- -- Find Expensive Books
--- SELECT *
--- FROM Book
--- WHERE Price > 1300;
-
--- -- -- Sort Books by Price
--- SELECT *
--- FROM Book
--- ORDER BY Price DESC;
-
-
-
-
-
--- CREATE DATABASE home_db;
--- USE home_db;
--- CREATE TABLE student(
---    id INT PRIMARY KEY,
---    name VARCHAR(50),
---    age INT,
---    salary DOUBLE
--- );
--- INSERT INTO student VALUES(4,'meerab',19,72000);
--- INSERT INTO student VALUES(3,'aahil',12,2000);
--- INSERT INTO student VALUES(2,'mahad',10,2000);
--- INSERT INTO student VALUES(1,'faran',9,52000);
--- SELECT * From student;
--- SELECT * FROM student WHERE age > 8;
--- UPDATE students SET Age = 12 WHERE ID = 4;
--- SET SQL_SAFE_UPDATES = 0;
--- SELECT * FROM student ORDER BY AGE ASC;
--- SELECT *FROM student ORDER BY AGE DESC;
--- UPDATE students SET AGE = 15 WHERE ID = 3;
--- DELETE FROM student WHERE ID = 4;
--- SELECT COUNT(*) AS Total_Student FROM student;
-
-
-
-
-
-
--- CREATE DATABASE misrishahdb; 
--- USE misrishahdb;
--- CREATE TABLE homies(
---     rest_id INT PRIMARY KEY,
---     name VARCHAR(20),
---     salary DOUBLE
--- );
--- -- INSERT INTO homies VALUES(1,',230000);
-
--- CREATE DATABASE homie_db;
--- USE homie_db;
--- CREATE TABLE students(
---    id INT PRIMARY KEY,
---    name VARCHAR(20),
---    age INT,
---    salary DOUBLE
--- );
--- CREATE TABLE homes(
---     id INT PRIMARY KEY,
---     name VARCHAR(20),
---     salary DOUBLE
--- );
--- SELECT S.student_ID,S.student_NAME,
--- H.homes_NAME
--- FROM students S
--- LEFT JOIN students S
--- ON S.home_ID = H.homes_ID
-
-
-
-
-
--- -- Create Database
--- CREATE DATABASE student_dbs;
-
--- -- Use Database
--- USE student_db;
-
--- -- Create Student Table
--- CREATE TABLE Student (
---     Student_ID INT PRIMARY KEY,
---     Name VARCHAR(30),
---     Age INT,
---     CGPA DECIMAL(3.9)
--- );
-
--- -- Create Department Table
--- CREATE TABLE Department (
---     Department_ID INT PRIMARY KEY,
---     Department_Name VARCHAR(50)
--- );
-
--- -- Insert Data into Student Table
--- INSERT INTO Student VALUES
--- (1, 'Ali', 20, 3.75),
--- (2, 'Ahmed', 21, 3.50),
--- (3, 'Sara', 19, 3.90);
-
--- -- Insert Data into Department Table
--- INSERT INTO Department VALUES
--- (1, 'Computer Science'),
--- (2, 'Software Engineering'),
--- (3, 'Information Technology');
-
--- -- Display Tables
--- SELECT * FROM Student;
--- SELECT * FROM Department;
-
--- -- CROSS JOIN Query
--- SELECT
---     S.Student_ID,
---     S.Name,
---     D.Department_ID,
---     D.Department_Name
--- FROM Student S
--- CROSS JOIN Department D;
+-- CROSS JOIN Query
+SELECT
+    S.Student_ID,
+    S.Name,
+    D.Department_ID,
+    D.Department_Name
+FROM Student S
+CROSS JOIN Department D;
 
 
 CREATE TABLE Student (
