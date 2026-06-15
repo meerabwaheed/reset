@@ -706,34 +706,34 @@
 //+------------------+
 
 // synatx
-using System;
-//class name
-class Student
-{
-
-    //attributes (means characteristics)
-    public string name;
-    public int age;
-   public void display(string name , int age)
-    {
-      
-        Console.WriteLine("Name" + name);
-        Console.WriteLine("Age" + age);
-    }
-    //there are two types of parameter that are default (like values  nae hongi or parameters bhi set nae kiye gye hongy) and parameterized (values hongy)
-
-}
-
-// class Program
+// using System;
+// //class name
+// class Student
 // {
 
-//   static void Main()
+//     //attributes (means characteristics)
+//     public string name;
+//     public int age;
+//    public void display(string name , int age)
 //     {
-       
-//         Student s1 = new Student();
-//         s1.display("meerab", 19);
+      
+//         Console.WriteLine("Name" + name);
+//         Console.WriteLine("Age" + age);
 //     }
+//     //there are two types of parameter that are default (like values  nae hongi or parameters bhi set nae kiye gye hongy) and parameterized (values hongy)
+
 // }
+
+class Program
+{
+
+  static void Main()
+    {
+       
+        Student s1 = new Student();
+        s1.display("meerab", 19);
+    }
+}
 
 
 
