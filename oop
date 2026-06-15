@@ -754,30 +754,46 @@
 // }
 
 
+// using System;
+// class Program
+// {
+//     static void Main()
+//     {
+//         Console.Write("enter your name");
+//         string name = Console.ReadLine();
+//         Console.WriteLine("Hello"+ name);
+//         int age = 20;
+
+// if(age >= 18)
+// {
+//     Console.WriteLine("Adult");
+// }
+// int age = 15;
+
+// if(age >= 18)
+// {
+//     Console.WriteLine("Adult");
+// }
+// else
+// {
+//     Console.WriteLine("Minor");
+// }
+//     }
+// }
+
 using System;
-class Program
+
+
+namespace hello_meerab
 {
-    static void Main()
+    internal class Program
     {
-        Console.Write("enter your name");
-        string name = Console.ReadLine();
-        Console.WriteLine("Hello"+ name);
-        int age = 20;
-
-if(age >= 18)
-{
-    Console.WriteLine("Adult");
-}
-int age = 15;
-
-if(age >= 18)
-{
-    Console.WriteLine("Adult");
-}
-else
-{
-    Console.WriteLine("Minor");
-}
+        static void Main(string[] args)
+        {
+            string inp = Console.ReadLine();
+            Console.WriteLine(inp);
+            
+        }
     }
 }
 
