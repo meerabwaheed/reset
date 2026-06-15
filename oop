@@ -748,10 +748,10 @@ class Program
         string name = "meerab";
         isBool = true;
 
-//         Console.WriteLine(name);
-//         Console.WriteLine(age);
-//     }
-// }
+        Console.WriteLine(name);
+        Console.WriteLine(age);
+    }
+}
 
 
 
