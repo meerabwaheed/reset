@@ -762,8 +762,17 @@ class Program
         Console.Write("enter your name");
         string name = Console.ReadLine();
         Console.WriteLine("Hello"+ name);
+        int age = 20;
+
+if(age >= 18)
+{
+    Console.WriteLine("Adult");
+}
     }
 }
+
+
+
 
 
 
