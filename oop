@@ -1022,15 +1022,15 @@
 //     }
 // }
 
-// class Program
-// {
-//     static void Main()
-//     {
-//         Cylinder c = new Cylinder(5, 10);
+class Program
+{
+    static void Main()
+    {
+        Cylinder c = new Cylinder(5, 10);
 
-//         c.Display();
-//     }
-// }
+        c.Display();
+    }
+}
 
 class parent
 {
