@@ -975,27 +975,27 @@
 // }
 
 
-// using System;
+using System;
 
-// class Circle
-// {
-//     public double Radius;
+class Circle
+{
+    public double Radius;
 
-//     public Circle(double radius)
-//     {
-//         Radius = radius;
-//     }
+    public Circle(double radius)
+    {
+        Radius = radius;
+    }
 
-//     public double GetArea()
-//     {
-//         return 3.14 * Radius * Radius;
-//     }
+    public double GetArea()
+    {
+        return 3.14 * Radius * Radius;
+    }
 
-//     public double GetCircumference()
-//     {
-//         return 2 * 3.14 * Radius;
-//     }
-// }
+    public double GetCircumference()
+    {
+        return 2 * 3.14 * Radius;
+    }
+}
 
 class Cylinder : Circle
 {
