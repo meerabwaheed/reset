@@ -882,157 +882,173 @@
 //     }
 // }
 
-using System;
+// using System;
 
-class Employee
-{
-    public int Id;
-    public string Name;
+// class Employee
+// {
+//     public int Id;
+//     public string Name;
 
-    public Employee(int id, string name)
-    {
-        Id = id;
-        Name = name;
-    }
-}
-
-class CollegeEmployee : Employee
-{
-    public double Salary;
-
-    public CollegeEmployee(int id, string name, double salary)
-        : base(id, name)
-    {
-        Salary = salary;
-    }
-
-    public void Display()
-    {
-        Console.WriteLine("ID: " + Id);
-        Console.WriteLine("Name: " + Name);
-        Console.WriteLine("Salary: " + Salary);
-    }
-}
-
-class Faculty : Employee
-{
-    public int ContractDuration;
-
-    public Faculty(int id, string name, int duration)
-        : base(id, name)
-    {
-        ContractDuration = duration;
-    }
-
-    public void Display()
-    {
-        Console.WriteLine("ID: " + Id);
-        Console.WriteLine("Name: " + Name);
-        Console.WriteLine("Contract Duration: " + ContractDuration + " Months");
-    }
-}
-
-class Program
-{
-//     static void Main()
+//     public Employee(int id, string name)
 //     {
-//         CollegeEmployee c = new CollegeEmployee(101, "Ali", 50000);
-//         Faculty f = new Faculty(201, "Ahmed", 12);
-
-//         Console.WriteLine("College Employee");
-//         c.Display();
-
-//         Console.WriteLine();
-
-//         Console.WriteLine("Faculty");
-//         f.Display();
+//         Id = id;
+//         Name = name;
 //     }
 // }
 
-static void Main()
+// class CollegeEmployee : Employee
+// {
+//     public double Salary;
+
+//     public CollegeEmployee(int id, string name, double salary)
+//         : base(id, name)
+//     {
+//         Salary = salary;
+//     }
+
+//     public void Display()
+//     {
+//         Console.WriteLine("ID: " + Id);
+//         Console.WriteLine("Name: " + Name);
+//         Console.WriteLine("Salary: " + Salary);
+//     }
+// }
+
+// class Faculty : Employee
+// {
+//     public int ContractDuration;
+
+//     public Faculty(int id, string name, int duration)
+//         : base(id, name)
+//     {
+//         ContractDuration = duration;
+//     }
+
+//     public void Display()
+//     {
+//         Console.WriteLine("ID: " + Id);
+//         Console.WriteLine("Name: " + Name);
+//         Console.WriteLine("Contract Duration: " + ContractDuration + " Months");
+//     }
+// }
+
+// class Program
+// {
+// //     static void Main()
+// //     {
+// //         CollegeEmployee c = new CollegeEmployee(101, "Ali", 50000);
+// //         Faculty f = new Faculty(201, "Ahmed", 12);
+
+// //         Console.WriteLine("College Employee");
+// //         c.Display();
+
+// //         Console.WriteLine();
+
+// //         Console.WriteLine("Faculty");
+// //         f.Display();
+// //     }
+// // }
+
+// static void Main()
+// {
+//     Employee e = new Employee(1, "Usman");
+
+//     CollegeEmployee c =
+//         new CollegeEmployee(101, "Ali", 50000);
+
+//     Faculty f =
+//         new Faculty(201, "Ahmed", 12);
+
+//     Console.WriteLine("Employee");
+//     Console.WriteLine("ID: " + e.Id);
+//     Console.WriteLine("Name: " + e.Name);
+
+//     Console.WriteLine();
+
+//     Console.WriteLine("College Employee");
+//     c.Display();
+
+//     Console.WriteLine();
+
+//     Console.WriteLine("Faculty");
+//     f.Display();
+// }
+
+
+// using System;
+
+// class Circle
+// {
+//     public double Radius;
+
+//     public Circle(double radius)
+//     {
+//         Radius = radius;
+//     }
+
+//     public double GetArea()
+//     {
+//         return 3.14 * Radius * Radius;
+//     }
+
+//     public double GetCircumference()
+//     {
+//         return 2 * 3.14 * Radius;
+//     }
+// }
+
+// class Cylinder : Circle
+// {
+//     public double Height;
+
+//     public Cylinder(double radius, double height)
+//         : base(radius)
+//     {
+//         Height = height;
+//     }
+
+//     public double GetVolume()
+//     {
+//         return GetArea() * Height;
+//     }
+
+//     public void Display()
+//     {
+//         Console.WriteLine("Radius: " + Radius);
+//         Console.WriteLine("Height: " + Height);
+//         Console.WriteLine("Area: " + GetArea());
+//         Console.WriteLine("Circumference: " + GetCircumference());
+//         Console.WriteLine("Volume: " + GetVolume());
+//     }
+// }
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         Cylinder c = new Cylinder(5, 10);
+
+//         c.Display();
+//     }
+// }
+
+class parent
 {
-    Employee e = new Employee(1, "Usman");
-
-    CollegeEmployee c =
-        new CollegeEmployee(101, "Ali", 50000);
-
-    Faculty f =
-        new Faculty(201, "Ahmed", 12);
-
-    Console.WriteLine("Employee");
-    Console.WriteLine("ID: " + e.Id);
-    Console.WriteLine("Name: " + e.Name);
-
-    Console.WriteLine();
-
-    Console.WriteLine("College Employee");
-    c.Display();
-
-    Console.WriteLine();
-
-    Console.WriteLine("Faculty");
-    f.Display();
+    public void show()
+    {
+        Console.WriteLine("parent show");
+    }
 }
 
-
-using System;
-
-class Circle
+class Student
 {
-    public double Radius;
+    public string Name;
 
-    public Circle(double radius)
+    public Student(Student s)
     {
-        Radius = radius;
-    }
-
-    public double GetArea()
-    {
-        return 3.14 * Radius * Radius;
-    }
-
-    public double GetCircumference()
-    {
-        return 2 * 3.14 * Radius;
+        Name = s.Name;
     }
 }
-
-class Cylinder : Circle
-{
-    public double Height;
-
-    public Cylinder(double radius, double height)
-        : base(radius)
-    {
-        Height = height;
-    }
-
-    public double GetVolume()
-    {
-        return GetArea() * Height;
-    }
-
-    public void Display()
-    {
-        Console.WriteLine("Radius: " + Radius);
-        Console.WriteLine("Height: " + Height);
-        Console.WriteLine("Area: " + GetArea());
-        Console.WriteLine("Circumference: " + GetCircumference());
-        Console.WriteLine("Volume: " + GetVolume());
-    }
-}
-
-class Program
-{
-    static void Main()
-    {
-        Cylinder c = new Cylinder(5, 10);
-
-        c.Display();
-    }
-}
-
-
 
 
 
