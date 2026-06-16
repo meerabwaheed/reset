@@ -934,21 +934,45 @@ class Faculty : Employee
 
 class Program
 {
-    static void Main()
-    {
-        CollegeEmployee c = new CollegeEmployee(101, "Ali", 50000);
-        Faculty f = new Faculty(201, "Ahmed", 12);
+//     static void Main()
+//     {
+//         CollegeEmployee c = new CollegeEmployee(101, "Ali", 50000);
+//         Faculty f = new Faculty(201, "Ahmed", 12);
 
-        Console.WriteLine("College Employee");
-        c.Display();
+//         Console.WriteLine("College Employee");
+//         c.Display();
 
-        Console.WriteLine();
+//         Console.WriteLine();
 
-        Console.WriteLine("Faculty");
-        f.Display();
-    }
+//         Console.WriteLine("Faculty");
+//         f.Display();
+//     }
+// }
+
+static void Main()
+{
+    Employee e = new Employee(1, "Usman");
+
+    CollegeEmployee c =
+        new CollegeEmployee(101, "Ali", 50000);
+
+    Faculty f =
+        new Faculty(201, "Ahmed", 12);
+
+    Console.WriteLine("Employee");
+    Console.WriteLine("ID: " + e.Id);
+    Console.WriteLine("Name: " + e.Name);
+
+    Console.WriteLine();
+
+    Console.WriteLine("College Employee");
+    c.Display();
+
+    Console.WriteLine();
+
+    Console.WriteLine("Faculty");
+    f.Display();
 }
-
 
 
 
