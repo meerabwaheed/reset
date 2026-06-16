@@ -953,7 +953,7 @@ static void Main()
 {
     Employee e = new Employee(1, "Usman");
 
-    CollegeEmployee c =
+    College_Employee c =
         new CollegeEmployee(101, "Ali", 50000);
 
     Faculty f =
