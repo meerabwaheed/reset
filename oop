@@ -997,20 +997,20 @@
 //     }
 // }
 
-// class Cylinder : Circle
-// {
-//     public double Height;
+class Cylinder : Circle
+{
+    public double Height;
 
-//     public Cylinder(double radius, double height)
-//         : base(radius)
-//     {
-//         Height = height;
-//     }
+    public Cylinder(double radius, double height)
+        : base(radius)
+    {
+        Height = height;
+    }
 
-//     public double GetVolume()
-//     {
-//         return GetArea() * Height;
-//     }
+    public double GetVolume()
+    {
+        return GetArea() * Height;
+    }
 
     public void Display()
     {
