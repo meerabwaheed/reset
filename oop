@@ -1012,15 +1012,15 @@
 //         return GetArea() * Height;
 //     }
 
-//     public void Display()
-//     {
-//         Console.WriteLine("Radius: " + Radius);
-//         Console.WriteLine("Height: " + Height);
-//         Console.WriteLine("Area: " + GetArea());
-//         Console.WriteLine("Circumference: " + GetCircumference());
-//         Console.WriteLine("Volume: " + GetVolume());
-//     }
-// }
+    public void Display()
+    {
+        Console.WriteLine("Radius: " + Radius);
+        Console.WriteLine("Height: " + Height);
+        Console.WriteLine("Area: " + GetArea());
+        Console.WriteLine("Circumference: " + GetCircumference());
+        Console.WriteLine("Volume: " + GetVolume());
+    }
+}
 
 class Program
 {
