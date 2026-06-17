@@ -695,7 +695,7 @@ AS
 PRINT 'New Student Added';
 
 INSERT INTO Student
-VALUES(1,'Ali',20);insertb
+VALUES(1,'Ali',20);
 
 Create TRIGGER professorsInsert
 On professorsInser
@@ -703,3 +703,5 @@ AFTER INSERT
 AS
 PRINT 'new professor added';
 
+INSERT INTO professor
+VALUES(1,'balach',21000);
