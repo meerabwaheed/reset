@@ -688,14 +688,14 @@ class Car : Vehicle
 }
 
 
--- CREATE TRIGGER StudentInsert
--- ON Student
--- AFTER INSERT
--- AS
--- PRINT 'New Student Added';
-
-Create TRIGGER professorsInsert
-On professorsInser
-AFTER INSERT 
+CREATE TRIGGER StudentInsert
+ON Student
+AFTER INSERT
 AS
-PRINT 'new professor added'
+PRINT 'New Student Added';
+
+-- Create TRIGGER professorsInsert
+-- On professorsInser
+-- AFTER INSERT 
+-- AS
+-- PRINT 'new professor added';
