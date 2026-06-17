@@ -615,78 +615,6 @@ INSERT INTO Enrollment VALUES
 
 
 
-class Book
-{
-    private string title;
-
-    public string Title
-    {
-        get { return title; }
-        set { title = value; }
-    }
-}
-
-class Person
-{
-    public string Name;
-}
-
-class Member : Person
-{
-    public int MemberID;
-}
-
-
-
-class Person
-{
-    public string Name;
-}
-
-class Student : Person
-{
-    public int Semester;
-}
-
-class Teacher : Person
-{
-    public string Subject;
-}
-
-
-
-class Account
-{
-    public double Balance;
-}
-
-class SavingsAccount : Account
-{
-}
-
-class CurrentAccount : Account
-{
-}
-
-SavingsAccount acc1 = new SavingsAccount();
--- CurrentAccount acc2 = new CurrentAccount();
-
-class Vehicle
-{
-    public virtual void Start()
-    {
-        Console.WriteLine("Vehicle Starting");
-    }
-}
-
-class Car : Vehicle
-{
-    public override void Start()
-    {
-        Console.WriteLine("Car Starting");
-    }
-}
-
 
 CREATE TRIGGER StudentInsert
 ON Student
@@ -694,14 +622,14 @@ AFTER INSERT
 AS
 PRINT 'New Student Added';
 
-INSERT INTO Student
-VALUES(1,'Ali',20);
+-- INSERT INTO Student
+-- VALUES(1,'Ali',20);
 
-Create TRIGGER professorsInsert
-On professorsInser
-AFTER INSERT 
-AS
-PRINT 'new professor added';
+-- Create TRIGGER professorsInsert
+-- On professorsInser
+-- AFTER INSERT 
+-- AS
+-- PRINT 'new professor added';
 
 INSERT INTO professor
 VALUES(1,'balach',21000);
