@@ -949,30 +949,30 @@
 // //     }
 // // }
 
-static void Main()
-{
-    Employee e = new Employee(1, "Usman");
+// static void Main()
+// {
+//     Employee e = new Employee(1, "Usman");
 
-    College_Employee c =
-        new CollegeEmployee(101, "Ali", 50000);
+//     CollegeEmployee c =
+//         new CollegeEmployee(101, "Ali", 50000);
 
-    Faculty f =
-        new Faculty(201, "Ahmed", 12);
+//     Faculty f =
+//         new Faculty(201, "Ahmed", 12);
 
-    Console.WriteLine("Employee");
-    Console.WriteLine("ID: " + e.Id);
-    Console.WriteLine("Name: " + e.Name);
+//     Console.WriteLine("Employee");
+//     Console.WriteLine("ID: " + e.Id);
+//     Console.WriteLine("Name: " + e.Name);
 
-    Console.WriteLine();
+//     Console.WriteLine();
 
-    Console.WriteLine("College Employee");
-    c.Display();
+//     Console.WriteLine("College Employee");
+//     c.Display();
 
-    Console.WriteLine();
+//     Console.WriteLine();
 
-    Console.WriteLine("Faculty");
-    f.Display();
-}
+//     Console.WriteLine("Faculty");
+//     f.Display();
+// }
 
 
 using System;
@@ -997,58 +997,58 @@ class Circle
     }
 }
 
-class Cylinder : Circle
-{
-    public double Height;
+// class Cylinder : Circle
+// {
+//     public double Height;
 
-    public Cylinder(double radius, double height)
-        : base(radius)
-    {
-        Height = height;
-    }
+//     public Cylinder(double radius, double height)
+//         : base(radius)
+//     {
+//         Height = height;
+//     }
 
-    public double GetVolume()
-    {
-        return GetArea() * Height;
-    }
+//     public double GetVolume()
+//     {
+//         return GetArea() * Height;
+//     }
 
-    public void Display()
-    {
-        Console.WriteLine("Radius: " + Radius);
-        Console.WriteLine("Height: " + Height);
-        Console.WriteLine("Area: " + GetArea());
-        Console.WriteLine("Circumference: " + GetCircumference());
-        Console.WriteLine("Volume: " + GetVolume());
-    }
-}
+//     public void Display()
+//     {
+//         Console.WriteLine("Radius: " + Radius);
+//         Console.WriteLine("Height: " + Height);
+//         Console.WriteLine("Area: " + GetArea());
+//         Console.WriteLine("Circumference: " + GetCircumference());
+//         Console.WriteLine("Volume: " + GetVolume());
+//     }
+// }
 
-class Program
-{
-    static void Main()
-    {
-        Cylinder c = new Cylinder(5, 10);
+// class Program
+// {
+//     static void Main()
+//     {
+//         Cylinder c = new Cylinder(5, 10);
 
-        c.Display();
-    }
-}
+//         c.Display();
+//     }
+// }
 
-class parent
-{
-    public void show()
-    {
-        Console.WriteLine("parent show");
-    }
-}
+// class parent
+// {
+//     public void show()
+//     {
+//         Console.WriteLine("parent show");
+//     }
+// }
 
-class Student
-{
-    public string Name;
+// class Student
+// {
+//     public string Name;
 
-    public Student(Student s)
-    {
-        Name = s.Name;
-    }
-}
+//     public Student(Student s)
+//     {
+//         Name = s.Name;
+//     }
+// }
 
 
 
