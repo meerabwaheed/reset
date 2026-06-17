@@ -688,8 +688,3 @@ class Car : Vehicle
 }
 
 
-
-CREATE TABLE StudentSubjects (
-    StudentID INT,
-    Subject VARCHAR(50)
-);
