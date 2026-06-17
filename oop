@@ -997,30 +997,30 @@ class Circle
     }
 }
 
-// class Cylinder : Circle
-// {
-//     public double Height;
+class Cylinder : Circle
+{
+    public double Height;
 
-//     public Cylinder(double radius, double height)
-//         : base(radius)
-//     {
-//         Height = height;
-//     }
+    public Cylinder(double radius, double height)
+        : base(radius)
+    {
+        Height = height;
+    }
 
-//     public double GetVolume()
-//     {
-//         return GetArea() * Height;
-//     }
+    public double Get_Volume()
+    {
+        return GetArea() * Height;
+    }
 
-//     public void Display()
-//     {
-//         Console.WriteLine("Radius: " + Radius);
-//         Console.WriteLine("Height: " + Height);
-//         Console.WriteLine("Area: " + GetArea());
-//         Console.WriteLine("Circumference: " + GetCircumference());
-//         Console.WriteLine("Volume: " + GetVolume());
-//     }
-// }
+    public void Display()
+    {
+        Console.WriteLine("Radius: " + Radius);
+        Console.WriteLine("Height: " + Height);
+        Console.WriteLine("Area: " + GetArea());
+        Console.WriteLine("Circumference: " + GetCircumference());
+        Console.WriteLine("Volume: " + GetVolume());
+    }
+}
 
 // class Program
 // {
