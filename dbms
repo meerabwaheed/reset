@@ -399,11 +399,11 @@ INSERT INTO Books VALUES
 (4, 'C#_Programming', 'John smith', 4530),
 (1, 'Web_Development', 'David stocker', 72100);
 
--- -- Insert Data into Members
--- INSERT INTO Members VALUES
--- (5, 'sadia', '03501234567'),
--- (4, 'waheed', '03216263400'),
--- (2, 'meri mama jaan', '03221275889');
+-- Insert Data into Members
+INSERT INTO Members VALUES
+(5, 'sadia', '03501234567'),
+(4, 'waheed', '03216263400'),
+(2, 'meri mama jaan', '03221275889');
 
 -- -- Insert Data into BorrowRecords
 INSERT INTO Borrow_Records VALUES
@@ -622,14 +622,15 @@ AFTER INSERT
 AS
 PRINT 'New Student Added';
 
--- INSERT INTO Student
--- VALUES(1,'Ali',20);
+INSERT INTO Student
+VALUES(1,'Ali',20);
 
--- Create TRIGGER professorsInsert
--- On professorsInser
--- AFTER INSERT 
--- AS
--- PRINT 'new professor added';
+Create TRIGGER professorsInsert
+On professorsInser
+AFTER INSERT 
+AS
+PRINT 'new professor added';
 
 INSERT INTO professor
 VALUES(1,'balach',21000);
+
