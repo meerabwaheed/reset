@@ -6,7 +6,7 @@ USE Library_DB;
 
 -- -- Create Books Table
 CREATE TABLE Book (
-    Book_ID INT PRIMARY KEY,
+    BookID INT PRIMARY KEY,
     Title VARCHAR(20),
     Price DECIMAL(32)
 );
