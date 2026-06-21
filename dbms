@@ -128,11 +128,11 @@ JOIN Courses
 ON Enrollments.CourseID = Courses.CourseID;
 
 -- -- Students with Marks Greater Than 80
-SELECT
-    Students.Name,
-    Courses.CourseName,
-    Enrollments.Marks
-FROM Enrollments
+-- SELECT
+--     Students.Name,
+--     Courses.CourseName,
+--     Enrollments.Marks
+-- FROM Enrollments
 JOIN Students
 ON Enrollments.StudentID = Students.StudentID
 JOIN Courses
