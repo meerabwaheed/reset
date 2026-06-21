@@ -144,9 +144,9 @@ UPDATE Enrollments
 SET Marks = 95
 WHERE EnrollmentID = 2;
 
--- -- Delete a Student
-DELETE FROM Students
-WHERE StudentID = 3;
+-- -- -- Delete a Student
+-- DELETE FROM Students
+-- WHERE StudentID = 3;
 
 
 
