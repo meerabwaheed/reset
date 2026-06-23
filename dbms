@@ -40,10 +40,10 @@ INSERT INTO Members VALUES
 (113, 'hussain', 'hussain@gmail.com');
 (114, 'balach', 'balach@gmail.com');
 
--- Insert Data into BorrowRecords
-INSERT INTO BorrowRecords VALUES
-(112, 101, 12, '2026-05-01', '2026-05-15'),
-(113, 102, 22, '2026-05-05', NULL);
+-- -- Insert Data into BorrowRecords
+-- INSERT INTO BorrowRecords VALUES
+-- (112, 101, 12, '2026-05-01', '2026-05-15'),
+-- (113, 102, 22, '2026-05-05', NULL);
 
 -- Display All Books
 SELECT * FROM Books;
