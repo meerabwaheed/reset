@@ -5,11 +5,11 @@ CREATE DATABASE Library_DB;
 USE Library_DB;
 
 -- -- Create Books Table
-CREATE TABLE Book (
-    BookID INT PRIMARY KEY,
-    Title VARCHAR(20),
-    Price DECIMAL(32)
-);
+-- CREATE TABLE Book (
+--     BookID INT PRIMARY KEY,
+--     Title VARCHAR(20),
+--     Price DECIMAL(32)
+-- );
 
 -- -- Create Members Table
 CREATE TABLE Member (
