@@ -19,15 +19,15 @@ CREATE TABLE Member (
     Email VARCHAR(30)
 );
 
--- -- Create BorrowRecords Table
-CREATE TABLE BorrowRecord (
-    Record_ID INT PRIMARY KEY,
-    Member_ID INT,
-    Book_ID INT,
-    Borrow_Date DATE,
-    FOREIGN KEY (MemberID) REFERENCES Members(MemberID),
-    FOREIGN KEY (BookID) REFERENCES Book(BookID)
-);
+-- -- -- Create BorrowRecords Table
+-- CREATE TABLE BorrowRecord (
+--     Record_ID INT PRIMARY KEY,
+--     Member_ID INT,
+--     Book_ID INT,
+--     Borrow_Date DATE,
+--     FOREIGN KEY (MemberID) REFERENCES Members(MemberID),
+--     FOREIGN KEY (BookID) REFERENCES Book(BookID)
+-- );
 
 -- -- Insert Data into Books
 INSERT INTO Books VALUES
