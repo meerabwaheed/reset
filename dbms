@@ -66,20 +66,20 @@ CREATE DATABASE UniversityDB;
 -- Use Database
 USE UniversityDB;
 
--- -- -- Create Students Table
--- CREATE TABLE Students (
---     Student_ID INTPRIMARY KEY,
---     Name VARCHAR(20),
---     Department VARCHAR(40),
---     Semester INT
--- );
+-- -- Create Students Table
+CREATE TABLE Students (
+    Student_ID INTPRIMARY KEY,
+    Name VARCHAR(20),
+    Department VARCHAR(40),
+    Semester INT
+);
 
--- -- -- Create Courses Table
--- CREATE TABLE Courses (
---     Course_IDINT PRIMARY KEY,
---     CourseName VARCHAR(54),
---     CreditHours INT
--- );
+-- -- Create Courses Table
+CREATE TABLE Courses (
+    Course_IDINT PRIMARY KEY,
+    CourseName VARCHAR(54),
+    CreditHours INT
+);
 
 -- -- -- Create Enrollments Table
 -- CREATE TABLE Enrollments (
